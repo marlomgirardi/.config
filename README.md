@@ -6,7 +6,7 @@ My MacOS setup and configuration 💻
 ```sh
 # Clone
 cd ~
-git clone git@github.com:marlomgirardi/MacOS.git .config
+git clone --recursive git@github.com:marlomgirardi/MacOS.git .config
 
 # Install
 sh .config/install.sh
