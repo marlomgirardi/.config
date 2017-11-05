@@ -6,8 +6,8 @@ My MacOS setup and configuration 💻
 ```sh
 # Clone
 cd ~
-git clone git@github.com:marlomgirardi/MacOS.git
+git clone git@github.com:marlomgirardi/MacOS.git .config
 
 # Install
-sh MacOS/install.sh
+sh .config/install.sh
 ```

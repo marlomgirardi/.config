@@ -26,7 +26,7 @@ export HISTCONTROL=ignoreboth
 export HISTFILE="~/.bash_history"
 export EDITOR=vim
 export PAGER=less
-
+ 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
