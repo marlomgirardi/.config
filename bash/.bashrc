@@ -1,5 +1,7 @@
 # https://github.com/marlomgirardi/MacOS
 
+CNF_DIR="$HOME/.config"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -26,7 +28,12 @@ export HISTCONTROL=ignoreboth
 export HISTFILE="~/.bash_history"
 export EDITOR=vim
 export PAGER=less
- 
+
+# Source aliases
+source $CNF_DIR/bash/.aliases
+
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# vim: set ft=sh ts=2 sw=2 tw=80 noet :

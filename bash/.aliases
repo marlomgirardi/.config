@@ -1,0 +1,51 @@
+# https://github.com/marlomgirardi/MacOS
+
+# Listing directory contents
+alias ls='gls --color --group-directories-first'
+alias l='ls -FA'
+alias ll='l -l'
+alias lsd='ll | grep ^d'
+
+# File and directory find, if fd is not installed
+if ! hash fd 2>/dev/null; then
+	alias f='find . -iname '
+	alias ff='find . -type f -iname '
+	alias fd='find . -type d -iname '
+fi
+
+# Git aliases
+alias gb='git branch'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gd='git diff'
+alias gds='git diff --cached'
+alias gfl='git fetch --prune && git log -15'
+alias gf='git fetch --prune'
+alias gfa='git fetch --all --tags --prune'
+alias gs='git status -sb'
+alias gl='git log -15'
+alias gll='git log'
+
+# Shortcuts
+alias c='clear'
+alias diff='colordiff'
+
+# Storage
+alias dut='du -hsx * | sort -rh | head -10'
+
+# Processes
+alias process='ps -ax'
+alias psk='ps -ax | fzf | cut -d " " -f1 | xargs -o kill'
+alias pst='pstree -g 3 -ws'
+
+# Misc
+alias ipinfo='curl -s ipinfo.io'
+alias weather='curl -s wttr.in/Tel-Aviv'
+
+# A quick way to get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
+# vim: set ft=sh ts=2 sw=2 tw=80 noet :
