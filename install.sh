@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # Get instalation folder
-DIR=$( cd -P $( dirname $BASH_SOURCE[0] ) && pwd )
+DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
 # Create Links
-ln -sf $DIR/bash/.bashrc ~/.bashrc
+ln -sf $DIR/bash/.bashrc $HOME/.bashrc
+ln -sf $DIR/bash/.vimrc $HOME/.vimrc
 ln -sf $DIR/bash/.vim ~/.vim
-ln -sf $DIR/bash/.vimrc ~/.vimrc
 
-source ~/.bashrc
+# Temp fix
+rm $DIR/bash/.vim/.vim
+
+source $HOME/.bashrc
