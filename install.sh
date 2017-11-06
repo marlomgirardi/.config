@@ -31,7 +31,7 @@ if ! hash pstree 2>/dev/null; then
 fi
 
 # If not exists, install fzf with brew command
-if ! hash nvm 2>/dev/null; then
+if ! sh /usr/local/opt/nvm/nvm.sh 2>/dev/null; then
   echo "nvm will be installed"
   brew install nvm
 fi
@@ -40,11 +40,13 @@ fi
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
 # Create Links
-ln -sf $DIR/bash/.bashrc $HOME/.bashrc
+ln -sf $DIR/bash/.bash_profile $HOME/.bash_profile
 ln -sf $DIR/bash/.vimrc $HOME/.vimrc
-ln -sf $DIR/bash/.vim ~/.vim
+ln -sf $DIR/bash/.vim $HOME/.vim
 
 # Temp fix
 rm $DIR/bash/.vim/.vim 2>/dev/null
 
-source $HOME/.bashrc
+source "${HOME}/.bash_profile"
+
+
