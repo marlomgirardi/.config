@@ -1,3 +1,4 @@
+source ~/.profile
 # https://github.com/marlomgirardi/MacOS
 
 CNF_DIR="$HOME/.config"
@@ -39,6 +40,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  . "/usr/local/opt/nvm/nvm.sh"
 
 # vim: set ft=sh ts=2 sw=2 tw=80 noet :

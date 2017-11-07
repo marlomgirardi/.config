@@ -218,4 +218,3 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
   human = name-rev --name-only --refs=refs/heads/*
-
