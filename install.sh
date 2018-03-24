@@ -6,6 +6,12 @@ if ! hash brew 2>/dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# If not exists, install htop with brew command
+if ! hash htop 2>/dev/null; then
+  echo "You will need htop  installed"
+  brew install htop
+fi
+
 # If not exists, install coreutils with brew command
 if ! hash gls 2>/dev/null; then
   echo "You will need coreutils installed"
