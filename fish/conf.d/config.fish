@@ -5,6 +5,7 @@
 stty stop undef
 stty start undef
 
+# TERMINAL CONFIG
 export HISTSIZE=2000
 export HISTFILESIZE=50000
 export HISTIGNORE='history:pwd:jobs:fg:bg:ll:ls:la:history:clear:c:exit'
@@ -12,6 +13,7 @@ export HISTCONTROL=ignoreboth
 export EDITOR=vim
 export PAGER=less
 
+# THEME CONFIG
 set -g theme_display_git_master_branch yes
 set -g theme_display_ruby no
 set -g theme_display_docker_machine no
@@ -20,24 +22,9 @@ set -g theme_show_exit_status yes
 set -g theme_project_dir_length 0
 set -g fish_prompt_pwd_dir_length 0
 
-# set -g theme_display_user yes
-# set -g theme_display_hostname yes
-# set -g theme_display_git yes
-# set -g theme_display_git_dirty yes
-# set -g theme_display_git_untracked yes
-# set -g theme_display_git_ahead_verbose yes
-# set -g theme_display_git_dirty_verbose yes
-# set -g theme_git_worktree_support yes
-# set -g theme_display_vagrant yes
-# set -g theme_display_k8s_context no
-# set -g theme_display_hg yes
-# set -g theme_display_virtualenv no
-# set -g theme_display_vi no
-# set -g theme_avoid_ambiguous_glyphs yes
-# set -g theme_powerline_fonts no
-# set -g default_user your_normal_user
-# set -g theme_color_scheme dark
-# set -g theme_newline_cursor yes
+# DONE CONFIG
+# set -U __done_min_cmd_duration 20000 # default: 5000 ms
+# set -U __done_exclude 'git (?!push|pull)' # default: all git commands, except push and pull. accepts a regex.
 
 # Source aliases
 source "$HOME/.config/_profile/.aliases"

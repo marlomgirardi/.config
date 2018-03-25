@@ -661,7 +661,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/marlom</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -910,8 +910,10 @@
 				<key>Red Component</key>
 				<integer>1</integer>
 			</dict>
-			<key>Blinking Cursor</key>
+			<key>Blink Allowed</key>
 			<false/>
+			<key>Blinking Cursor</key>
+			<true/>
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
@@ -980,6 +982,8 @@
 				<key>Red Component</key>
 				<integer>0</integer>
 			</dict>
+			<key>Cursor Type</key>
+			<integer>0</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -990,8 +994,6 @@
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
 			<true/>
-			<key>Dynamic Profile Filename</key>
-			<string>/Users/marlom/Library/Application Support/iTerm2/DynamicProfiles/profile.json</string>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -1401,7 +1403,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/marlom</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>

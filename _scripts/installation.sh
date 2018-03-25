@@ -20,6 +20,7 @@ if exists brew; then
   if not_exists colordiff; then brew_install colordiff; fi
   if not_exists fzf; then brew_install fzf; fi
   if not_exists pstree; then brew_install pstree; fi
+  if not_exists terminal-notifier; then brew_install terminal-notifier; fi
   if not_exists fish; then brew_install fish; fi
 else
   echo "Looks like brew isn't installed"
