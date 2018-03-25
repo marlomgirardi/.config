@@ -19,7 +19,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.config/_iTerm</string>
+	<string>~/.config/_plists</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -63,7 +63,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>690 547 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>573 287 570 377 0 0 1680 1028 </string>
+	<string>212 101 400 422 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 73 570 377 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_DECAE3D5-6F55-4B8A-9007-230C5A1FD8B3</key>
@@ -1450,7 +1450,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/marlom/.config/_iTerm</string>
+	<string>/Users/marlom/.config/_plists</string>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
