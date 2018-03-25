@@ -21,5 +21,8 @@ fisher omf/pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 echo "Install plugin-node-binpath - Automatically add node_modules binaries to PATH."
 fisher omf/plugin-node-binpath 1>/dev/null # https://github.com/oh-my-fish/pplugin-node-binpath
 
-# echo "Install upto - oh-my-fish plugin to search error numbers, labels and messages"
+# echo "Install plugin-grc - grc Colourizer for some commands."
+# fisher omf/plugin-grc 1>/dev/null # https://github.com/oh-my-fish/plugin-grc
+
+# echo "Install plugin-errno-grep - oh-my-fish plugin to search error numbers, labels and messages"
 # fisher install Shadowigor/plugin-errno-grep # https://github.com/Shadowigor/plugin-errno-grep

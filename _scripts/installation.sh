@@ -24,6 +24,7 @@ if exists brew; then
   if not_exists terminal-notifier; then brew_install terminal-notifier; fi
   if not_exists thefuck; then brew_install thefuck; fi
   if not_exists mas; then brew_install mas; fi
+  if not_exists grc; then brew_install grc; fi
   if not_exists fish; then brew_install fish; fi
 else
   echo "Looks like brew isn't installed"
