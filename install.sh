@@ -9,8 +9,13 @@ for SCRIPT in installation defaults brew; do
 done
 
 # Create Links into ~/
-for FILE in bash_profile vim vimrc; do
+for FILE in vim vimrc; do
+  rm "$HOME/.$FILE" 2>/dev/null
   ln -sf "$DIR/_profile/.$FILE" $HOME
 done
 
-source "$HOME/.bash_profile"
+source "$HOME/.profile"
+
+echo "Execute 'fish' and after '_scripts/fish.sh'"
+
+exit

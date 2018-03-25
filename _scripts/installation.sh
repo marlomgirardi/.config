@@ -20,21 +20,22 @@ if exists brew; then
   if not_exists colordiff; then brew_install colordiff; fi
   if not_exists fzf; then brew_install fzf; fi
   if not_exists pstree; then brew_install pstree; fi
-  if ! sh /usr/local/opt/nvm/nvm.sh 2>/dev/null; then brew_install nvm; fi
+  if not_exists fish; then brew_install fish; fi
 else
   echo "Looks like brew isn't installed"
 fi;
 
-# FONTS - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
+# FONTS - https://github.com/ryanoasis/nerd-fonts
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf?raw=true";
-# install_font "DejaVu Sans Mono Nerd Oblique.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Italic/complete/DejaVu%20Sans%20Mono%20Oblique%20Nerd%20Font%20Complete.ttf?raw=true";
-# install_font "DejaVu Sans Mono Nerd Bold.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Bold/complete/DejaVu%20Sans%20Mono%20Bold%20Nerd%20Font%20Complete.ttf?raw=true";
-# install_font "DejaVu Sans Mono Nerd Bold Oblique.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Bold-Italic/complete/DejaVu%20Sans%20Mono%20Bold%20Oblique%20Nerd%20Font%20Complete.ttf?raw=true";
 
 # APPS
 if ! has_app "iTerm.app"; then brew_cask_install iterm; fi
 if ! has_app "JetBrains Toolbox.app"; then brew_cask_install jetbrains-toolbox; fi
 if ! has_app "Adobe Creative Cloud"; then open -W "$(brew_cask_install adobe-creative-cloud)"; fi
+
+
+echo "Install fisher..."
+curl -Lo "$1/fish/functions/fisher.fish" --create-dirs https://git.io/fisher 2>/dev/null
 
 rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
