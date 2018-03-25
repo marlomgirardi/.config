@@ -13,6 +13,4 @@ for FILE in bash_profile vim vimrc; do
   ln -sf "$DIR/_profile/.$FILE" $HOME
 done
 
-defaults import com.googlecode.iterm2 $DIR/_iTerm/com.googlecode.iterm2.plist
-
 source "$HOME/.bash_profile"

@@ -3,7 +3,9 @@
 exists() { hash $1 2>/dev/null; }
 not_exists() { ! exists $1; }
 has_app() { test -d "/Applications/$1" || test -L "/Applications/$1"; }
+has_font() { test $(ls /Library/Fonts/ | grep "$1" | wc -l) -gt 0 || test $(ls $HOME/Library/Fonts/ | grep "$1" | wc -l) -gt 0; } # TODO: change to test
 brew_install() { echo "Install $1..."; brew install $1 1>/dev/null; }
+install_font() { if ! has_font "$1"; then echo "Install $1..." && wget $2 -O "$HOME/Library/Fonts/$1" 2>/dev/null; fi; }
 brew_cask_install() { echo $(brew cask install $1) | cut -d "'" -f2; }
 
 if not_exists brew; then
@@ -22,6 +24,12 @@ if exists brew; then
 else
   echo "Looks like brew isn't installed"
 fi;
+
+# FONTS - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DejaVuSansMono
+install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf?raw=true";
+# install_font "DejaVu Sans Mono Nerd Oblique.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Italic/complete/DejaVu%20Sans%20Mono%20Oblique%20Nerd%20Font%20Complete.ttf?raw=true";
+# install_font "DejaVu Sans Mono Nerd Bold.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Bold/complete/DejaVu%20Sans%20Mono%20Bold%20Nerd%20Font%20Complete.ttf?raw=true";
+# install_font "DejaVu Sans Mono Nerd Bold Oblique.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Bold-Italic/complete/DejaVu%20Sans%20Mono%20Bold%20Oblique%20Nerd%20Font%20Complete.ttf?raw=true";
 
 # APPS
 if ! has_app "iTerm.app"; then brew_cask_install iterm; fi
