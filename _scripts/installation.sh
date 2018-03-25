@@ -18,26 +18,16 @@ if exists brew; then
   if not_exists colordiff; then brew_install colordiff; fi
   if not_exists fzf; then brew_install fzf; fi
   if not_exists pstree; then brew_install pstree; fi
-  if not_exists wget; then brew_install wget; fi
-  if not_exists unzip; then brew_install unzip; fi
   if ! sh /usr/local/opt/nvm/nvm.sh 2>/dev/null; then brew_install nvm; fi
 else
   echo "Looks like brew isn't installed"
 fi;
 
 # APPS
-if ! has_app "JetBrains Toolbox.app"; then brew_install caskroom/cask/jetbrains-toolbox; fi
+if ! has_app "iTerm.app"; then brew_cask_install iterm; fi
+if ! has_app "JetBrains Toolbox.app"; then brew_cask_install jetbrains-toolbox; fi
 if ! has_app "Adobe Creative Cloud"; then open -W "$(brew_cask_install adobe-creative-cloud)"; fi
-
-# if ! has_app "iTerm"; then
-#   echo "Install iTerm..."
-#   wget -q https://iterm2.com/downloads/stable/latest
-#   unzip -q latest
-#   rm latest
-#   mv iTerm.app /Applications/
-# fi
 
 rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
 exit
-
