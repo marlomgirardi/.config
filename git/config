@@ -7,11 +7,11 @@
   excludesfile = ~/ignore
 [rerere]
 	enabled = 1
-  autoupdate = 1
+	autoupdate = 1
 [push]
 	default = matching
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
 	current = yellow bold
 	local = green bold
@@ -25,17 +25,17 @@
 [color "status"]
 	added = green bold
 	changed = yellow bold
-  untracked = red bold
+	untracked = red bold
 [diff]
 	tool = vimdiff
 [difftool]
-  prompt = false
+	prompt = false
 [gitflow "prefix"]
 	feature = feature-
 	release = release-
 	hotfix = hotfix-
 	support = support-
-  versiontag = v
+	versiontag = v
 [alias]
 	a = add --all
 	ai = add -i
@@ -217,4 +217,4 @@
 	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
-  human = name-rev --name-only --refs=refs/heads/*
+	human = name-rev --name-only --refs=refs/heads/*

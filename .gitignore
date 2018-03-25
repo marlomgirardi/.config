@@ -1,3 +1,7 @@
 .DS_Store
-fish/
+
+/fish/
+!/fish/conf.d/config.fish
+!/fish/functions/fish_greeting.fish
+
 fisherman/
