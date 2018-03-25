@@ -10,6 +10,4 @@ for a in bash_profile vim vimrc; do
   ln -sf "$DIR/bash/.$a" $HOME
 done
 
-source "${HOME}/.bash_profile"
-
-
+source "$HOME/.bash_profile"
