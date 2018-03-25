@@ -18,6 +18,9 @@ fisher laughedelic/brew-completions # https://github.com/laughedelic/brew-comple
 echo "Install pj - pj allows you to easily jump between your favourite directories in a predictable manner."
 fisher omf/pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 
+echo "Install fnm - Fisher node manager."
+fisher fnm 1>/dev/null # https://github.com/fisherman/fnm
+
 echo "Install plugin-node-binpath - Automatically add node_modules binaries to PATH."
 fisher omf/plugin-node-binpath 1>/dev/null # https://github.com/oh-my-fish/pplugin-node-binpath
 
