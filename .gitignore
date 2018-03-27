@@ -4,6 +4,7 @@
 !/fish/conf.d/config.fish
 !/fish/functions/fish_greeting.fish
 
+configstore/
 fisherman/
 thefuck/
 fnm/

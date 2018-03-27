@@ -18,8 +18,8 @@ fisher laughedelic/brew-completions # https://github.com/laughedelic/brew-comple
 echo "Install pj - pj allows you to easily jump between your favourite directories in a predictable manner."
 fisher omf/pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 
-echo "Install fnm - Fisher node manager."
-fisher fnm 1>/dev/null # https://github.com/fisherman/fnm
+echo "Install nvm - Node version manager."
+fisher nvm 1>/dev/null # https://github.com/fisherman/nvm
 
 echo "Install plugin-node-binpath - Automatically add node_modules binaries to PATH."
 fisher omf/plugin-node-binpath 1>/dev/null # https://github.com/oh-my-fish/pplugin-node-binpath
@@ -29,3 +29,13 @@ fisher omf/plugin-node-binpath 1>/dev/null # https://github.com/oh-my-fish/pplug
 
 # echo "Install plugin-errno-grep - oh-my-fish plugin to search error numbers, labels and messages"
 # fisher install Shadowigor/plugin-errno-grep # https://github.com/Shadowigor/plugin-errno-grep
+
+# Run node from nvm
+echo '#! /usr/bin/env fish
+__nvm_run "node" $argv' > /usr/local/bin/node
+
+echo '#! /usr/bin/env fish
+__nvm_run "npm" $argv' > /usr/local/bin/npm
+
+chmod +x /usr/local/bin/node
+chmod +x /usr/local/bin/npm
