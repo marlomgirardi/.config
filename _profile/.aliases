@@ -2,9 +2,10 @@
 # https://github.com/marlomgirardi/MacOS
 
 # Listing directory contents
-alias ls='gls --color --group-directories-first -FA'
-# alias l='ls -FA'
-# alias ll='l -l'
+alias ls="gls --color --group-directories-first -F"
+alias la="ls -lA"
+alias l='ls -FA'
+alias ll='ls -l'
 # alias lsd='ll | grep ^d'
 
 # File and directory find, if fd is not installed
@@ -41,7 +42,7 @@ alias dut='du -hsx * | sort -rh | head -10'
 
 # # Processes
 # alias process='ps -ax'
-alias psk='ps -ax | fzf | cut -d " " -f1 | xargs -o kill'
+alias psk='ps -ax | fzf --ansi | cut -d " " -f1 | xargs -o kill'
 alias pstree='pstree -g 3'
 
 # Misc
