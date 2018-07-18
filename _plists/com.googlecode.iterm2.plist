@@ -63,9 +63,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 489 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>512 359 928 394 0 0 1680 1028 </string>
+	<string>512 431 928 401 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>843 649 585 377 0 0 1680 1028 </string>
+	<string>843 626 585 400 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 73 585 377 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_DECAE3D5-6F55-4B8A-9007-230C5A1FD8B3</key>
@@ -1485,7 +1485,7 @@
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>

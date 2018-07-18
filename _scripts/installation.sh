@@ -64,6 +64,7 @@ if ! has_app "Slack.app"; then mas_install "803453959"; fi
 if ! has_app "WhatsApp.app"; then mas_install "1147396723"; fi
 if ! has_app "Todoist.app"; then mas_install "585829637"; fi
 if ! has_app "Lightshot Screenshot.app"; then mas_install "526298438"; fi
+if ! has_app "Agenda.app"; then mas_install "1370289240"; fi
 
 echo "Install fisher..."
 curl -Lo "$1/fish/functions/fisher.fish" --create-dirs https://git.io/fisher 2>/dev/null
