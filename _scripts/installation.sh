@@ -17,7 +17,6 @@ fi
 # COMMANDS
 if exists brew; then
   if not_exists htop; then brew_install htop; fi
-  if not_exists gls; then brew_install coreutils; fi
   if not_exists colordiff; then brew_install colordiff; fi
   if not_exists fzf; then brew_install fzf; fi
   if not_exists pstree; then brew_install pstree; fi
@@ -29,6 +28,8 @@ if exists brew; then
 else
   echo "Looks like brew isn't installed"
 fi;
+
+if not_exists colorls; then gem install colorls; fi;
 
 # FONTS - https://github.com/ryanoasis/nerd-fonts
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf?raw=true";

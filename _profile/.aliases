@@ -2,11 +2,19 @@
 # https://github.com/marlomgirardi/MacOS
 
 # Listing directory contents
-alias ls="gls --color --group-directories-first -F"
-alias la="ls -lA"
-alias l='ls -FA'
+if hash colorls 2>/dev/null;
+	alias ls='colorls'
+	alias l='ls -A'
+	alias lsd='ll -dA'
+	alias lsf='ll -fA'
+else
+	alias l='ls -FA'
+	alias lsd='ll | grep "^d"'
+	alias lsf='ll | grep "^-"'
+end;
+
+alias la='ls -lA'
 alias ll='ls -l'
-# alias lsd='ll | grep ^d'
 
 # File and directory find, if fd is not installed
 if not hash fd 2>/dev/null;
