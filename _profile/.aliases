@@ -5,15 +5,16 @@
 if hash colorls 2>/dev/null;
 	alias ls='colorls'
 	alias l='ls -A'
+	alias la='ls -lA --sd'
 	alias lsd='ll -dA'
 	alias lsf='ll -fA'
 else
 	alias l='ls -FA'
 	alias lsd='ll | grep "^d"'
 	alias lsf='ll | grep "^-"'
+	alias la='ls -lA'
 end;
 
-alias la='ls -lA'
 alias ll='ls -l'
 
 # File and directory find, if fd is not installed

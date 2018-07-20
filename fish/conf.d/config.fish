@@ -1,14 +1,14 @@
 #!/usr/local/bin/fish
 # https://github.com/marlomgirardi/MacOS
 
-# Remove the ^S ^Q mappings. See all mappings: stty -a
+# Remove the ^S ^Q mappings.
 stty stop undef
 stty start undef
 
 # TERMINAL CONFIG
 export HISTSIZE=2000
 export HISTFILESIZE=50000
-export HISTIGNORE='history:pwd:jobs:fg:bg:ll:ls:la:history:clear:c:exit'
+export HISTIGNORE='history:pwd:jobs:fg:bg:l:ll:ls:la:lsd:lsf:history:clear:c:exit'
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
 export PAGER=less
@@ -28,5 +28,7 @@ set -g fish_prompt_pwd_dir_length 0
 
 # Source aliases
 source "$HOME/.config/_profile/.aliases"
+
+set PATH /Users/marlom/.nvm/versions/node/v10.7.0/bin $PATH
 
 # vim: set ft=sh ts=2 sw=2 tw=80 noet :
