@@ -90,8 +90,8 @@
 	#############
 	g = grep -p
 	#############
-	l = log --oneline
-	lg = log --oneline --graph --decorate
+	l = log --graph --oneline
+	lg = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
 	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i

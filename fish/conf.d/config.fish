@@ -29,6 +29,6 @@ set -g fish_prompt_pwd_dir_length 0
 # Source aliases
 source "$HOME/.config/_profile/.aliases"
 
-set PATH /Users/marlom/.nvm/versions/node/v10.7.0/bin $PATH
+set PATH /Users/marlom/.nvm/versions/node/v10.15.2/bin $PATH
 
 # vim: set ft=sh ts=2 sw=2 tw=80 noet :
