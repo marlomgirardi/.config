@@ -25,6 +25,9 @@ if exists brew; then
   if not_exists mas; then brew_install mas; fi
   if not_exists grc; then brew_install grc; fi
   if not_exists fish; then brew_install fish; fi
+
+  # https://github.com/nvie/gitflow
+  if not_exists git-flow; then brew_install git-flow; fi
 else
   echo "Looks like brew isn't installed"
 fi;

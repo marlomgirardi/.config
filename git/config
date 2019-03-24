@@ -4,14 +4,16 @@
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/ignore
+    excludesfile = ~/ignore
 [rerere]
-	enabled = 1
+	enabled = 1g
 	autoupdate = 1
+[fetch]
+	prune = true
 [push]
 	default = matching
 [color]
-	ui = auto
+	ui = true
 [color "branch"]
 	current = yellow bold
 	local = green bold
@@ -27,7 +29,7 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vimdiff
+	tool = vimdff
 [difftool]
 	prompt = false
 [gitflow "prefix"]
@@ -90,6 +92,8 @@
 	#############
 	g = grep -p
 	#############
+	gcn = gc --prune=now
+	#############
 	l = log --graph --oneline
 	lg = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
 	#############
@@ -147,6 +151,8 @@
 	rbc = rebase --continue
 	rbi = rebase --interactive
 	rbs = rebase --skip
+	#############
+	rleu = reflog expire --expire-unreachable=now --all
 	#############
 	re = reset
 	rh = reset HEAD
