@@ -67,7 +67,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>512 475 770 429 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>567 383 570 377 0 0 1680 1027 </string>
+	<string>406 328 570 377 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 73 585 377 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_DECAE3D5-6F55-4B8A-9007-230C5A1FD8B3</key>
@@ -1489,17 +1489,17 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-01-03T20:17:38Z</date>
+	<date>2019-03-24T22:21:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.6</string>
+	<string>3.2.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

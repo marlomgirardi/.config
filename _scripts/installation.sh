@@ -38,6 +38,7 @@ if not_exists colorls; then gem install colorls; fi;
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf?raw=true";
 
 # APPS
+if ! has_app "Visual Studio Code.app"; then brew_cask_install visual-studio-code; fi
 if ! has_app "iTerm.app"; then brew_cask_install iterm; fi
 if ! has_app "JetBrains Toolbox.app"; then brew_cask_install jetbrains-toolbox; fi
 if ! has_app "Google Chrome.app"; then open -W "$(brew_cask_install google-chrome)"; fi

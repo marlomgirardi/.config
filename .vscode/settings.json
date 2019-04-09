@@ -1,0 +1,52 @@
+{
+  "breadcrumbs.enabled": true,
+
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "smooth",
+  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+
+  "ActiveFileInStatusBar.fullpath": false,
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "extensions.ignoreRecommendations": true,
+
+  "window.zoomLevel": -1,
+
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "DejaVuSansMono Nerd Font",
+
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+
+  "emmet.includeLanguages": {},
+
+  "files.autoSave": "off",
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.decorations.enabled": true,
+
+  "gitlens.blame.avatars": true,
+
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+
+  "javascript.implicitProjectConfig.checkJs": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.autoClosingTags": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.completeJSDocs": true,
+
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+
+  "cSpell.userWords": ["compose", "devtools", "extension", "gitignore", "redux"]
+}
