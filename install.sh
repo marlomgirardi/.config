@@ -1,27 +1,28 @@
 #!/bin/sh
 
-# Get instalation folder
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
-VSCODE='/Users/marlom/Library/Application Support/Code/User'
+
+# Get instalation folder
+# VSCODE='/Users/marlom/Library/Application Support/Code/User'
 # Run scripts
-for SCRIPT in installation defaults brew; do
-	sh "$DIR/_scripts/$SCRIPT.sh" $DIR
+for SCRIPT in installation; do
+	$DIR/_scripts/$SCRIPT.sh $DIR
 done
 
-# Create Links into ~/
-for FILE in vim vimrc; do
-  rm "$HOME/.$FILE" 2>/dev/null
-  ln -sf "$DIR/_profile/.$FILE" $HOME
-done
+# # Create Links into ~/
+# for FILE in vim vimrc; do
+#   rm "$HOME/.$FILE" 2>/dev/null
+#   ln -sf "$DIR/_profile/.$FILE" $HOME
+# done
 
-# Create Links into VS Code directory
-for FILE in 'settings.json' 'keybinding.json'; do
-  rm "$VSCODE/$FILE" 2>/dev/null
-  ln -sf "$DIR/.vscode/$FILE" $HOME
-done
+# # Create Links into VS Code directory
+# for FILE in 'settings.json' 'keybinding.json'; do
+#   rm "$VSCODE/$FILE" 2>/dev/null
+#   ln -sf "$DIR/.vscode/$FILE" $HOME
+# done
 
-source "$HOME/.profile"
+# source "$HOME/.profile"
 
-echo "Execute 'fish' and after '_scripts/fish.sh'"
+# echo "Execute 'fish' and after '_scripts/fish.sh'"
 
 exit

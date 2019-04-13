@@ -4,7 +4,7 @@
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    excludesfile = ~/ignore
+  excludesfile = ~/ignore
 [rerere]
 	enabled = 1g
 	autoupdate = 1
@@ -224,3 +224,6 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
+[url "git@github.com:"]
+	# Use ssh instead of https
+	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
