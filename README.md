@@ -4,6 +4,10 @@ My MacOS setup and configuration 💻
 
 This should be in `~/.config` this way it can always be up to date with new changes.
 
+## Before run the script
+
+1. Login into App Store app.
+
 
 ## Structure
 
