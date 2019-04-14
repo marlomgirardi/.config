@@ -3,9 +3,10 @@
 # Get instalation folder
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
-PLISTS="com.apple.finder com.apple.dock"
+PLISTS="com.googlecode.iterm2"
 
 # Run scripts
 for PLIST in $PLISTS; do
-	defaults read $PLIST > "$DIR/_plists/$PLIST.plist"
+	defaults export $PLIST "$DIR/_backup/plists/$PLIST.plist"
+	plutil -convert xml1 "$DIR/_backup/plists/$PLIST.plist"
 done
