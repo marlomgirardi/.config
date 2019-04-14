@@ -92,8 +92,6 @@ if not_exists colorls; then sudo gem install colorls; fi;
 # Automatic option: https://github.com/Homebrew/homebrew-cask-fonts
 #####
 
-# TODO: dont work
-
 # https://github.com/ryanoasis/nerd-fonts
 install_font "DejaVu Sans Mono Bold Oblique Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Bold%20Oblique%20Nerd%20Font%20Complete.ttf";
 install_font "DejaVu Sans Mono Bold Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Bold%20Nerd%20Font%20Complete.ttf";
@@ -155,3 +153,12 @@ if ! has_app "Telegram"; then mas_install "747648890"; fi
 # curl -Lo "$1/fish/functions/fisher.fish" --create-dirs https://git.io/fisher 2>/dev/null
 
 # rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
+
+######
+# Custom directories
+######
+
+if ! test -d "/Users/$USER/Library/Projects/"; then
+  echo "Create Projects directory ...";
+  mkdir "/Users/$USER/Library/Projects/";
+fi;
