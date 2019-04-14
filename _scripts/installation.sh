@@ -95,10 +95,17 @@ if not_exists colorls; then sudo gem install colorls; fi;
 # TODO: dont work
 
 # https://github.com/ryanoasis/nerd-fonts
+install_font "DejaVu Sans Mono Bold Oblique Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Bold%20Oblique%20Nerd%20Font%20Complete.ttf";
+install_font "DejaVu Sans Mono Bold Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Bold%20Nerd%20Font%20Complete.ttf";
+install_font "DejaVu Sans Mono Italic Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Italic%20Nerd%20Font%20Complete.ttf";
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf";
 
 # https://github.com/tonsky/FiraCode
-install_font "Fira Code Retina.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Retina.ttf";
+install_font "FiraCode-Bold.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Bold.ttf";
+install_font "FiraCode-Light.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Light.ttf";
+install_font "FiraCode-Medium.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Medium.ttf";
+install_font "FiraCode-Regular.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf";
+install_font "FiraCode-Retina.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Retina.ttf";
 
 
 ######
