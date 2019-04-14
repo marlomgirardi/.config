@@ -25,6 +25,26 @@ set showmode "> Show the current mode
 set title "> Show the filename in the window titlebar
 set showcmd "> Show the (partial) command as it’s being typed
 
+" Plugins config
+
+" https://vimawesome.com/plugin/vim-javascript
+let g:javascript_plugin_jsdoc=1 "> enables syntax highlighting for JSDocs
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+" https://vimawesome.com/plugin/markdown-syntax
+let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'javascript=js']
+
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
