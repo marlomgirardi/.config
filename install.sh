@@ -5,7 +5,7 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # Get instalation folder
 # VSCODE='/Users/marlom/Library/Application Support/Code/User'
 # Run scripts
-for SCRIPT in installation; do
+for SCRIPT in installation defaults; do
 	$DIR/_scripts/$SCRIPT.sh $DIR
 done
 
