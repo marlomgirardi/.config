@@ -1,9 +1,9 @@
 #!/bin/sh
 
+# TODO: Don't know why space have issues when used in function params :/
 to_dock() { echo "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$1</string><key>_CFURLStringType</key><integer>$2</integer></dict></dict></dict>"; }
 to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
-
 
 #####
 # Terminal
@@ -56,14 +56,21 @@ defaults write com.apple.dock ResetLaunchPad -bool true;
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Launchpad");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
-defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Google Chrome");
+
+APP="Google Chrome";
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
+
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spotify");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Slack");
-defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Visual Studio Code");
-defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Sequel Pro");
+
+APP="Visual Studio Code";
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
+
+APP="Sequel Pro";
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
+
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Cyberduck");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Notes");
-defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "App Store");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "FaceTime");
 defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Messages");
 
@@ -91,7 +98,6 @@ defaults write com.apple.screencapture disable-shadow -bool true; # Disable shad
 #####
 
 defaults write com.apple.Siri StatusMenuVisible -bool false;
-
 
 killall Dock; # Restart Dock
 killall Finder; # Restart Finder

@@ -42,6 +42,10 @@ fi
 #####
 
 if exists brew; then
+
+  # Check outdated libraries
+  if ! exists brew cu; then brew tap buo/cask-upgrade; fi
+
   # Distributed revision control system
   if ! exists_in_brew git; then brew_install git; fi
 
@@ -128,6 +132,7 @@ if ! has_app "Macs Fan Control"; then brew_cask_install macs-fan-control; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
+if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 
 # Office
 if ! has_app "Backup and Sync" && ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
