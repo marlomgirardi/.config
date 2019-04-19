@@ -62,6 +62,7 @@ sh .config/_scripts/fish.sh
 
 ### Must used commands
 
+- `sudo find / -name "*.plist" | grep -v -E "(Info|version).plist" > plist.txt`  - Find all plist files except `Info` and `version`
 - `osascript -e 'id of app "####"'` - Find #### id to change the defaults
 - `defaults domains` - See all domains
 - `defaults import {domain} {plist}` -  Import a plist
