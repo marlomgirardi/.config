@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # TODO: Don't know why space have issues when used in function params :/
+# to_dock() { echo "{tile-data={file-data={_CFURLString=\"${1}\";_CFURLStringType=${2};};};}"; }
 to_dock() { echo "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${1}</string><key>_CFURLStringType</key><integer>${2}</integer></dict></dict></dict>"; }
 to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
@@ -15,6 +16,12 @@ to_dock_folder() { echo $(to_dock "file://$1" 15); }
 
     # Require password after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1;
+    defaults write com.apple.screensaver askForPasswordDelay 0;
+
+    defaults -currentHost write com.apple.screensaver moduleDict -dict \
+        moduleName "Blue Screen Saver" \
+        path "${HOME}/Library/Screen Savers/BlueScreen.saver" \
+        type 0;
 
 ###############################################################################
 # Screenshots                                                                 #
@@ -122,8 +129,8 @@ to_dock_folder() { echo $(to_dock "file://$1" 15); }
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Messages");
 
     # Add folders to docker
-    defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "/Users/$USER/Library/Projects/");
-    defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "/Users/$USER/Downloads/");
+    defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "${HOME}/Library/Projects/");
+    defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "${HOME}/Downloads/");
 
 ###############################################################################
 # Trackpad                                                                    #
