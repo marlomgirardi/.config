@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSToolbar Configuration Cyberduck Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame Browser</key>
+	<string>932 306 601 473 0 0 1680 1027 </string>
+	<key>NSWindow Frame Preferences</key>
+	<string>586 474 507 443 0 0 1680 1027 </string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2019-04-19T15:25:35Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>bookmark.import.com.crossftp</key>
+	<string>true</string>
+	<key>bookmark.import.com.expandrive.ExpanDrive3</key>
+	<string>true</string>
+	<key>bookmark.import.com.extendmac.Flow</key>
+	<string>true</string>
+	<key>bookmark.import.com.fetchsoftworks.Fetch</key>
+	<string>true</string>
+	<key>bookmark.import.com.nolobe.interarchy</key>
+	<string>true</string>
+	<key>bookmark.import.com.panic.Transmit</key>
+	<string>true</string>
+	<key>bookmark.import.de.filezilla</key>
+	<string>true</string>
+	<key>bookmark.import.org.mozdev.fireftp</key>
+	<string>true</string>
+	<key>browser.column.filename.width</key>
+	<string>277.5</string>
+	<key>browser.column.modified.width</key>
+	<string>192.5</string>
+	<key>browser.column.size.width</key>
+	<string>122.5</string>
+	<key>donate.reminder.date</key>
+	<string>1555628669172</string>
+	<key>preferences.toolbar.selected</key>
+	<string>0</string>
+	<key>uses</key>
+	<string>2</string>
+</dict>
+</plist>

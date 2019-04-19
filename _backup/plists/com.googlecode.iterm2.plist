@@ -1146,6 +1146,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>1C6DC260-2150-4FFD-A531-67E22E4D7EA3</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>576968308.46714199</real>
 	<key>OpenArrangementAtStartup</key>
@@ -1191,6 +1193,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/marlom/.config/_backup/iTerm</string>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1200,7 +1204,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-04-14T21:27:31Z</date>
+	<date>2019-04-18T21:58:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
