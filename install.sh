@@ -3,6 +3,7 @@
 # Ask for the administrator password
 sudo -v;
 
+# dir from this script (.config)
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
 # Get instalation folder

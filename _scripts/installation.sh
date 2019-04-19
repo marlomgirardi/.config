@@ -158,16 +158,16 @@ if ! has_app "Telegram"; then mas_install "747648890"; fi
 # Screen Saver
 # https://github.com/dessibelle/Blue-Screen-Saver
 if ! test -d "/Users/$USER/Library/Screen Savers/Blue Screen Saver.saver"; then
-  echo "Copy screen saver...";
-  curl "https://www.dropbox.com/s/i8d004hh45qrzz4/Blue-Screen-Saver.saver.zip?dl=1" --output "/tmp/saver.zip" &>/dev/null;
-  unzip /tmp/saver.zip -p "/Users/$USER/Library/Screen Savers/Blue Screen Saver.saver"
+    echo "Copy screen saver...";
+    curl "https://www.dropbox.com/s/i8d004hh45qrzz4/Blue-Screen-Saver.saver.zip?dl=1" --output "/tmp/saver.zip" &>/dev/null;
+    unzip /tmp/saver.zip -p "/Users/$USER/Library/Screen Savers/Blue Screen Saver.saver"
 fi;
 
+echo "Install/update fisher...";
+curl https://git.io/fisher --create-dirs -sLo "$1/fish/functions/fisher.fish";
 
-echo "Install fisher..." # already have v3.2.8
-curl -Lo "$1/fish/functions/fisher.fish" --create-dirs https://git.io/fisher 2>/dev/null
 
-rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
+# rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
 ######
 # Custom directories
