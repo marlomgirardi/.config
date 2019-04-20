@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Ask for the administrator password
 sudo -v;
@@ -9,7 +9,7 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # Get instalation folder
 # VSCODE='/Users/marlom/Library/Application Support/Code/User'
 # Run scripts
-for SCRIPT in installation defaults; do
+for SCRIPT in installation launchpad defaults; do
 	$DIR/_scripts/$SCRIPT.sh $DIR
 done
 
