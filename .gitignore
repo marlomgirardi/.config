@@ -1,5 +1,8 @@
 .DS_Store
 
+/_external/home/.vim/swaps
+!/_external/home/.vim/swaps/.gitkeep
+
 /fish/
 !/fish/conf.d/config.fish
 !/fish/conf.d/grc.fish
