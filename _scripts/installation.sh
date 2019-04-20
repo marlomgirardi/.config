@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 exists() { hash $1 2>/dev/null; }
 not_exists() { ! exists $1; }
@@ -157,10 +157,10 @@ if ! has_app "Telegram"; then mas_install "747648890"; fi
 
 # Screen Saver
 # https://github.com/dessibelle/Blue-Screen-Saver
-if ! test -d "/Users/$USER/Library/Screen Savers/Blue Screen Saver.saver"; then
+if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
     echo "Copy screen saver...";
-    curl "https://www.dropbox.com/s/i8d004hh45qrzz4/Blue-Screen-Saver.saver.zip?dl=1" --output "/tmp/saver.zip" &>/dev/null;
-    unzip /tmp/saver.zip -p "/Users/$USER/Library/Screen Savers/Blue Screen Saver.saver"
+    curl "https://www.dropbox.com/s/i8d004hh45qrzz4/Blue-Screen-Saver.saver.zip?dl=1" -sLo "/tmp/saver.zip" 1>/dev/null;
+    unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
 fi;
 
 echo "Install/update fisher...";
@@ -173,7 +173,7 @@ curl https://git.io/fisher --create-dirs -sLo "$1/fish/functions/fisher.fish";
 # Custom directories
 ######
 
-if ! test -d "/Users/$USER/Library/Projects/"; then
+if ! test -d "$HOME/Library/Projects/"; then
   echo "Create Projects directory ...";
-  mkdir "/Users/$USER/Library/Projects/";
+  mkdir "$HOME/Library/Projects/";
 fi;
