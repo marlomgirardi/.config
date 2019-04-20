@@ -163,9 +163,11 @@ if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
     unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
 fi;
 
-echo "Install/update fisher...";
-curl https://git.io/fisher --create-dirs -sLo "$1/fish/functions/fisher.fish";
+echo "Install OMF...";
+curl -L https://get.oh-my.fish | fish
 
+echo "Install fish NVM...";
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 # rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 

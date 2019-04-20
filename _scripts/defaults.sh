@@ -231,12 +231,6 @@ if [ $SHELL != "/usr/local/bin/fish" ]; then
     chsh -s /usr/local/bin/fish;
 fi
 
-# com.apple.notificationcenterui
-
-# NotificationCenter
-
-
 killall Dock; # Restart Dock
 killall Finder; # Restart Finder
 killall SystemUIServer; # Restart Top right menu (clock, battery, ...)
-
