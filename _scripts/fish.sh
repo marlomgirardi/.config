@@ -12,9 +12,6 @@ omf install laughedelic/brew-completions # https://github.com/laughedelic/brew-c
 echo "Install pj - pj allows you to easily jump between your favourite directories in a predictable manner."
 omf install pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 
-echo "Install nvm - Node version manager."
-curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > ~/.config/fish/functions/nvm.fish
-
 echo "Install plugin-node-binpath - Automatically add node_modules binaries to PATH."
 omf install node-binpath 1>/dev/null # https://github.com/oh-my-fish/plugin-node-binpath
 

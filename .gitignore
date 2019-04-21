@@ -6,7 +6,7 @@
 /fish/
 !/fish/conf.d/config.fish
 !/fish/conf.d/grc.fish
-!/fish/functions/fish_greeting.fish
+!/fish/functions/nvm.fish
 
 configstore/
 fisherman/
