@@ -44,7 +44,6 @@ alias gs='git status -sb'
 
 # Shortcuts
 alias c='clear'
-alias diff='colordiff'
 
 # Storage
 alias dut='du -hsx * | sort -rh | head -10'
@@ -56,7 +55,6 @@ alias pstree='pstree -g 3'
 
 # Misc
 alias ipinfo='curl -s ipinfo.io'
-alias weather='curl -s wttr.in'
 
 # A quick way to get out of current directory
 # alias ..='cd ..'
@@ -64,4 +62,4 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
-# vim: set ft=sh ts=2 sw=2 tw=80 noet :
+# vim: set ft=sh ts=2 sw=2 tw=120 noet :

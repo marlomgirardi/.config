@@ -1,34 +1,91 @@
 #!/usr/local/bin/fish
 # https://github.com/marlomgirardi/MacOS
 
+function _i --description 'Convert unicode code to icon'
+    printf "\u$argv"
+end
+
 # Remove the ^S ^Q mappings.
 stty stop undef
 stty start undef
 
 # TERMINAL CONFIG
-export HISTSIZE=2000
-export HISTFILESIZE=50000
-export HISTIGNORE='history:pwd:jobs:fg:bg:l:ll:ls:la:lsd:lsf:history:clear:c:exit'
-export HISTCONTROL=ignoreboth
-export EDITOR=vim
-export PAGER=less
+set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit
+# export HISTSIZE=2000
+# export HISTFILESIZE=50000
+# export HISTCONTROL=ignoreboth
+# export EDITOR=vim
+# export PAGER=less
 
+##########################
 # THEME CONFIG
-set -g theme_display_git_master_branch yes
-set -g theme_display_ruby no
-set -g theme_display_docker_machine no
-set -g theme_nerd_fonts yes
-set -g theme_show_exit_status yes
-set -g theme_project_dir_length 0
-set -g fish_prompt_pwd_dir_length 0
+##########################
 
-# DONE CONFIG
-# set -U __done_min_cmd_duration 20000 # default: 5000 ms
-# set -U __done_exclude 'git (?!push|pull)' # default: all git commands, except push and pull. accepts a regex.
+# Disable some things
+set SPACEFISH_TIME_SHOW false
+set SPACEFISH_USER_SHOW false
+set SPACEFISH_HOST_SHOW false
+set SPACEFISH_JULIA_SHOW false
+set SPACEFISH_RUBY_SHOW false
+set SPACEFISH_HASKELL_SHOW false
+set SPACEFISH_AWS_SHOW false
+set SPACEFISH_VENV_SHOW false
+set SPACEFISH_CONDA_SHOW false
+set SPACEFISH_PYENV_SHOW false
+set SPACEFISH_GOLANG_SHOW false
+set SPACEFISH_PHP_SHOW false
+set SPACEFISH_RUST_SHOW false
+set SPACEFISH_DOTNET_SHOW false
+set SPACEFISH_KUBECONTEXT_SHOW false
+set SPACEFISH_VI_MODE_SHOW false
+set SPACEFISH_DOCKER_SHOW false
+
+# PROMPT
+# default: time user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep battery jobs exit_code char
+set SPACEFISH_PROMPT_ORDER dir git package node exec_time line_sep battery jobs exit_code char
+set SPACEFISH_CHAR_SYMBOL (_i "f061")
+
+# EXIT CODE
+set SPACEFISH_EXIT_CODE_SHOW true
+set SPACEFISH_EXIT_CODE_SYMBOL "✘ "
+
+# GIT
+set SPACEFISH_GIT_BRANCH_PREFIX (_i "f418 ") # Prefix before Git branch subsection
+set SPACEFISH_GIT_STATUS_UNTRACKED ? # Indicator for untracked changes
+set SPACEFISH_GIT_STATUS_ADDED + # Indicator for added changes
+set SPACEFISH_GIT_STATUS_MODIFIED ! # Indicator for unstaged files
+set SPACEFISH_GIT_STATUS_RENAMED » # Indicator for renamed files
+set SPACEFISH_GIT_STATUS_DELETED ✘ # Indicator for deleted files
+set SPACEFISH_GIT_STATUS_STASHED '$' # Indicator for stashed changes
+set SPACEFISH_GIT_STATUS_UNMERGED = # Indicator for unmerged changes
+set SPACEFISH_GIT_STATUS_AHEAD ↑ # Indicator for unpushed changes (ahead of remote branch)
+set SPACEFISH_GIT_STATUS_BEHIND ↓ # Indicator for unpulled changes (behind of remote branch)
+set SPACEFISH_GIT_STATUS_DIVERGED ↕︎ # Indicator for diverged chages (diverged with remote branch)
+
+# BATTERY
+set SPACEFISH_BATTERY_SHOW true
+set SPACEFISH_BATTERY_SYMBOL_CHARGING (_i "f58e ")
+set SPACEFISH_BATTERY_SYMBOL_DISCHARGING (_i "f58b ")
+set SPACEFISH_BATTERY_SYMBOL_FULL (_i "f578 ")
+
+# DIR
+set SPACEFISH_DIR_LOCK_SYMBOL (_i "f840")
+
+# PJ CONFIG
+set -gx PROJECT_PATHS ~/Projects
 
 # Source aliases
-source "$HOME/.config/_profile/.aliases"
+source "$HOME/.config/_external/home/.bash_aliases"
 
-set PATH /Users/marlom/.nvm/versions/node/v10.15.2/bin $PATH
+# Use default node
+nvm use default --silent
 
-# vim: set ft=sh ts=2 sw=2 tw=80 noet :
+# TODO: see a way to dont write in history and maintain the arrow up history
+function ignorehistory --on-event fish_postexec -d "Simulate HISTIGNORE from bash"
+    set COMMAND (echo $argv[1] | head -n1 | cut -d " " -f1)
+    if contains -i $COMMAND $HISTIGNORE 1>/dev/null
+        history delete --case-sensitive --exact $argv
+    end
+end
+
+# vim: set ft=sh ts=2 sw=2 tw=120 noet :
