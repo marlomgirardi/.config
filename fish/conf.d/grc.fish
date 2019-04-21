@@ -6,13 +6,9 @@
 #
 # See also the plugin at https://github.com/oh-my-fish/plugin-grc
 
-set -U grc_plugin_execs cat cvs df diff dig gcc g++ ifconfig \
-       make mount mtr netstat ping ps tail traceroute \
-       wdiff blkid du dnf docker docker-machine env id ip iostat \
-       last lsattr lsblk lspci lsmod lsof getfacl getsebool ulimit uptime nmap \
-       fdisk findmnt free semanage sar ss sysctl systemctl stat showmount tune2fs \
-       tcpdump tune2fs \
-       vmstat w who
+set -U grc_plugin_execs df diff dig ifconfig ping traceroute make mount tail \
+        du env last uptime w who tcpdump sysctl stat pstree
+    #    docker docker-machine \
 
 for executable in $grc_plugin_execs
     if type -q $executable

@@ -53,7 +53,7 @@ if exists brew; then
   if ! exists_in_brew htop; then brew_install htop; fi
 
   # Color-highlighted diff(1) output
-  if ! exists_in_brew colordiff; then brew_install colordiff; fi
+  # if ! exists_in_brew colordiff; then brew_install colordiff; fi
 
   # Show ps output as a tree
   if ! exists_in_brew pstree; then brew_install pstree; fi
