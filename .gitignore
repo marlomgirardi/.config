@@ -3,10 +3,11 @@
 /_external/home/.vim/swaps
 !/_external/home/.vim/swaps/.gitkeep
 
-/fish/
-!/fish/conf.d/config.fish
-!/fish/conf.d/grc.fish
-!/fish/functions/nvm.fish
+# FISH
+fish/functions/fish_prompt.fish
+fish/conf.d/omf.fish
+fish/fish_variables
+fish/fishfile
 
 configstore/
 fisherman/

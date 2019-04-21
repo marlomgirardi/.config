@@ -33,7 +33,8 @@ function nvm-fast
 		else
 			set -l new_path (string match -ev "$NODE_DIR" $PATH)
 			if test $matched_version != 'system'
-				set -gx NVM_BIN "$NODE_DIR/$matched_version/bin"
+				set -gx NODE_VERSION $matched_version;
+				set -gx NVM_BIN "$NODE_DIR/$NODE_VERSION/bin"
 				set new_path $NVM_BIN $new_path
 			end
 			set -gx PATH $new_path
