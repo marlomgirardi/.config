@@ -13,8 +13,7 @@ echo "Install pj - pj allows you to easily jump between your favourite directori
 omf install pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 
 echo "Install nvm - Node version manager."
-omf install https://github.com/edc/bass 1>/dev/null
-omf install https://github.com/FabioAntunes/fish-nvm 1>/dev/null # https://github.com/FabioAntunes/fish-nvm
+curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > ~/.config/fish/functions/nvm.fish
 
 echo "Install plugin-node-binpath - Automatically add node_modules binaries to PATH."
 omf install node-binpath 1>/dev/null # https://github.com/oh-my-fish/plugin-node-binpath
