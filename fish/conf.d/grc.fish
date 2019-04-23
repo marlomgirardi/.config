@@ -7,7 +7,7 @@
 # See also the plugin at https://github.com/oh-my-fish/plugin-grc
 
 set -U grc_plugin_execs df diff dig ifconfig ping traceroute make mount tail \
-        du env last uptime w who tcpdump sysctl stat pstree
+        du env last uptime w who tcpdump sysctl stat pstree ps
     #    docker docker-machine \
 
 for executable in $grc_plugin_execs

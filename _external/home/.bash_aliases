@@ -18,43 +18,41 @@ end;
 alias ll='ls -l'
 
 # File and directory find, if fd is not installed
-if not hash fd 2>/dev/null;
-	alias f='find . -iname '
-	alias ff='find . -type f -iname '
-	alias fd='find . -type d -iname '
-end;
+# if not hash fd 2>/dev/null;
+# 	alias f='find . -iname '
+# 	alias ff='find . -type f -iname '
+# 	alias fd='find . -type d -iname '
+# end;
 
 # Git aliases
-alias gb='git branch'
-alias gc='git checkout'
-alias gcb='git checkout -b'
-alias gcm='git commit -m'
-alias gad='git add --all'
-alias gps='git push'
-alias gpl='git pull'
-alias gd='git diff'
-# alias gds='git diff --cached'
-# alias gfl='git fetch --prune && git log -15'
-alias gf='git fetch --prune'
-# alias gfa='git fetch --all --tags --prune'
-alias gs='git status -sb'
-# alias gl='git log -15'
-# alias gll='git log'
-# alias gllp='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+# alias gb='git branch'
+# alias gc='git checkout'
+# alias gcb='git checkout -b'
+# alias gcm='git commit -m'
+# alias gad='git add --all'
+# alias gps='git push'
+# alias gpl='git pull'
+# alias gd='git diff'
+# # alias gds='git diff --cached'
+# # alias gfl='git fetch --prune && git log -15'
+# alias gf='git fetch --prune'
+# # alias gfa='git fetch --all --tags --prune'
+# alias gs='git status -sb'
+# # alias gl='git log -15'
+# # alias gll='git log'
+# # alias gllp='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
 # Shortcuts
 alias c='clear'
 
 # Storage
+alias df='df -H'
+alias du='du -ch'
 alias dut='du -hsx * | sort -rh | head -10'
 
-# # Processes
-# alias process='ps -ax'
+# Processes
 alias psk='ps -ax | fzf --ansi | sed "s/^ *//" | cut -d " " -f1 | xargs -o kill'
 alias pstree='pstree -g 3'
-
-# Misc
-alias ipinfo='curl -s ipinfo.io'
 
 # A quick way to get out of current directory
 # alias ..='cd ..'
