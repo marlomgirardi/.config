@@ -222,8 +222,12 @@ to_dock_folder() { echo $(to_dock "file://$1" 15); }
 # Plists to import                                                            #
 ###############################################################################
 
-    echo "Import iTerm defaults...";
-    defaults import com.googlecode.iterm2 $1/_backup/plists/com.googlecode.iterm2.plist;
+    PLISTS=$(/bin/ls .config/_backup/plists/ | sed -e "s/\.plist//")
+
+    for PLIST in $PLISTS; do
+        echo "Import $PLIST defaults...";
+        defaults import $PLIST "$1/_backup/plists/$PLIST.plist";
+    done;
 
 if [ $SHELL != "/usr/local/bin/fish" ]; then
 	echo "Defined fish as default shell...";
