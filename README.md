@@ -70,8 +70,6 @@ sh .config/_scripts/fish.sh
 - `plutil -convert xml1 {pathOfPlistToConvert}` - Convert a binary plist to xml, easier to edit.
 
 ## TODO
+* Configure Touch Bar
+* Configure Notifications
 * Sublime Text
-* VS Code
-* PHP Storm
-* Web Storm
-* Define projects with `set -gx PROJECT_PATHS ~/Library/Projects`
