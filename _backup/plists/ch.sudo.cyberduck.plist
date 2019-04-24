@@ -22,7 +22,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-04-19T15:25:35Z</date>
+	<date>2019-04-21T23:23:17Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>bookmark.import.com.crossftp</key>
@@ -42,16 +42,16 @@
 	<key>bookmark.import.org.mozdev.fireftp</key>
 	<string>true</string>
 	<key>browser.column.filename.width</key>
-	<string>277.5</string>
+	<string>282.5</string>
 	<key>browser.column.modified.width</key>
-	<string>192.5</string>
+	<string>190.0</string>
 	<key>browser.column.size.width</key>
-	<string>122.5</string>
+	<string>120.0</string>
 	<key>donate.reminder.date</key>
 	<string>1555628669172</string>
 	<key>preferences.toolbar.selected</key>
 	<string>0</string>
 	<key>uses</key>
-	<string>2</string>
+	<string>4</string>
 </dict>
 </plist>

@@ -19,23 +19,25 @@
 	<key>UpdateChecker_Auto</key>
 	<integer>1</integer>
 	<key>UpdateChecker_NextCheck</key>
-	<string>2019-04-20T00:18:55</string>
+	<string>2019-04-24T22:40:19</string>
 	<key>WindowGeometry</key>
 	<data>
-	AdnQywACAAAAAAGtAAABUQAABOEAAALdAAABrQAAAWcAAAThAAAC3QAAAAAAAAAABpA=
+	AdnQywACAAAAAAGtAAABJQAABOEAAAKxAAABrQAAATsAAAThAAACsQAAAAAAAAAABpA=
 	</data>
 	<key>WindowSplitterPosition</key>
 	<array>
-		<string>560</string>
-		<string>232</string>
+		<string>46</string>
+		<string>46</string>
 	</array>
 	<key>WindowState</key>
 	<data>
 	AAAA/wAAAAD9AAAAAAAAAzUAAAF3AAAABAAAAAQAAAAIAAAACPwAAAAA
 	</data>
 	<key>menubarIcon</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>menubarTwoLines</key>
 	<integer>0</integer>
+	<key>traySensor</key>
+	<string>TG0D</string>
 </dict>
 </plist>
