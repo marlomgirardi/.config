@@ -1,6 +1,7 @@
 package https://github.com/laughedelic/brew-completions
 package node-binpath
 package pj
+package touchrunner
 package z
 theme default
 theme spacefish

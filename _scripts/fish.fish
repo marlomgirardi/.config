@@ -18,5 +18,8 @@ omf install node-binpath 1>/dev/null # https://github.com/oh-my-fish/plugin-node
 echo "Install plugin-grc - grc Colourizer for some commands."
 omf install plugin-grc 1>/dev/null # https://github.com/oh-my-fish/plugin-grc
 
+echo "Install touchrunner - Run tasks from the touchbar (iTerm2 fn)"
+omf install touchrunner
+
 # echo "Install plugin-errno-grep - oh-my-fish plugin to search error numbers, labels and messages"
 # fisher install Shadowigor/plugin-errno-grep # https://github.com/Shadowigor/plugin-errno-grep
