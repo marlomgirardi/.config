@@ -2,9 +2,12 @@
 
 exists() { hash $1 2>/dev/null; }
 not_exists() { ! exists $1; }
+download() { echo "Downloading $2..."; curl $3 --output "$1/$2" &>/dev/null; }
 
 has_font() { ls "/Library/Fonts/$1" &>/dev/null || ls "$HOME/Library/Fonts/$1" &>/dev/null; }
-install_font() { if ! has_font "$1"; then echo "Downloading $1..."; curl $2 --output "$HOME/Library/Fonts/$1" &>/dev/null; fi; }
+install_font() { if ! has_font "$1"; then download "$HOME/Library/Fonts" $1 $2; fi; }
+
+
 
 exists_in_brew() { brew ls --versions $1 > /dev/null; }
 brew_install() { echo "brew install $1 ..."; brew install $1 1>/dev/null; }
@@ -69,9 +72,6 @@ if exists brew; then
 
   # Mac App Store command-line interface
   if ! exists_in_brew mas; then brew_install mas; fi
-
-  # Programatically correct mistyped console commands
-  if ! exists_in_brew thefuck; then brew_install thefuck; fi
 
   # User-friendly command-line shell for UNIX-like operating systems
   if ! exists_in_brew fish; then brew_install fish; fi

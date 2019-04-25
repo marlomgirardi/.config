@@ -72,4 +72,4 @@ sh .config/_scripts/fish.sh
 ## TODO
 * Configure Touch Bar
 * Configure Notifications
-* Sublime Text
+* Coonfigure Finder Sidebar
