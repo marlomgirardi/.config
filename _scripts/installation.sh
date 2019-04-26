@@ -150,6 +150,8 @@ if ! has_app "Stremio"; then brew_cask_install stremio; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
 
 # Chat
+if ! has_app "Franz"; then brew_cask_install franz; fi
+# if ! has_app "Gitter"; then brew_cask_install gitter; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
 if ! has_app "Slack"; then mas_install "803453959"; fi
 if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
