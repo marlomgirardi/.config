@@ -27,18 +27,8 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # VSCODE
 ###########
 
-  # Create Links into VS Code directory
-  VSCODE="$HOME/Library/Application Support/Code/User"
-  for FILE in 'settings.json' 'keybindings.json'; do
-    rm "$VSCODE/$FILE" 2>/dev/null
-    ln -sf "$DIR/_external/vscode/$FILE" "$VSCODE/$FILE"
-  done
-
-  # Install extensions
-  EXTENSIONS=$(cat "$DIR/_external/vscode/extensions")
-  for EXT in $EXTENSIONS; do
-    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --install-extension $EXT;
-  done
+  # Install sync extension
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --install-extension "Shan.code-settings-sync";
 
 ###########
 # SUBLIME TEXT
