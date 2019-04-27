@@ -6,13 +6,41 @@ to_dock() { echo "<dict><key>tile-data</key><dict><key>file-data</key><dict><key
 to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
 
+SYSTEM_NAME="marlom"
+
+###############################################################################
+# Sharing                                                                     #
+###############################################################################
+
+    # Set computer name
+    sudo scutil --set ComputerName $SYSTEM_NAME
+    sudo scutil --set HostName $SYSTEM_NAME
+    sudo scutil --set LocalHostName $SYSTEM_NAME
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $SYSTEM_NAME
+
 ###############################################################################
 # Desktop & Screen Saver                                                      #
 ###############################################################################
 
+    # Hot corners
+    # Possible values:
+    #  0: no-op
+    #  2: Mission Control
+    #  3: Show application windows
+    #  4: Desktop
+    #  5: Start screen saver
+    #  6: Disable screen saver
+    #  7: Dashboard
+    # 10: Put display to sleep
+    # 11: Launchpad
+    # 12: Notification Center
+
     # Hot corners - bottom right corner -> start screen saver
     defaults write com.apple.dock wvous-br-corner -int 5;
     defaults write com.apple.dock wvous-br-modifier -int 0;
+    # Top right screen corner → Desktop
+    defaults write com.apple.dock wvous-tr-corner -int 4
+    defaults write com.apple.dock wvous-tr-modifier -int 0
 
     # Require password after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1;
@@ -198,13 +226,39 @@ to_dock_folder() { echo $(to_dock "file://$1" 15); }
 # Web                                                                         #
 ###############################################################################
 
+    # Privacy: don’t send search queries to Apple
+    defaults write com.apple.Safari UniversalSearchEnabled -bool false
+    defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+    # Show the full URL in the address bar (note: this still hides the scheme)
+    defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+    # Set Safari’s home page to `about:blank` for faster loading
+    defaults write com.apple.Safari HomePage -string "about:blank"
+
     # Cmd-f should find stuff anywhere in the page, just as in Chrome
     defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false;
 
+    # Enable Safari’s debug menu
+    defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
     # Enable the Develop menu and the Web Inspector in Safari
-    defaults write com.apple.Safari IncludeDevelopMenu -bool true;
-    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true;
-    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true;
+    defaults write com.apple.Safari IncludeDevelopMenu -bool true
+    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+    # Enable continuous spellchecking
+    defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
+
+    # Disable auto-correct
+    defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
+    # Warn about fraudulent websites
+    defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+
+    # Disable Java
+    defaults write com.apple.Safari WebKitJavaEnabled -bool false
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
 
     # Add a context menu item for showing the Web Inspector in webviews
     defaults write NSGlobalDomain WebKitDeveloperExtras -bool true;
