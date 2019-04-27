@@ -3,13 +3,15 @@
 	name = Marlom Girardi
 [core]
 	editor = vim
+	autocrlf = false
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/ignore
+	excludesfile = ~/ignore
 [rerere]
 	enabled = 1g
 	autoupdate = 1
 [fetch]
 	prune = true
+	pruneTags = true
 [push]
 	default = matching
 [color]
@@ -30,8 +32,12 @@
 	untracked = red bold
 [diff]
 	tool = vimdff
+	guitool = subl -w
 [difftool]
 	prompt = false
+[gitflow "branch"]
+	master = master
+	develop = dev
 [gitflow "prefix"]
 	feature = feature-
 	release = release-
