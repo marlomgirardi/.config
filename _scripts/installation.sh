@@ -143,6 +143,7 @@ if ! has_app "Keynote"; then mas_install "409183694"; fi
 if ! has_app "Spark"; then mas_install "1176895641"; fi
 if ! has_app "Evernote"; then mas_install "406056744"; fi
 if ! has_app "Dashlane"; then mas_install "552383089"; fi
+if ! has_app "Kindle"; then mas_install "405399194"; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
