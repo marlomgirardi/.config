@@ -10,7 +10,7 @@ stty stop undef
 stty start undef
 
 # TERMINAL CONFIG
-set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit
+set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit gs
 # export HISTSIZE=2000
 # export HISTFILESIZE=50000
 # export HISTCONTROL=ignoreboth
@@ -84,7 +84,8 @@ nvm use default --silent
 function ignorehistory --on-event fish_postexec -d "Simulate HISTIGNORE from bash"
     set COMMAND (echo $argv[1] | head -n1 | cut -d " " -f1)
     if contains -i $COMMAND $HISTIGNORE 1>/dev/null
-        history delete --case-sensitive --exact $argv
+        # history delete --case-sensitive --exact $argv
+        history delete --case-sensitive --exact $COMMAND
     end
 end
 
