@@ -18,7 +18,7 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # HOME
 ###########
 
-  for FILE in vim vimrc; do
+  for FILE in vim vimrc bashrc; do
     rm -r "$HOME/.$FILE" 2>/dev/null
     ln -sf "$DIR/_external/home/.$FILE" $HOME
   done

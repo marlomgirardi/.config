@@ -45,7 +45,6 @@
 	support = support-
 	versiontag = v
 [url "git@github.com:"]
-	# Use ssh instead of https
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [alias]
 	# a = add --all

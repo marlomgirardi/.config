@@ -6,7 +6,7 @@ to_dock() { echo "<dict><key>tile-data</key><dict><key>file-data</key><dict><key
 to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
 
-SYSTEM_NAME="marlom"
+SYSTEM_NAME="mgmbp"
 
 ###############################################################################
 # Sharing                                                                     #
@@ -44,7 +44,7 @@ SYSTEM_NAME="marlom"
 
     # Require password after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1;
-    defaults write com.apple.screensaver askForPasswordDelay 0;
+    defaults write com.apple.screensaver askForPasswordDelay -int 0;
 
     defaults -currentHost write com.apple.screensaver moduleDict -dict \
         moduleName "Blue Screen Saver" \
@@ -83,7 +83,7 @@ SYSTEM_NAME="marlom"
 
     defaults write com.apple.finder WarnOnEmptyTrash -bool false; # Disable the warning before emptying the Trash
     defaults write com.apple.finder FavoriteTagNames -array; # clear favorite tag list
-    defaults write com.apple.finder AppleShowAllFiles -bool true; # show hidden files
+    # defaults write com.apple.finder AppleShowAllFiles -bool true; # show hidden files
     defaults write com.apple.finder ShowStatusBar -bool true; # show status bar
     defaults write com.apple.finder ShowPathbar -bool true; # show path bar
     defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; # show full path
@@ -262,6 +262,10 @@ SYSTEM_NAME="marlom"
 
     # Add a context menu item for showing the Web Inspector in webviews
     defaults write NSGlobalDomain WebKitDeveloperExtras -bool true;
+
+    # Block pop-up windows
+    defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
 ###############################################################################
 # System UI Server                                                            #
