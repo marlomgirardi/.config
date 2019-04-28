@@ -117,7 +117,8 @@ install_font "FiraCode-Retina.ttf" "https://raw.githubusercontent.com/tonsky/Fir
 # Development
 if ! has_app "Visual Studio Code"; then brew_cask_install visual-studio-code; fi
 if ! has_app "Sublime Text"; then brew_cask_install sublime-text; fi
-if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi
+if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
+if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
@@ -133,6 +134,7 @@ if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
+if ! has_app "Gifsky"; then mas_install "1351639930"; fi
 
 # Office
 if ! has_app "Backup and Sync" && ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
