@@ -5,6 +5,7 @@
 alias ls='colorls'
 alias l='ls -A'
 alias la='ls -lA --sd'
+alias ll='ls -l'
 alias lsd='ll -dA'
 alias lsf='ll -fA'
 # alias l='ls -FA'
@@ -12,32 +13,22 @@ alias lsf='ll -fA'
 # alias lsf='ll | grep "^-"'
 # alias la='ls -lA'
 
-alias ll='ls -l'
-
-# File and directory find, if fd is not installed
-# if not hash fd 2>/dev/null;
-# 	alias f='find . -iname '
-# 	alias ff='find . -type f -iname '
-# 	alias fd='find . -type d -iname '
-# end;
 
 # Git aliases
-# alias gb='git branch'
+alias gb='git branch'
 # alias gc='git checkout'
 # alias gcb='git checkout -b'
-# alias gcm='git commit -m'
-# alias gad='git add --all'
-# alias gps='git push'
-# alias gpl='git pull'
+alias gcm='git commit -m'
+alias ga='git add --all'
+alias gps='git push'
+alias gpl='git pull'
 # alias gd='git diff'
 # # alias gds='git diff --cached'
-# # alias gfl='git fetch --prune && git log -15'
-# alias gf='git fetch --prune'
-# # alias gfa='git fetch --all --tags --prune'
-# alias gs='git status -sb'
-# # alias gl='git log -15'
-# # alias gll='git log'
-# # alias gllp='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+alias gf='git f'
+alias gfa='git fa'
+alias gs='git sb'
+alias gl='git l'
+alias glp='git lp'
 
 # Shortcuts
 alias c='clear'

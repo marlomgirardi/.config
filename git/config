@@ -5,13 +5,20 @@
 	editor = vim
 	autocrlf = false
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/ignore
+	excludesfile = ~/.config/git/ignore
+	attributesfile = ~/.config/git/attributes
 [rerere]
 	enabled = 1g
 	autoupdate = 1
 [fetch]
 	prune = true
 	pruneTags = true
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
 [push]
 	default = matching
 [color]
@@ -47,8 +54,8 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [alias]
-	# a = add --all
-	# ai = add -i
+	a = add --all
+	# ai = add --interactive
 	#############
 	# ap = apply
 	# as = apply --stat
@@ -58,24 +65,31 @@
 	# amr = am --resolved
 	# ams = am --skip
 	#############
-	# b = branch
-	# ba = branch -a
-	# bd = branch -d
-	# bdd = branch -D
-	# br = branch -r
+	b = branch
+	a = branch --all
+	bd = branch --delete
+	bdf = branch --delete --force
+	br = branch --remotes
+
+	# Remove merged branches
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
 	# bc = rev-parse --abbrev-ref HEAD
 	#############
 	# c = commit
-	# ca = commit -a
+	# ca = commit --all
 	# cm = commit -m
 	# cam = commit -am
 	# cem = commit --allow-empty -m
-	# cd = commit --amend
-	# cad = commit -a --amend
+	# cad = commit --amend
 	# ced = commit --allow-empty --amend
+
+	# Amend the currently staged files to the latest commit
+	amend = commit --amend --reuse-message=HEAD
+
 	#############
-	# cl = clone
-	# cld = clone --depth 1
+	cl = clone --recursive
+	cld = clone --depth 1
 	# clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
 	#############
 	# cp = cherry-pick
@@ -83,6 +97,13 @@
 	# cpc = cherry-pick --continue
 	#############
 	# d = diff
+
+	# Show the diff between the latest commit and the current state
+	dl = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
+	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
 	# dp = diff --patience
 	# dc = diff --cached
 	# dk = diff --check
@@ -90,7 +111,8 @@
 	# dt = difftool
 	# dct = difftool --cached
 	#############
-	# f = fetch
+	f = fetch
+	fa = fetch --all --tags
 	# fo = fetch origin
 	# fu = fetch upstream
 	#############
@@ -102,8 +124,8 @@
 	#############
 	# gcn = gc --prune=now
 	#############
-	# l = log --graph --oneline
-	# lg = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
+	l = log --graph --oneline
+	lp = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
 	#############
 	# ls = ls-files
 	# lsf = !git ls-files | grep -i
@@ -113,14 +135,16 @@
 	# mc = merge --continue
 	# ms = merge --skip
 	#############
-	# o = checkout
-	# ob = checkout -b
+
+	# Switch to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
 	#############
 	# pr = prune -v
 	#############
-	# ps = push
-	# psf = push -f
-	# psu = push -u
+	ps = push
+	psf = push --force
+	# psu = push --set-upstream
 	# pst = push --tags
 	#############
 	# pso = push origin
@@ -138,8 +162,8 @@
 	# psuoc = !git push -u origin $(git bc)
 	# psdc = !git push origin :$(git bc)
 	#############
-	# pl = pull
-	# pb = pull --rebase
+	pl = pull
+	pb = pull --rebase
 	#############
 	# plo = pull origin
 	# pbo = pull --rebase origin
@@ -154,11 +178,11 @@
 	# pbum = pull --rebase upstream master
 	# pbuc = !git pull --rebase upstream $(git bc)
 	#############
-	# rb = rebase
-	# rba = rebase --abort
-	# rbc = rebase --continue
-	# rbi = rebase --interactive
-	# rbs = rebase --skip
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	rbs = rebase --skip
 	#############
 	# rleu = reflog expire --expire-unreachable=now --all
 	#############
@@ -190,8 +214,8 @@
 	# rmf = rm -f
 	# rmrf = rm -r -f
 	#############
-	# s = status
-	# sb = status -s -b
+	s = status
+	sb = status -sb
 	#############
 	# sa = stash apply
 	# sc = stash clear
