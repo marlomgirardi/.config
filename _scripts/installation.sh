@@ -78,6 +78,9 @@ if exists brew; then
 
   # http://danielkummer.github.io/git-flow-cheatsheet/
   if ! exists_in_brew git-flow-avh; then brew_install git-flow-avh; fi
+
+  # https://github.com/antonmedv/fx
+  if ! exists_in_brew fx; then brew_install fx; fi
 else
   echo "Looks like brew isn't installed"
 fi;
@@ -121,6 +124,7 @@ if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by Ta
 if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
+if ! has_app "Dash"; then brew_cask_install dash; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
@@ -135,9 +139,11 @@ if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "Gifsky"; then mas_install "1351639930"; fi
+if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 
 # Office
-if ! has_app "Backup and Sync" && ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
+if ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
+if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
 if ! has_app "Keynote"; then mas_install "409183694"; fi
@@ -154,6 +160,7 @@ if ! has_app "Spotify"; then brew_cask_install spotify; fi
 # Chat
 if ! has_app "Franz"; then brew_cask_install franz; fi
 # if ! has_app "Gitter"; then brew_cask_install gitter; fi
+# if ! has_app "Discord"; then brew_cask_install discord; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
 if ! has_app "Slack"; then mas_install "803453959"; fi
 if ! has_app "WhatsApp"; then mas_install "1147396723"; fi

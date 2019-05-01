@@ -126,6 +126,7 @@
 	#############
 	l = log --graph --oneline
 	lp = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
+	ls = log --numstat --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
 	#############
 	# ls = ls-files
 	# lsf = !git ls-files | grep -i
