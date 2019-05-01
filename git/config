@@ -7,15 +7,20 @@
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.config/git/ignore
 	attributesfile = ~/.config/git/attributes
+	hooksPath = ~/.config/git/hooks
 [rerere]
 	enabled = 1g
 	autoupdate = 1
 [fetch]
 	prune = true
 	pruneTags = true
+	# recurseSubmodules = true
 [help]
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
+[pretty]
+	singleline = %C(yellow)%h %C(bold green)%d%C(reset) %s %C(245)(%an · %cr)%C(reset)
+	multiline = %n%C(240)────────────%+n%C(auto)%H%C(auto)%D%C(reset)%n%C(cyan)%an%C(reset) · %C(green)%cr%C(reset)%n%+B
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
@@ -125,8 +130,9 @@
 	# gcn = gc --prune=now
 	#############
 	l = log --graph --oneline
-	lp = log --graph --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
-	ls = log --numstat --pretty=format:'%C(yellow)%h %C(bold green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
+	lp = log --graph --pretty=singleline
+	ls = log --numstat --pretty=multiline
+	find = !git lp | fzf | cut -d ' ' -f1 | xargs -o git show
 	#############
 	# ls = ls-files
 	# lsf = !git ls-files | grep -i
@@ -234,9 +240,10 @@
 	# svnd = svn dcommit
 	# svnl = svn log --oneline --show-commit
 	#############
-	# subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
-	# subup = submodule update --init --recursive
-	# subpull = !git submodule foreach git pull --tags origin master
+	# sm = submodule
+	# sma = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
+	# smu = submodule update --init --recursive
+	# smp = !git submodule foreach git pull --tags origin master
 	#############
 	# assume = update-index --assume-unchanged
 	# unassume = update-index --no-assume-unchanged
@@ -257,3 +264,7 @@
 	# theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	# subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	# human = name-rev --name-only --refs=refs/heads/*
+	#############
+	# w  = whatchanged --decorate
+	# wp = whatchanged --decorate -p
+	#############
