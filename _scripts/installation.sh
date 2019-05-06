@@ -138,8 +138,9 @@ if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
-if ! has_app "Gifsky"; then mas_install "1351639930"; fi
 if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
+if ! has_app "RunJS"; then brew_cask_install runjs; fi
+if ! has_app "1Clipboard"; then brew_cask_install 1clipboard; fi
 
 # Office
 if ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
