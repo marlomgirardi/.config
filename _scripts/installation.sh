@@ -81,6 +81,8 @@ if exists brew; then
 
   # https://github.com/antonmedv/fx
   if ! exists_in_brew fx; then brew_install fx; fi
+
+  if ! exists_in_brew awscli; then brew_install awscli; fi
 else
   echo "Looks like brew isn't installed"
 fi;
@@ -125,6 +127,7 @@ if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Dash"; then brew_cask_install dash; fi
+if ! has_app "Docker"; then brew_cask_install docker; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
