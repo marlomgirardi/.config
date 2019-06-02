@@ -51,18 +51,13 @@
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [alias]
 	a = add --all
-	# ai = add --interactive
 	#############
 	# ap = apply
 	# as = apply --stat
 	# ac = apply --check
 	#############
-	# ama = am --abort
-	# amr = am --resolved
-	# ams = am --skip
-	#############
 	b = branch
-	a = branch --all
+	ba = branch --all
 	bd = branch --delete
 	bdf = branch --delete --force
 	br = branch --remotes
@@ -73,11 +68,11 @@
 	# bc = rev-parse --abbrev-ref HEAD
 	#############
 	# c = commit
-	# ca = commit --all
-	# cm = commit -m
+	# ca = commit -a
+	cm = commit -m
 	# cam = commit -am
 	# cem = commit --allow-empty -m
-	# cad = commit --amend
+	cad = commit --amend
 	# ced = commit --allow-empty --amend
 
 	# Amend the currently staged files to the latest commit
@@ -86,7 +81,7 @@
 	#############
 	cl = clone --recursive
 	cld = clone --depth 1
-	# clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
+	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
 	#############
 	# cp = cherry-pick
 	# cpa = cherry-pick --abort
@@ -120,10 +115,9 @@
 	#############
 	# gcn = gc --prune=now
 	#############
-	l = log --graph --oneline
-	lp = log --graph --pretty=singleline
+	l = log --graph --pretty=singleline
 	ls = log --numstat --pretty=multiline
-	find = !git lp | fzf | cut -d ' ' -f1 | xargs -o git show
+	find = !git l | fzf | cut -d ' ' -f1 | xargs -o git show
 	#############
 	# ls = ls-files
 	# lsf = !git ls-files | grep -i
@@ -212,15 +206,14 @@
 	# rmf = rm -f
 	# rmrf = rm -r -f
 	#############
-	s = status
-	sb = status -sb
+	s = status -sb
 	#############
 	# sa = stash apply
 	# sc = stash clear
 	# sd = stash drop
-	# sl = stash list
-	# sp = stash pop
-	# ss = stash save
+	sl = stash list
+	sp = stash pop
+	ss = stash save
 	# sw = stash show
 	#############
 	# w = show
