@@ -10,7 +10,7 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # INSTALLATION SCRIPTS
 ###########
 
-  for SCRIPT in installation defaults launchpad brew; do
+  for SCRIPT in installation defaults brew; do
     $DIR/_scripts/$SCRIPT.sh $DIR
   done
 
