@@ -47,15 +47,6 @@
 	guitool = subl -w
 [difftool]
 	prompt = false
-[gitflow "branch"]
-	master = master
-	develop = dev
-[gitflow "prefix"]
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
-	versiontag = v
 [url "git@github.com:"]
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [alias]

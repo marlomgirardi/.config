@@ -76,9 +76,6 @@ if exists brew; then
   # User-friendly command-line shell for UNIX-like operating systems
   if ! exists_in_brew fish; then brew_install fish; fi
 
-  # http://danielkummer.github.io/git-flow-cheatsheet/
-  if ! exists_in_brew git-flow-avh; then brew_install git-flow-avh; fi
-
   # https://github.com/antonmedv/fx
   if ! exists_in_brew fx; then brew_install fx; fi
 
