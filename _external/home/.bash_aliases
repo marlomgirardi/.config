@@ -15,6 +15,7 @@ alias lsf='ll -fA'
 
 
 # Git aliases
+alias g='git'
 alias gb='git branch'
 # alias gc='git checkout'
 # alias gcb='git checkout -b'
@@ -26,7 +27,7 @@ alias gpl='git pull'
 # alias gds='git diff --cached'
 alias gf='git f'
 alias gfa='git fa'
-alias gs='git sb'
+alias gs='git s'
 alias gl='git l'
 alias glp='git lp'
 
