@@ -127,6 +127,8 @@
 	# mc = merge --continue
 	# ms = merge --skip
 	#############
+	fco = !git b | grep "^[^*]" | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
+	# fcor = !git b -r | awk '!/->/' | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -252,3 +254,8 @@
 	# w  = whatchanged --decorate
 	# wp = whatchanged --decorate -p
 	#############
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
