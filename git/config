@@ -68,16 +68,10 @@
 	# bc = rev-parse --abbrev-ref HEAD
 	#############
 	# c = commit
-	# ca = commit -a
 	cm = commit -m
 	# cam = commit -am
-	# cem = commit --allow-empty -m
-	cad = commit --amend
-	# ced = commit --allow-empty --amend
-
-	# Amend the currently staged files to the latest commit
-	amend = commit --amend --reuse-message=HEAD
-
+	ca = commit --amend
+	can = commit --amend --no-edit
 	#############
 	cl = clone --recursive
 	cld = clone --depth 1
@@ -127,8 +121,8 @@
 	# mc = merge --continue
 	# ms = merge --skip
 	#############
-	fco = !git b | grep "^[^*]" | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
-	# fcor = !git b -r | awk '!/->/' | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
+	fco = !git branch | grep "^[^*]" | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
+	fcor = !git branch --remotes | awk '!/->/' | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout --track
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -137,7 +131,7 @@
 	# pr = prune -v
 	#############
 	ps = push
-	psf = push --force
+	# psf = push --force
 	# psu = push --set-upstream
 	# pst = push --tags
 	#############
@@ -157,7 +151,7 @@
 	# psdc = !git push origin :$(git bc)
 	#############
 	pl = pull
-	pb = pull --rebase
+	# pb = pull --rebase
 	#############
 	# plo = pull origin
 	# pbo = pull --rebase origin
@@ -172,11 +166,11 @@
 	# pbum = pull --rebase upstream master
 	# pbuc = !git pull --rebase upstream $(git bc)
 	#############
-	rb = rebase
-	rba = rebase --abort
-	rbc = rebase --continue
-	rbi = rebase --interactive
-	rbs = rebase --skip
+	# rb = rebase
+	# rba = rebase --abort
+	# rbc = rebase --continue
+	# rbi = rebase --interactive
+	# rbs = rebase --skip
 	#############
 	# rleu = reflog expire --expire-unreachable=now --all
 	#############
@@ -213,9 +207,9 @@
 	# sa = stash apply
 	# sc = stash clear
 	# sd = stash drop
-	sl = stash list
-	sp = stash pop
-	ss = stash save
+	# sl = stash list
+	# sp = stash pop
+	# ss = stash save
 	# sw = stash show
 	#############
 	# w = show
@@ -254,8 +248,8 @@
 	# w  = whatchanged --decorate
 	# wp = whatchanged --decorate -p
 	#############
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+# [filter "lfs"]
+	# clean = git-lfs clean -- %f
+	# smudge = git-lfs smudge -- %f
+	# process = git-lfs filter-process
+	# required = true
