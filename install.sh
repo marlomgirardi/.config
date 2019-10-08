@@ -28,7 +28,10 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 ###########
 
   # Install sync extension
-  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --install-extension "Shan.code-settings-sync";
+  if [ $(code --list-extensions | grep -c "Shan.code-settings-sync") -eq 0 ]; then
+    echo "Installing VSCode Settings sync...";
+    code --install-extension "Shan.code-settings-sync";
+  fi;
 
 ###########
 # SUBLIME TEXT
