@@ -281,11 +281,11 @@ SYSTEM_NAME="mgmbp"
 # Plists to import                                                            #
 ###############################################################################
 
-    PLISTS=$(/bin/ls .config/_backup/plists/ | sed -e "s/\.plist//")
+    PLISTS=$(/bin/ls "$HOME/.config/_backup/plists/" | sed -e "s/\.plist//")
 
     for PLIST in $PLISTS; do
         echo "Import $PLIST defaults...";
-        defaults import $PLIST "$1/_backup/plists/$PLIST.plist";
+        defaults import $PLIST "$HOME/.config/_backup/plists/$PLIST.plist";
     done;
 
 if [ $SHELL != "/usr/local/bin/fish" ]; then
