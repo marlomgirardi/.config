@@ -52,7 +52,6 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
     curl "https://packagecontrol.io/Package%20Control.sublime-package" --output "$INSTALLED_PACKAGES/Package Control.sublime-package" &>/dev/null;
   fi;
 
-  PACKAGES="$SUBLIME/Packages/User"
   for FILE in 'Package Control.sublime-settings' 'Preferences.sublime-settings'; do
     rm "$SUBLIME_PACKAGES/$FILE" 2>/dev/null
     ln -sf "$DIR/_external/sublime-text-3/$FILE" "$SUBLIME_PACKAGES/$FILE"
