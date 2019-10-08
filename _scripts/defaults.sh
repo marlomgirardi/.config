@@ -4,6 +4,7 @@
 # to_dock() { echo "{tile-data={file-data={_CFURLString=\"${1}\";_CFURLStringType=${2};};};}"; }
 to_dock() { echo "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${1}</string><key>_CFURLStringType</key><integer>${2}</integer></dict></dict></dict>"; }
 to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
+to_dock_app_system() { echo $(to_dock "/System/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
 
 SYSTEM_NAME="mgmbp"
@@ -48,7 +49,7 @@ SYSTEM_NAME="mgmbp"
 
     defaults -currentHost write com.apple.screensaver moduleDict -dict \
         moduleName "Blue Screen Saver" \
-        path "${HOME}/Library/Screen Savers/BlueScreen.saver" \
+        path "$HOME/Library/Screen Savers/Blue Screen Saver.saver" \
         type 0;
 
 ###############################################################################
@@ -134,7 +135,7 @@ SYSTEM_NAME="mgmbp"
 
 
     # Add apps to docker
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Launchpad");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Launchpad");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
 
@@ -152,9 +153,9 @@ SYSTEM_NAME="mgmbp"
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Cyberduck");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Notes");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "FaceTime");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Messages");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Notes");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "FaceTime");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Messages");
 
     # Add folders to docker
     defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "${HOME}/Library/Projects/");
