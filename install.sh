@@ -35,6 +35,12 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 ###########
 
   SUBLIME="$HOME/Library/Application Support/Sublime Text 3"
+  SUBLIME_PACKAGES="$SUBLIME/Packages/User"
+
+  if ! test -d "$SUBLIME_PACKAGES"; then
+    echo "Create Sublime Text 3 directory";
+    mkdir -p "$SUBLIME_PACKAGES";
+  fi;
 
   # Package Control
   INSTALLED_PACKAGES="$SUBLIME/Installed Packages"
@@ -45,8 +51,8 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
   PACKAGES="$SUBLIME/Packages/User"
   for FILE in 'Package Control.sublime-settings' 'Preferences.sublime-settings'; do
-    rm "$PACKAGES/$FILE" 2>/dev/null
-    ln -sf "$DIR/_external/sublime-text-3/$FILE" "$PACKAGES/$FILE"
+    rm "$SUBLIME_PACKAGES/$FILE" 2>/dev/null
+    ln -sf "$DIR/_external/sublime-text-3/$FILE" "$SUBLIME_PACKAGES/$FILE"
   done
 
 fish "$DIR/_scripts/fish.fish"
