@@ -5,7 +5,7 @@ not_exists() { ! exists $1; }
 download() { echo "Downloading $2..."; curl $3 --output "$1/$2" &>/dev/null; }
 
 has_font() { ls "/Library/Fonts/$1" &>/dev/null || ls "$HOME/Library/Fonts/$1" &>/dev/null; }
-install_font() { if ! has_font "$1"; then download "$HOME/Library/Fonts" $1 $2; fi; }
+install_font() { if ! has_font "$1"; then download "$HOME/Library/Fonts" "$1" "$2"; fi; }
 
 
 
@@ -124,7 +124,7 @@ if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Dash"; then brew_cask_install dash; fi
-if ! has_app "Docker"; then brew_cask_install docker; fi
+# if ! has_app "Docker"; then brew_cask_install docker; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
@@ -140,10 +140,9 @@ if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 if ! has_app "RunJS"; then brew_cask_install runjs; fi
-if ! has_app "1Clipboard"; then brew_cask_install 1clipboard; fi
 
 # Office
-if ! has_app "Backup e sincronização do Google"; then brew_cask_install google-backup-and-sync; fi
+if ! has_app "Backup and Sync"; then brew_cask_install google-backup-and-sync; fi
 if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
@@ -164,22 +163,24 @@ if ! has_app "Franz"; then brew_cask_install franz; fi
 # if ! has_app "Discord"; then brew_cask_install discord; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
 if ! has_app "Slack"; then mas_install "803453959"; fi
-if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
-if ! has_app "Telegram"; then mas_install "747648890"; fi
+# if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
+# if ! has_app "Telegram"; then mas_install "747648890"; fi
 
 # Screen Saver
 # https://github.com/dessibelle/Blue-Screen-Saver
 if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
     echo "Copy screen saver...";
-    curl "https://www.dropbox.com/s/i8d004hh45qrzz4/Blue-Screen-Saver.saver.zip?dl=1" -sLo "/tmp/saver.zip" 1>/dev/null;
+    curl "https://www.dropbox.com/s/30upmkpsdkyvjug/Blue-Screen-Saver.saver.zip?dl=1" -sLo "/tmp/saver.zip" 1>/dev/null;
     unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
 fi;
 
 echo "Install OMF...";
 curl -L https://get.oh-my.fish | fish
 
-echo "Install fish NVM...";
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+if ! test -d "$HOME/.nvm"; then
+echo "Install NVM...";
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+fi;
 
 # rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
