@@ -72,7 +72,7 @@ set SPACEFISH_BATTERY_SYMBOL_FULL (_i "f578 ")
 set SPACEFISH_DIR_LOCK_SYMBOL (_i "f840")
 
 # PJ CONFIG
-set -gx PROJECT_PATHS ~/Projects
+set -gx PROJECT_PATHS ~/Library/Projects
 
 # Source aliases
 source "$HOME/.config/_external/home/.bash_aliases"

@@ -175,8 +175,8 @@ if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
     unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
 fi;
 
-#echo "Install OMF...";
-#curl -L https://get.oh-my.fish | fish
+echo "Install OMF...";
+curl -L https://get.oh-my.fish | fish
 
 if ! test -d "$HOME/.nvm"; then
     echo "Install NVM...";

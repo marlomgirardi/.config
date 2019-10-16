@@ -288,11 +288,11 @@ SYSTEM_NAME="mgmbp"
         defaults import $PLIST "$HOME/.config/_backup/plists/$PLIST.plist";
     done;
 
-#if [ $SHELL != "/usr/local/bin/fish" ]; then
-#	echo "Defined fish as default shell...";
-#    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells;
-#    chsh -s /usr/local/bin/fish;
-#fi
+if [ $SHELL != "/usr/local/bin/fish" ]; then
+	echo "Defined fish as default shell...";
+   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells;
+   chsh -s /usr/local/bin/fish;
+fi
 
 killall Dock; # Restart Dock
 killall Finder; # Restart Finder
