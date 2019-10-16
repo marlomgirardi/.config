@@ -151,6 +151,7 @@ if ! has_app "Spark"; then mas_install "1176895641"; fi
 if ! has_app "Evernote"; then mas_install "406056744"; fi
 if ! has_app "Dashlane"; then mas_install "552383089"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
+if ! has_app "Bear"; then mas_install "1091189122"; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
@@ -174,12 +175,12 @@ if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
     unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
 fi;
 
-echo "Install OMF...";
-curl -L https://get.oh-my.fish | fish
+#echo "Install OMF...";
+#curl -L https://get.oh-my.fish | fish
 
 if ! test -d "$HOME/.nvm"; then
-echo "Install NVM...";
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+    echo "Install NVM...";
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 fi;
 
 # rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;

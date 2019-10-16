@@ -10,18 +10,18 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # INSTALLATION SCRIPTS
 ###########
 
-  for SCRIPT in installation defaults brew; do
-    $DIR/_scripts/$SCRIPT.sh $DIR
-  done
+for SCRIPT in installation defaults brew zsh; do
+  $DIR/_scripts/$SCRIPT.sh $DIR
+done
 
 ###########
 # HOME
 ###########
 
-  for FILE in vim vimrc bashrc; do
-    rm -r "$HOME/.$FILE" 2>/dev/null
-    ln -sf "$DIR/_external/home/.$FILE" $HOME
-  done
+for FILE in vim vimrc bashrc .zshrc; do
+  rm -r "$HOME/.$FILE" 2>/dev/null
+  ln -sf "$DIR/_external/home/.$FILE" $HOME
+done
 
 ###########
 # VSCODE
@@ -57,6 +57,6 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
     ln -sf "$DIR/_external/sublime-text-3/$FILE" "$SUBLIME_PACKAGES/$FILE"
   done
 
-fish "$DIR/_scripts/fish.fish"
+# fish "$DIR/_scripts/fish.fish"
 
 exit
