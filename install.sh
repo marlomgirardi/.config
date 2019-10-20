@@ -10,7 +10,7 @@ DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 # INSTALLATION SCRIPTS
 ###########
 
-for SCRIPT in installation defaults brew zsh; do
+for SCRIPT in installation defaults brew; do
   $DIR/_scripts/$SCRIPT.sh $DIR
 done
 
@@ -57,6 +57,6 @@ done
     ln -sf "$DIR/_external/sublime-text-3/$FILE" "$SUBLIME_PACKAGES/$FILE"
   done
 
-# fish "$DIR/_scripts/fish.fish"
+fish "$DIR/_scripts/fish.fish"
 
 exit

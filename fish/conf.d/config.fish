@@ -11,11 +11,9 @@ stty start undef
 
 # TERMINAL CONFIG
 set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit gs
-# export HISTSIZE=2000
-# export HISTFILESIZE=50000
-# export HISTCONTROL=ignoreboth
-# export EDITOR=vim
-# export PAGER=less
+set -gx EDITOR vim
+set -gx VISUAL vim
+set -gx GIT_EDITOR vim
 
 ##########################
 # THEME CONFIG

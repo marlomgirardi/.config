@@ -39,6 +39,9 @@ if not_exists brew; then
   CI=1 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo "Tap homebrew/cask-versions...";
+brew tap homebrew/cask-versions
+
 
 #####
 # Brew packages
@@ -124,6 +127,7 @@ if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Dash"; then brew_cask_install dash; fi
+if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
 # if ! has_app "Docker"; then brew_cask_install docker; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "Postman"; then brew_cask_install postman; fi
