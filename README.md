@@ -48,9 +48,6 @@ sh .config/install.sh
 
 # Save backup
 sh .config/backup.sh
-
-# After run install.sh
-sh .config/_scripts/fish.sh
 ```
 
 ## Apple
@@ -63,7 +60,7 @@ sh .config/_scripts/fish.sh
 - `d40d071a838d2f4fb97d7c993a98669c` - Settings Sync gist
 - Put your token into `$HOME/Library/Application Support/Code/User/syncLocalSettings.json` in `token` prop.
 
-### Must used commands
+### Most used commands
 
 - `sudo find / -name "*.plist" | grep -v -E "(Info|version).plist" > plist.txt`  - Find all plist files except `Info` and `version`
 - `osascript -e 'id of app "####"'` - Find #### id to change the defaults
@@ -72,8 +69,3 @@ sh .config/_scripts/fish.sh
 - `defaults export {domain} {pathToPlist}` -  Export a plist
 - `plutil -convert xml1 {pathOfPlistToConvert}` - Convert a binary plist to xml, easier to edit.
 
-## TODO
-
-- Configure Touch Bar
-- Configure Notifications
-- Configure Finder Sidebar
