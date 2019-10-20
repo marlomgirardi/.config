@@ -30,7 +30,7 @@ export EDITOR=vim
 export PAGER=less
 
 # Source aliases
-source $CNF_DIR/_external/home/.bash_aliases
+source $CNF_DIR/_external/.bash_aliases
 
 # Terminal colors
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "

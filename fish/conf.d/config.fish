@@ -73,7 +73,7 @@ set SPACEFISH_DIR_LOCK_SYMBOL (_i "f840")
 set -gx PROJECT_PATHS ~/Library/Projects
 
 # Source aliases
-source "$HOME/.config/_external/home/.bash_aliases"
+source "$HOME/.config/_external/.bash_aliases"
 
 # Use default node
 nvm use default --silent

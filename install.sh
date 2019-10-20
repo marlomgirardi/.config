@@ -18,7 +18,7 @@ done
 # HOME
 ###########
 
-for FILE in vim vimrc bashrc .zshrc; do
+for FILE in vim bashrc; do
   rm -r "$HOME/.$FILE" 2>/dev/null
   ln -sf "$DIR/_external/home/.$FILE" $HOME
 done
