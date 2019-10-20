@@ -4,12 +4,16 @@ execute pathogen#infect()
 
 colorscheme monokai
 
+set shell=fish
 set t_Co=256              " iTerm2 supports 256 color mode. 
 set ai                    " auto indenting
 set history=1000          " keep 100 lines of history
 set ruler                 " show the cursor position
 syntax on                 " syntax highlighting
-filetype plugin indent on        " use the file type plugins
+
+filetype plugin on
+filetype plugin indent on
+
 set backspace=2           " make backspace work like most other programs
 set tabstop=2             " Tab size
 set shiftwidth=2          " Tab ident

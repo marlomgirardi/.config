@@ -83,6 +83,9 @@ if exists brew; then
   if ! exists_in_brew fx; then brew_install fx; fi
 
   if ! exists_in_brew awscli; then brew_install awscli; fi
+
+  # https://github.com/wting/autojump
+  if ! exists_in_brew autojump; then brew_install autojump; fi
 else
   echo "Looks like brew isn't installed"
 fi;
