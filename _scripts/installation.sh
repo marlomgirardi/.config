@@ -86,6 +86,11 @@ if exists brew; then
 
   # https://github.com/wting/autojump
   if ! exists_in_brew autojump; then brew_install autojump; fi
+
+  # PGP
+  if ! exists_in_brew gpg2; then brew_install gpg2; fi
+  if ! exists_in_brew gnupg; then brew_install gnupg; fi
+  if ! exists_in_brew pinentry-mac; then brew_install pinentry-mac; fi
 else
   echo "Looks like brew isn't installed"
 fi;

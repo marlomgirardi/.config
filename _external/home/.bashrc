@@ -29,6 +29,8 @@ export HISTFILE="~/.bash_history"
 export EDITOR=vim
 export PAGER=less
 
+export GPG_TTY=`tty`
+
 # Source aliases
 source $CNF_DIR/_external/.bash_aliases
 

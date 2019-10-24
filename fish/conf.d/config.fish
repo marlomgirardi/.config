@@ -15,6 +15,8 @@ set -gx EDITOR vim
 set -gx VISUAL vim
 set -gx GIT_EDITOR vim
 
+set -gx GPG_TTY (tty)
+
 ##########################
 # THEME CONFIG
 ##########################
