@@ -11,9 +11,11 @@ stty start undef
 
 # TERMINAL CONFIG
 set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit gs
+set -gx LC_ALL en_US.UTF-8
 set -gx EDITOR vim
 set -gx VISUAL vim
 set -gx GIT_EDITOR vim
+set -gx GPG_TTY (tty)
 
 set -gx GPG_TTY (tty)
 

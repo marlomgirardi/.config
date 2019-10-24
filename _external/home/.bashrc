@@ -29,6 +29,7 @@ export HISTFILE="~/.bash_history"
 export EDITOR=vim
 export PAGER=less
 
+export LC_ALL=en_US.UTF-8
 export GPG_TTY=`tty`
 
 # Source aliases
