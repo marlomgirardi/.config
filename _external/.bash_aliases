@@ -26,7 +26,7 @@ alias gpl='g pl'
 alias gf='g f'
 alias gs='g s'
 alias gl='g l'
-alias glp='g lp'
+alias glm='g lm'
 
 # Shortcuts
 alias c='clear'

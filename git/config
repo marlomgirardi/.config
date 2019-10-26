@@ -43,7 +43,7 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vimdff
+	tool = vimdiff
 	guitool = subl -w
 [difftool]
 	prompt = false
@@ -69,7 +69,7 @@
 	#############
 	# c = commit
 	cm = commit -m
-	# cam = commit -am
+	cam = commit -am
 	ca = commit --amend
 	can = commit --amend --no-edit
 	#############
@@ -77,9 +77,9 @@
 	cld = clone --depth 1
 	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
 	#############
-	# cp = cherry-pick
-	# cpa = cherry-pick --abort
-	# cpc = cherry-pick --continue
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
 	#############
 	# d = diff
 
@@ -110,7 +110,7 @@
 	# gcn = gc --prune=now
 	#############
 	l = log --graph --pretty=singleline
-	ls = log --numstat --pretty=multiline
+	lm = log --numstat --pretty=multiline
 	find = !git l | fzf | cut -d ' ' -f1 | xargs -o git show
 	#############
 	# ls = ls-files
@@ -131,7 +131,7 @@
 	# pr = prune -v
 	#############
 	ps = push
-	# psf = push --force
+	psf = push --force-with-lease
 	# psu = push --set-upstream
 	# pst = push --tags
 	#############
@@ -151,7 +151,6 @@
 	# psdc = !git push origin :$(git bc)
 	#############
 	pl = pull
-	# pb = pull --rebase
 	#############
 	# plo = pull origin
 	# pbo = pull --rebase origin
@@ -166,20 +165,19 @@
 	# pbum = pull --rebase upstream master
 	# pbuc = !git pull --rebase upstream $(git bc)
 	#############
-	# rb = rebase
-	# rba = rebase --abort
-	# rbc = rebase --continue
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
 	# rbi = rebase --interactive
 	# rbs = rebase --skip
 	#############
 	# rleu = reflog expire --expire-unreachable=now --all
 	#############
-	# re = reset
-	# rh = reset HEAD
+	undo = reset HEAD^1
 	# reh = reset --hard
 	# rem = reset --mixed
 	# res = reset --soft
-	# rehh = reset --hard HEAD
+	rehh = reset --hard HEAD
 	# remh = reset --mixed HEAD
 	# resh = reset --soft HEAD
 	#############
@@ -199,26 +197,22 @@
 	# rpo = remote prune origin
 	# rpu = remote prune upstream
 	#############
-	# rmf = rm -f
-	# rmrf = rm -r -f
+	rmf = rm -f
+	rmrf = rm -r -f
 	#############
 	s = status -sb
 	#############
 	# sa = stash apply
 	# sc = stash clear
-	# sd = stash drop
-	# sl = stash list
-	# sp = stash pop
-	# ss = stash save
+	sd = stash drop
+	sl = stash list
+	sp = stash pop
+	ss = stash save
 	# sw = stash show
 	#############
 	# w = show
 	# wp = show -p
 	# wr = show -p --no-color
-	#############
-	# svnr = svn rebase
-	# svnd = svn dcommit
-	# svnl = svn log --oneline --show-commit
 	#############
 	# sm = submodule
 	# sma = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
@@ -253,3 +247,7 @@
 	# smudge = git-lfs smudge -- %f
 	# process = git-lfs filter-process
 	# required = true
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgsign = true
