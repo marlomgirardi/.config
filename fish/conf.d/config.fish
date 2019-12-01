@@ -17,7 +17,8 @@ set -gx VISUAL vim
 set -gx GIT_EDITOR vim
 set -gx GPG_TTY (tty)
 
-set -gx GPG_TTY (tty)
+set -x PATH ~/Library/Python/2.7/bin $PATH
+
 
 ##########################
 # THEME CONFIG

@@ -35,13 +35,17 @@ SYSTEM_NAME="mgmbp"
     # 10: Put display to sleep
     # 11: Launchpad
     # 12: Notification Center
+    # 1048576 modifier is cmd
 
+    # Hot corners - top right screen corner → Desktop
+    defaults write com.apple.dock wvous-tr-corner -int 4;
+    defaults write com.apple.dock wvous-tr-modifier -int 1048576;
     # Hot corners - bottom right corner -> start screen saver
     defaults write com.apple.dock wvous-br-corner -int 5;
-    defaults write com.apple.dock wvous-br-modifier -int 0;
-    # Top right screen corner → Desktop
-    defaults write com.apple.dock wvous-tr-corner -int 4
-    defaults write com.apple.dock wvous-tr-modifier -int 0
+    defaults write com.apple.dock wvous-br-modifier -int 1048576;
+    # Hot corners - bottom left corner -> show application window
+    defaults write com.apple.dock wvous-bl-corner -int 3;
+    defaults write com.apple.dock wvous-bl-modifier -int 1048576;
 
     # Require password after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1;
@@ -132,9 +136,10 @@ SYSTEM_NAME="mgmbp"
     defaults write com.apple.dock ResetLaunchPad -bool true; # restart order in launch
     defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true; # spring loading for all Dock items
     defaults write com.apple.dock show-process-indicators -bool true;  # indicator lights for open applications in the Dock
+    defaults write com.apple.dock show-recents -bool false; # Show recent apps in dock
 
 
-    # Add apps to docker
+    # Add apps to dock
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Launchpad");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");

@@ -1,6 +1,7 @@
 [user]
 	email = marlom.girardi@gmail.com
 	name = Marlom Girardi
+	signingkey = E7EEE242FC90B2C564554FDCFF4361BBB606CDAE
 [core]
 	editor = vim
 	autocrlf = false

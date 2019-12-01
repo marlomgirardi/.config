@@ -136,9 +136,9 @@ if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Dash"; then brew_cask_install dash; fi
 if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
-# if ! has_app "Docker"; then brew_cask_install docker; fi
+if ! has_app "Docker"; then brew_cask_install docker; fi
+if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
-# if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
 # if ! has_app "MAMP PRO"; then brew_cask_install mamp; fi
 # if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
@@ -154,6 +154,8 @@ if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 if ! has_app "RunJS"; then brew_cask_install runjs; fi
 
 # Office
+if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
+if ! has_app "Notion"; then brew_cask_install notion; fi
 if ! has_app "Backup and Sync"; then brew_cask_install google-backup-and-sync; fi
 if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
