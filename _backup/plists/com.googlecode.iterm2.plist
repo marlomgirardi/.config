@@ -609,7 +609,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>721 468 916 514 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>79 130 850 438 0 0 1680 1027 </string>
+	<string>471 412 850 438 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 589 850 438 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_C95EB434-4F62-459A-8D0B-3EFDCD025775</key>
@@ -1545,6 +1545,7 @@
 		<string>3.2.9</string>
 		<string>3.3.5</string>
 		<string>3.3.0</string>
+		<string>3.3.7</string>
 		<string>3.3.6</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -1563,7 +1564,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>1C6DC260-2150-4FFD-A531-67E22E4D7EA3</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>13</integer>
+	<integer>61</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2368,7 +2369,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-09T22:10:26Z</date>
+	<date>2019-12-04T22:20:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2376,7 +2377,7 @@
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StatusBarPosition</key>
@@ -2398,7 +2399,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

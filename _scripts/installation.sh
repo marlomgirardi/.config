@@ -55,11 +55,17 @@ if exists brew; then
   # Distributed revision control system
   if ! exists_in_brew git; then brew_install git; fi
 
-  # Improved top (interactive process viewer)
-  if ! exists_in_brew htop; then brew_install htop; fi
+  # Like cat, but better.
+  if ! exists_in_brew bat; then brew_install bat; fi
 
-  # Color-highlighted diff(1) output
-  # if ! exists_in_brew colordiff; then brew_install colordiff; fi
+  # Intuitive find CLI
+  if ! exists_in_brew fd; then brew_install fd; fi
+
+  # Another terminal based graphical activity monitor, inspired by gtop and vtop.
+  if ! exists_in_brew gotop; then brew tap cjbassi/gotop; brew_install gotop; fi
+
+  # Better man command
+  if ! exists_in_brew tldr; then brew_install tldr; fi
 
   # Show ps output as a tree
   if ! exists_in_brew pstree; then brew_install pstree; fi
@@ -150,8 +156,9 @@ if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
-if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 if ! has_app "RunJS"; then brew_cask_install runjs; fi
+if ! has_app "Kap"; then brew_cask_install kap; fi
+# if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 
 # Office
 if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
