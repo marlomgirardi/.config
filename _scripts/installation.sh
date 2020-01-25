@@ -121,13 +121,15 @@ install_font "DejaVu Sans Mono Bold Nerd Font Complete.ttf" "https://raw.githubu
 install_font "DejaVu Sans Mono Italic Nerd Font Complete.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Italic/complete/DejaVu%20Sans%20Mono%20Oblique%20Nerd%20Font%20Complete.ttf";
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf";
 
-# https://github.com/tonsky/FiraCode
-install_font "FiraCode-Bold.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Bold.ttf";
-install_font "FiraCode-Light.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Light.ttf";
-install_font "FiraCode-Medium.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Medium.ttf";
-install_font "FiraCode-Regular.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf";
-install_font "FiraCode-Retina.ttf" "https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Retina.ttf";
-
+# https://github.com/JetBrains/JetBrainsMono
+install_font "JetBrainsMono-Bold-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Bold-Italic.ttf"
+install_font "JetBrainsMono-Bold.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Bold.ttf"
+install_font "JetBrainsMono-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Italic.ttf"
+install_font "JetBrainsMono-Regular.tt" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Regular.tt"
+# install_font "JetBrainsMono-ExtraBold-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-ExtraBold-Italic.ttf"
+# install_font "JetBrainsMono-ExtraBold.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-ExtraBold.ttf"
+# install_font "JetBrainsMono-Medium-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Medium-Italic.ttf"
+# install_font "JetBrainsMono-Medium.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Medium.ttf"
 
 ######
 # Apps
