@@ -53,7 +53,8 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="curl ipecho.net/plain"
+alias ipv6="curl icanhazip.com"
 alias localip="ipconfig getifaddr en0"
 
 # Flush Directory Service cache

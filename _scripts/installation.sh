@@ -106,6 +106,9 @@ fi;
 # Ruby Gems
 #####
 
+# Install latest ruby version.
+brew_install ruby;
+
 # A Ruby gem that beautifies the terminal's ls command.
 if not_exists colorls; then sudo gem install colorls; fi;
 
@@ -122,14 +125,14 @@ install_font "DejaVu Sans Mono Italic Nerd Font Complete.ttf" "https://raw.githu
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf";
 
 # https://github.com/JetBrains/JetBrainsMono
-install_font "JetBrainsMono-Bold-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Bold-Italic.ttf"
-install_font "JetBrainsMono-Bold.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Bold.ttf"
-install_font "JetBrainsMono-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Italic.ttf"
-install_font "JetBrainsMono-Regular.tt" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Regular.tt"
-# install_font "JetBrainsMono-ExtraBold-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-ExtraBold-Italic.ttf"
-# install_font "JetBrainsMono-ExtraBold.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-ExtraBold.ttf"
-# install_font "JetBrainsMono-Medium-Italic.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Medium-Italic.ttf"
-# install_font "JetBrainsMono-Medium.ttf" "https://github.com/JetBrains/JetBrainsMono/blob/master/ttf/JetBrainsMono-Medium.ttf"
+install_font "JetBrainsMono-Bold-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Bold-Italic.ttf"
+install_font "JetBrainsMono-Bold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Bold.ttf"
+install_font "JetBrainsMono-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Italic.ttf"
+install_font "JetBrainsMono-Regular.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf"
+install_font "JetBrainsMono-ExtraBold-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-ExtraBold-Italic.ttf"
+install_font "JetBrainsMono-ExtraBold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-ExtraBold.ttf"
+install_font "JetBrainsMono-Medium-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Medium-Italic.ttf"
+install_font "JetBrainsMono-Medium.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Medium.ttf"
 
 ######
 # Apps
@@ -138,13 +141,13 @@ install_font "JetBrainsMono-Regular.tt" "https://github.com/JetBrains/JetBrainsM
 # Development
 if ! has_app "Visual Studio Code"; then brew_cask_install visual-studio-code; fi
 if ! has_app "Sublime Text"; then brew_cask_install sublime-text; fi
-if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
-if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
-if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
+#if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
+#if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
+#if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Dash"; then brew_cask_install dash; fi
 if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
-if ! has_app "Docker"; then brew_cask_install docker; fi
+#if ! has_app "Docker"; then brew_cask_install docker; fi
 if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
@@ -153,14 +156,12 @@ if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "Xcode"; then mas_install "497799835"; fi
 
 # Utils
-if ! has_app "Macs Fan Control"; then brew_cask_install macs-fan-control; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "RunJS"; then brew_cask_install runjs; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
-# if ! has_app "GIF Brewery 3"; then mas_install "1081413713"; fi
 
 # Office
 if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
@@ -178,15 +179,15 @@ if ! has_app "Bear"; then mas_install "1091189122"; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
-if ! has_app "Stremio"; then brew_cask_install stremio; fi
+#if ! has_app "Stremio"; then brew_cask_install stremio; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
 
 # Chat
-if ! has_app "Franz"; then brew_cask_install franz; fi
+#if ! has_app "Franz"; then brew_cask_install franz; fi
 # if ! has_app "Gitter"; then brew_cask_install gitter; fi
 # if ! has_app "Discord"; then brew_cask_install discord; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
-if ! has_app "Slack"; then mas_install "803453959"; fi
+#if ! has_app "Slack"; then mas_install "803453959"; fi
 # if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
 # if ! has_app "Telegram"; then mas_install "747648890"; fi
 

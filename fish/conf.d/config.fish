@@ -10,7 +10,7 @@ stty stop undef
 stty start undef
 
 # TERMINAL CONFIG
-set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit gs
+set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit
 set -gx LC_ALL en_US.UTF-8
 set -gx EDITOR vim
 set -gx VISUAL vim
@@ -19,6 +19,9 @@ set -gx GPG_TTY (tty)
 
 set -x PATH ~/Library/Python/2.7/bin $PATH
 
+set -gx LDFLAGS "-L/usr/local/opt/ruby/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/ruby/include"
+set -g fish_user_paths "/usr/local/lib/ruby/gems/2.7.0/bin" "/usr/local/opt/ruby/bin" $fish_user_paths
 
 ##########################
 # THEME CONFIG

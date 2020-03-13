@@ -16,7 +16,7 @@ echo "Install plugin-node-binpath - Automatically add node_modules binaries to P
 omf install node-binpath 1>/dev/null # https://github.com/oh-my-fish/plugin-node-binpath
 
 echo "Install plugin-grc - grc Colourizer for some commands."
-omf install plugin-grc 1>/dev/null # https://github.com/oh-my-fish/plugin-grc
+omf install grc 1>/dev/null # https://github.com/oh-my-fish/plugin-grc
 
 echo "Install touchrunner - Run tasks from the touchbar (iTerm2 fn)"
 omf install touchrunner
