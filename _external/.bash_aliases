@@ -101,4 +101,14 @@ alias ns='npm start'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nlg='npm list --global --depth=0'
 
+# yarn
+alias y='yarn'
+alias yi='yarn install'
+alias ya='yarn add'
+alias yt='yarn test'
+alias yit='yarn install && yarn test'
+alias ns='npm start'
+alias yf='yarn cache clean && rm -rf node_modules && yarn install'
+alias ylg='yarn global list --depth=0'
+
 # vim: set ft=sh ts=2 sw=2 tw=120 noet :

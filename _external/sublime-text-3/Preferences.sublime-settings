@@ -15,11 +15,11 @@
 		"node_modules"
 	],
 	"font_face": "JetBrains Mono",
-	"font_size": 12,
 	"font_options":
 	[
 		"gray_antialias"
 	],
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage"

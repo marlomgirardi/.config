@@ -6,6 +6,8 @@
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -609,7 +611,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>721 468 916 514 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>456 405 850 438 0 0 1680 1027 </string>
+	<string>484 432 850 438 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 589 850 438 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_C95EB434-4F62-459A-8D0B-3EFDCD025775</key>
@@ -1544,9 +1546,20 @@
 	<array>
 		<string>3.2.9</string>
 		<string>3.3.5</string>
+		<string>3.3.8</string>
 		<string>3.3.0</string>
 		<string>3.3.7</string>
 		<string>3.3.6</string>
+	</array>
+	<key>NoSyncBFPFavorites</key>
+	<array>
+		<string>JetBrains Mono</string>
+		<string>Fira Code</string>
+	</array>
+	<key>NoSyncBFPRecents</key>
+	<array>
+		<string>JetBrains Mono Medium</string>
+		<string>JetBrains Mono</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
@@ -1555,7 +1568,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{382, 979}</string>
+		<string>{704, 747}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -1564,7 +1577,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>1C6DC260-2150-4FFD-A531-67E22E4D7EA3</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>61</integer>
+	<integer>83</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2369,7 +2382,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-25T17:39:50Z</date>
+	<date>2020-02-11T21:00:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2399,7 +2412,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

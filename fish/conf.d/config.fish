@@ -23,6 +23,10 @@ set -gx LDFLAGS "-L/usr/local/opt/ruby/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/ruby/include"
 set -g fish_user_paths "/usr/local/lib/ruby/gems/2.7.0/bin" "/usr/local/opt/ruby/bin" $fish_user_paths
 
+# set -gx VIMRUNTIME /usr/share/vim/vim81
+# set -gx VIM ~/.config/vim
+# /bin/ls /usr/share/vim/ | grep -e "vim[0-9]"
+
 ##########################
 # THEME CONFIG
 ##########################

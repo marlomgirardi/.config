@@ -25,7 +25,7 @@ mas_install() { echo $(mas install $1); }
 if not_exists gcc; then
   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
   PROD=$(softwareupdate -l | grep "\*.*Command Line" | head -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' | tr -d '\n')
-  softwareupdate -i "$PROD" -v
+  softwareupdate -i "$PROD" -a
 fi;
 
 
@@ -181,15 +181,15 @@ if ! has_app "Bear"; then mas_install "1091189122"; fi
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
 #if ! has_app "Stremio"; then brew_cask_install stremio; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
+if ! has_app "Itsycal"; then brew_cask_install itsycal; fi
 
 # Chat
-#if ! has_app "Franz"; then brew_cask_install franz; fi
 # if ! has_app "Gitter"; then brew_cask_install gitter; fi
 # if ! has_app "Discord"; then brew_cask_install discord; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
-#if ! has_app "Slack"; then mas_install "803453959"; fi
-# if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
-# if ! has_app "Telegram"; then mas_install "747648890"; fi
+if ! has_app "Slack"; then mas_install "803453959"; fi
+if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
+if ! has_app "Telegram"; then mas_install "747648890"; fi
 
 # Screen Saver
 # https://github.com/dessibelle/Blue-Screen-Saver
