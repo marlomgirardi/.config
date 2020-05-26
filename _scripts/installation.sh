@@ -36,7 +36,7 @@ fi;
 if not_exists brew; then
   # CI = 1 to do a simulate a CI bot and do it silently
   echo "Install brew..."
-  CI=1 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 echo "Tap homebrew/cask-versions...";
@@ -162,6 +162,7 @@ if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "RunJS"; then brew_cask_install runjs; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
+if ! has_app "Authy Desktop"; then brew_cask_install authy; fi
 
 # Office
 if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
