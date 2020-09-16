@@ -76,6 +76,13 @@ SYSTEM_NAME="mgmbp"
     sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true;
 
 ###############################################################################
+# Mail                                                                        #
+###############################################################################
+
+    # See attachments as icon by default.
+    defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;
+
+###############################################################################
 # Terminal                                                                    #
 ###############################################################################
 

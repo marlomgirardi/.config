@@ -25,13 +25,9 @@ crashlytics-build.properties
 fabric.properties
 
 ### macOS ###
-Icon?
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
 
 # Thumbnails
 ._*

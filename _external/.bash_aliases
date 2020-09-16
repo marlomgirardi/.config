@@ -31,6 +31,9 @@ alias glm='g lm'
 # Shortcuts
 alias c='clear'
 
+# Docker
+alias lzd='lazydocker'
+
 # A quick way to get out of current directory
 # alias ..='cd ..'
 alias ...='cd ../../'
@@ -58,7 +61,7 @@ alias ipv6="curl icanhazip.com"
 alias localip="ipconfig getifaddr en0"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"

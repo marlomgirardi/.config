@@ -90,8 +90,14 @@ if exists brew; then
 
   if ! exists_in_brew awscli; then brew_install awscli; fi
 
-  # https://github.com/wting/autojump
-  if ! exists_in_brew autojump; then brew_install autojump; fi
+  # https://github.com/BurntSushi/ripgrep
+  if ! exists_in_brew ripgrep; then brew_install ripgrep; fi;
+
+  # https://github.com/jesseduffield/lazydocker
+  if !exists_in_brew lazydocker; then brew_install lazydocker; fi;
+
+  # https://github.com/bcicen/ctop
+  if !exists_in_brew ctop; then brew_install ctop; fi;
 
   # PGP
   if ! exists_in_brew gpg2; then brew_install gpg2; fi

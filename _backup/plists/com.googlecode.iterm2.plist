@@ -363,9 +363,11 @@
 	<key>Default Bookmark Guid</key>
 	<string>C95EB434-4F62-459A-8D0B-3EFDCD025775</string>
 	<key>DisableFullscreenTransparency</key>
-	<false/>
+	<true/>
 	<key>EnableDivisionView</key>
 	<true/>
+	<key>FlashTabBarInFullscreen</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -500,6 +502,8 @@
 	<false/>
 	<key>HideTab</key>
 	<true/>
+	<key>HideTabNumber</key>
+	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -611,7 +615,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>721 468 916 514 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>484 432 850 438 0 0 1680 1027 </string>
+	<string>529 439 850 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 589 850 438 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_C95EB434-4F62-459A-8D0B-3EFDCD025775</key>
@@ -1544,12 +1548,15 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.2.9</string>
-		<string>3.3.5</string>
+		<string>3.3.10</string>
 		<string>3.3.8</string>
-		<string>3.3.0</string>
-		<string>3.3.7</string>
 		<string>3.3.6</string>
+		<string>3.3.11</string>
+		<string>3.3.12</string>
+		<string>3.3.5</string>
+		<string>3.3.7</string>
+		<string>3.2.9</string>
+		<string>3.3.0</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array>
@@ -1566,9 +1573,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{-2472, 900}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{704, 747}</string>
+		<string>{-1880, 1776}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -1577,7 +1584,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>1C6DC260-2150-4FFD-A531-67E22E4D7EA3</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>83</integer>
+	<integer>122</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1907,6 +1914,14 @@
 				<true/>
 				<key>name</key>
 				<string>style</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2382,7 +2397,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-11T21:00:19Z</date>
+	<date>2020-08-21T09:05:48Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2412,7 +2427,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.8</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

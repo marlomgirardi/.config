@@ -19,9 +19,9 @@ set -gx GPG_TTY (tty)
 
 set -x PATH ~/Library/Python/2.7/bin $PATH
 
-set -gx LDFLAGS "-L/usr/local/opt/ruby/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/ruby/include"
-set -g fish_user_paths "/usr/local/lib/ruby/gems/2.7.0/bin" "/usr/local/opt/ruby/bin" $fish_user_paths
+set -gx LDFLAGS "-L/usr/local/opt/ruby/lib" "-L/usr/local/opt/sqlite/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/ruby/include" "-I/usr/local/opt/sqlite/include"
+set -g fish_user_paths "/usr/local/opt/sqlite/bin" "/usr/local/lib/ruby/gems/2.7.0/bin" "/usr/local/opt/ruby/bin" $fish_user_paths
 
 # set -gx VIMRUNTIME /usr/share/vim/vim81
 # set -gx VIM ~/.config/vim

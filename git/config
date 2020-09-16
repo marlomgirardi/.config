@@ -8,7 +8,6 @@
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.config/git/ignore
 	attributesfile = ~/.config/git/attributes
-	hooksPath = ~/.config/git/hooks
 [rerere]
 	enabled = 1g
 	autoupdate = 1
@@ -60,8 +59,10 @@
 	b = branch
 	ba = branch --all
 	bd = branch --delete
-	bdf = branch --delete --force
 	br = branch --remotes
+
+	# Remove branch from local and remote
+	dblr = "!git branch -D $1; git push origin --delete $1"
 
 	# Remove merged branches
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
@@ -125,8 +126,8 @@
 	fco = !git branch | grep "^[^*]" | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout
 	fcor = !git branch --remotes | awk '!/->/' | fzf | sed -e 's/^[ ]*//' | xargs -o git checkout --track
 
-	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	# Go to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$@\" 2> /dev/null || git checkout \"$@\"; }; f"
 
 	#############
 	# pr = prune -v
