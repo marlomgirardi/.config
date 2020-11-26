@@ -3,7 +3,7 @@
 # Get instalation folder
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
-PLISTS="com.googlecode.iterm2 com.crystalidea.macsfancontrol ch.sudo.cyberduck";
+PLISTS="com.googlecode.iterm2 ch.sudo.cyberduck com.apple.spotlight com.apple.controlstrip";
 
 # Run scripts
 for PLIST in $PLISTS; do

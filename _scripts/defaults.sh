@@ -94,7 +94,7 @@ SYSTEM_NAME="mgmbp"
 ###############################################################################
 
     defaults write com.apple.finder WarnOnEmptyTrash -bool false; # Disable the warning before emptying the Trash
-    defaults write com.apple.finder FavoriteTagNames -array; # clear favorite tag list
+    # defaults write com.apple.finder FavoriteTagNames -array; # clear favorite tag list
     # defaults write com.apple.finder AppleShowAllFiles -bool true; # show hidden files
     defaults write com.apple.finder ShowStatusBar -bool true; # show status bar
     defaults write com.apple.finder ShowPathbar -bool true; # show path bar
@@ -239,6 +239,17 @@ SYSTEM_NAME="mgmbp"
     defaults write com.apple.Siri StatusMenuVisible -bool false;
 
 ###############################################################################
+# Control Center                                                              #
+###############################################################################
+
+    defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -bool true;
+    defaults write com.apple.controlcenter "NSStatusItem Visible Clock" -bool true;
+    defaults write com.apple.controlcenter "NSStatusItem Visible NowPlaying" -bool true;
+    defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -bool false;
+    defaults write com.apple.controlcenter "NSStatusItem Visible UserSwitcher" -bool false;
+    defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool false;
+
+###############################################################################
 # Web                                                                         #
 ###############################################################################
 
@@ -309,6 +320,9 @@ if [ $SHELL != "/usr/local/bin/fish" ]; then
    chsh -s /usr/local/bin/fish;
 fi
 
+killall Spotlight; # Restart Spotlight
+killall ControlCenter; # Restart Control Center
+killall ControlStrip; # Restart Touchbar
 killall Dock; # Restart Dock
 killall Finder; # Restart Finder
 killall SystemUIServer; # Restart Top right menu (clock, battery, ...)

@@ -55,11 +55,6 @@ sh .config/backup.sh
 - `{domain}` - Is like `com.apple.dock`.
 - `{plist}` - Is like `com.apple.dock.plist`. It can e a binary or a xml.
 
-## VS Code
-
-- `d40d071a838d2f4fb97d7c993a98669c` - Settings Sync gist
-- Put your token into `$HOME/Library/Application Support/Code/User/syncLocalSettings.json` in `token` prop.
-
 ### Most used commands
 
 - `sudo find / -name "*.plist" | grep -v -E "(Info|version).plist" > plist.txt`  - Find all plist files except `Info` and `version`

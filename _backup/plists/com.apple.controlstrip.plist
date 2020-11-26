@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MiniCustomized</key>
+	<array>
+		<string>com.apple.system.brightness</string>
+		<string>com.apple.system.volume</string>
+		<string>com.apple.system.mute</string>
+		<string>com.apple.system.do-not-disturb</string>
+	</array>
+	<key>last-analytics-stamp</key>
+	<array>
+		<real>628074714.68195295</real>
+	</array>
+	<key>last-messagetrace-stamp</key>
+	<array>
+		<real>626614834.73966503</real>
+	</array>
+</dict>
+</plist>
