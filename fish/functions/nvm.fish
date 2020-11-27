@@ -2,7 +2,7 @@
 
 function nvm-fast
 	set -q NVM_DIR ; or set -l NVM_DIR ~/.nvm
-	set -l NODE_DIR $NVM_DIR/versions/node
+	set -l brigand_nvm_fish_path $NVM_DIR/versions/node
 	if test (count $argv[1]) -lt 1
 		echo 'nvm-fast: at least one argument is required'
 	end
@@ -27,20 +27,20 @@ function nvm-fast
 		if test -z $matched_version -o $matched_version = 'N/A'
 			echo "No version installed for $target_version, run nvm install $target_version"
 			echo "Installed versions: "
-			for file in $NODE_DIR/v*
+			for file in $brigand_nvm_fish_path/v*
 				echo ' -' $file
 			end
 		else
-			set -l new_path (string match -ev "$NODE_DIR" $PATH)
+			set -l new_path (string match -ev "$brigand_nvm_fish_path" $PATH)
 			if test $matched_version != 'system'
-				set -gx NODE_VERSION $matched_version;
-				set -gx NVM_BIN "$NODE_DIR/$NODE_VERSION/bin"
-				set new_path $NVM_BIN $new_path
+				set new_path $brigand_nvm_fish_path/$matched_version/bin $new_path
 			end
 			set -gx PATH $new_path
+			set -gx NVM_BIN (which node)
 		end
 	else
 		bash -c "source $NVM_DIR/nvm.sh --no-use; nvm $argv"
+		set -gx NVM_BIN (which node)
 	end
 end
 
@@ -52,4 +52,3 @@ function nvm
 	end
 	nvm-fast $argv
 end
-

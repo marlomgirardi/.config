@@ -73,9 +73,6 @@ if exists brew; then
   # It's an interactive Unix filter for command-line.
   if ! exists_in_brew fzf; then brew_install fzf; fi
 
-  # Send User Notifications on macOS from the command-line.
-  if ! exists_in_brew terminal-notifier; then brew_install terminal-notifier; fi
-
   # Colorize logfiles and command output.
   if ! exists_in_brew grc; then brew_install grc; fi
 
@@ -166,33 +163,30 @@ if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
-if ! has_app "RunJS"; then brew_cask_install runjs; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
 if ! has_app "Authy Desktop"; then brew_cask_install authy; fi
 
 # Office
-if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
 if ! has_app "Notion"; then brew_cask_install notion; fi
 if ! has_app "Backup and Sync"; then brew_cask_install google-backup-and-sync; fi
-if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
+# if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
+# if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
 if ! has_app "Keynote"; then mas_install "409183694"; fi
 if ! has_app "Spark"; then mas_install "1176895641"; fi
-if ! has_app "Evernote"; then mas_install "406056744"; fi
 if ! has_app "Dashlane"; then mas_install "552383089"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
-if ! has_app "Bear"; then mas_install "1091189122"; fi
+# if ! has_app "Evernote"; then mas_install "406056744"; fi
+# if ! has_app "Bear"; then mas_install "1091189122"; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
-#if ! has_app "Stremio"; then brew_cask_install stremio; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
-if ! has_app "Itsycal"; then brew_cask_install itsycal; fi
+#if ! has_app "Stremio"; then brew_cask_install stremio; fi
 
 # Chat
-# if ! has_app "Gitter"; then brew_cask_install gitter; fi
-# if ! has_app "Discord"; then brew_cask_install discord; fi
+if ! has_app "Discord"; then brew_cask_install discord; fi
 if ! has_app "Skype"; then brew_cask_install skype; fi
 if ! has_app "Slack"; then mas_install "803453959"; fi
 if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
@@ -211,7 +205,7 @@ curl -L https://get.oh-my.fish | fish
 
 if ! test -d "$HOME/.nvm"; then
     echo "Install NVM...";
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
 fi;
 
 # rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
