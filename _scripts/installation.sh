@@ -11,7 +11,7 @@ install_font() { if ! has_font "$1"; then download "$HOME/Library/Fonts" "$1" "$
 
 exists_in_brew() { brew ls --versions $1 > /dev/null; }
 brew_install() { echo "brew install $1 ..."; brew install $1 1>/dev/null; }
-brew_cask_install() { echo "brew cask install $1 ..."; brew cask install $1 1>/dev/null; }
+brew_cask_install() { echo "brew install --cask $1 ..."; brew install --cask $1 1>/dev/null; }
 
 has_app() { test -d "/Applications/$1.app" || test -L "/Applications/$1.app"; }
 mas_install() { echo $(mas install $1); }
@@ -91,7 +91,7 @@ if exists brew; then
   if ! exists_in_brew ripgrep; then brew_install ripgrep; fi;
 
   # https://github.com/jesseduffield/lazydocker
-  if !exists_in_brew lazydocker; then brew_install lazydocker; fi;
+  # if !exists_in_brew lazydocker; then brew_install lazydocker; fi;
 
   # https://github.com/bcicen/ctop
   if !exists_in_brew ctop; then brew_install ctop; fi;
@@ -155,7 +155,7 @@ if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
 # if ! has_app "MAMP PRO"; then brew_cask_install mamp; fi
-# if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
+if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
 # if ! has_app "Xcode"; then mas_install "497799835"; fi
 
 # Utils
@@ -173,7 +173,7 @@ if ! has_app "Backup and Sync"; then brew_cask_install google-backup-and-sync; f
 # if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
-if ! has_app "Keynote"; then mas_install "409183694"; fi
+# if ! has_app "Keynote"; then mas_install "409183694"; fi
 if ! has_app "Spark"; then mas_install "1176895641"; fi
 if ! has_app "Dashlane"; then mas_install "552383089"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
@@ -183,7 +183,7 @@ if ! has_app "Kindle"; then mas_install "405399194"; fi
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
-#if ! has_app "Stremio"; then brew_cask_install stremio; fi
+if ! has_app "Stremio"; then brew_cask_install stremio; fi
 
 # Chat
 if ! has_app "Discord"; then brew_cask_install discord; fi
@@ -208,7 +208,7 @@ if ! test -d "$HOME/.nvm"; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
 fi;
 
-# rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
+rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
 ######
 # Custom directories
