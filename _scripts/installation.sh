@@ -91,10 +91,10 @@ if exists brew; then
   if ! exists_in_brew ripgrep; then brew_install ripgrep; fi;
 
   # https://github.com/jesseduffield/lazydocker
-  # if !exists_in_brew lazydocker; then brew_install lazydocker; fi;
+  # if ! exists_in_brew lazydocker; then brew_install lazydocker; fi;
 
   # https://github.com/bcicen/ctop
-  if !exists_in_brew ctop; then brew_install ctop; fi;
+  if ! exists_in_brew ctop; then brew_install ctop; fi;
 
   # PGP
   if ! exists_in_brew gpg2; then brew_install gpg2; fi
@@ -128,14 +128,20 @@ install_font "DejaVu Sans Mono Italic Nerd Font Complete.ttf" "https://raw.githu
 install_font "DejaVu Sans Mono Nerd Regular.ttf" "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf";
 
 # https://github.com/JetBrains/JetBrainsMono
-install_font "JetBrainsMono-Bold-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Bold-Italic.ttf"
-install_font "JetBrainsMono-Bold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Bold.ttf"
-install_font "JetBrainsMono-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Italic.ttf"
-install_font "JetBrainsMono-Regular.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf"
-install_font "JetBrainsMono-ExtraBold-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-ExtraBold-Italic.ttf"
-install_font "JetBrainsMono-ExtraBold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-ExtraBold.ttf"
-install_font "JetBrainsMono-Medium-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Medium-Italic.ttf"
-install_font "JetBrainsMono-Medium.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Medium.ttf"
+install_font "JetBrainsMono-Thin.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Thin.ttf"
+install_font "JetBrainsMono-ThinItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ThinItalic.ttf"
+install_font "JetBrainsMono-ExtraLight.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ExtraLight.ttf"
+install_font "JetBrainsMono-ExtraLightItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ExtraLightItalic.ttf"
+install_font "JetBrainsMono-Light.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Light.ttf"
+install_font "JetBrainsMono-LightItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-LightItalic.ttf"
+install_font "JetBrainsMono-BoldItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-BoldItalic.ttf"
+install_font "JetBrainsMono-Bold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Bold.ttf"
+install_font "JetBrainsMono-Italic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Italic.ttf"
+install_font "JetBrainsMono-Regular.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf"
+install_font "JetBrainsMono-ExtraBoldItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ExtraBoldItalic.ttf"
+install_font "JetBrainsMono-ExtraBold.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ExtraBold.ttf"
+install_font "JetBrainsMono-MediumItalic.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-MediumItalic.ttf"
+install_font "JetBrainsMono-Medium.ttf" "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Medium.ttf"
 
 ######
 # Apps
@@ -205,7 +211,7 @@ curl -L https://get.oh-my.fish | fish
 
 if ! test -d "$HOME/.nvm"; then
     echo "Install NVM...";
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 fi;
 
 rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
