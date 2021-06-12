@@ -165,6 +165,7 @@ if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud
 # if ! has_app "Xcode"; then mas_install "497799835"; fi
 
 # Utils
+if ! has_app "Raycast"; then brew_cask_install raycast; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
 if ! has_app "Magnet"; then mas_install "441258766"; fi
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
