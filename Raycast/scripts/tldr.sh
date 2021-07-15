@@ -26,7 +26,7 @@ command=$1
 os=$2
 
 if test -z "$os"; then
-    tldr "$command" --color always
+    tldr "$command"
 else
-    tldr "$command" --os "$os" --color always
+    tldr "$command" --platform "$os"
 fi
