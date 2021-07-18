@@ -19,8 +19,16 @@ function bind_dollar
   end
 end
 
+# Copy selected text
+function copy_selected
+  # iTerm is set to copy on select.
+  set copied (pbpaste)
+  open "https://www.google.com/search?q=$copied"
+end
+
 # enable keybindings
 function fish_user_key_bindings
+  bind ± copy_selected
   bind ! bind_bang
   bind '$' bind_dollar
   bind "&&" 'commandline -i "; and"'
