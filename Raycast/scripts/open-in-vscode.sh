@@ -23,3 +23,5 @@ fi
 PROJECT_DIR=$(fish -c "z -e $1")
 
 code "$PROJECT_DIR"
+
+echo $PROJECT_DIR
