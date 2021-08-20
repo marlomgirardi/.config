@@ -514,8 +514,24 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 141 224 278 0 0 1680 1025 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>964 -566 620 398 434 -1050 1680 1025 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>502 -599 850 388 0 -1050 1680 1025 </string>
+	<string>383 282 850 388 0 0 1680 1025 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>220 -954 850 378 0 -1050 1680 1025 </string>
 	<key>NeverWarnAboutShortLivedSessions_C95EB434-4F62-459A-8D0B-3EFDCD025775</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_C95EB434-4F62-459A-8D0B-3EFDCD025775_selection</key>
@@ -1446,20 +1462,36 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.4.5</string>
+		<string>3.4.8</string>
 		<string>3.4.4</string>
+		<string>3.4.6</string>
 	</array>
+	<key>NoSyncFrame_SharedPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {1680, 1050}}</string>
+		<key>topLeft</key>
+		<string>{447, 837}</string>
+	</dict>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncIgnoreSystemWindowRestoration</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>81638D53-7436-4A36-B9C9-C9F950600DF3</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 11.2.3 (Build 20D91)</string>
+	<string>Version 11.5.2 (Build 20G95)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
+	<key>NoSyncLastTipTime</key>
+	<real>638784526.63106596</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>2</integer>
+	<integer>77</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>637454010.74680996</real>
+	<real>637679846.51097703</real>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -1818,6 +1850,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.jobPid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>frame</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1986,6 +2026,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.jobName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1997,7 +2045,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.terminalWindowName</string>
+				<string>currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2005,7 +2053,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.bellCount</string>
+				<string>tmuxWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2054,6 +2102,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentSession.presentationName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2141,6 +2197,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.bellCount</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentSession.termid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2152,6 +2216,14 @@
 				<string>iterm2</string>
 				<key>nonterminalContext</key>
 				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -2174,22 +2246,6 @@
 				<true/>
 				<key>name</key>
 				<string>currentSession.pid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2242,6 +2298,17 @@
 	<integer>0</integer>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>637281210.74638903</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>0003</string>
+		<string>0001</string>
+		<string>000</string>
+		<string>0002</string>
+		<string>0000</string>
+		<string>0004</string>
+	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -2300,8 +2367,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2021-03-14T11:22:30Z</date>
+	<date>2021-08-20T13:47:07Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>1437533947</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
@@ -2333,7 +2404,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.4.4</string>
+	<string>3.4.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

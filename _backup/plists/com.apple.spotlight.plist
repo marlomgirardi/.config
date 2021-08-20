@@ -2,18 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSStatusItem Preferred Position Item-0</key>
+	<real>181</real>
+	<key>NSStatusItem Visible Item-0</key>
+	<true/>
 	<key>SPMessageTracingWindowHideCount</key>
-	<integer>1087</integer>
+	<integer>2059</integer>
 	<key>SPMessageTracingWindowShowCount</key>
-	<integer>1087</integer>
+	<integer>2060</integer>
 	<key>__NSEnableTSMDocumentWindowLevel</key>
 	<true/>
 	<key>engagementCount-com.apple.Spotlight</key>
-	<integer>325</integer>
+	<integer>0</integer>
+	<key>engagementCount-com.apple.Spotlight.suggestions</key>
+	<integer>0</integer>
+	<key>engagementCount-com.apple.mail</key>
+	<integer>0</integer>
 	<key>lastVisibleScreenRect</key>
-	<string>{{0, 53}, {1440, 822}}</string>
+	<string>{{0, 60}, {1680, 965}}</string>
 	<key>lastWindowPosition</key>
-	<string>{{665, 623}, {680, 52}}</string>
+	<string>{{964, 692.63708873379858}, {680, 52}}</string>
 	<key>orderedItems</key>
 	<array>
 		<dict>
@@ -140,12 +148,14 @@
 	<key>showedFTE</key>
 	<true/>
 	<key>startTime</key>
-	<real>628083843.89767003</real>
+	<real>651138835.41342998</real>
 	<key>useCount</key>
 	<integer>3</integer>
 	<key>userHasMovedWindow</key>
 	<true/>
 	<key>version</key>
 	<integer>7</integer>
+	<key>windowHeight</key>
+	<real>431</real>
 </dict>
 </plist>
