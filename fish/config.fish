@@ -19,9 +19,11 @@ set -gx PROJECT_PATHS ~/Library/Projects
 nvm use default --silent
 
 if status is-interactive
+    eval (/opt/homebrew/bin/brew shellenv)
+    starship init fish | source
+
     # Source aliases
     source "$HOME/.config/_external/.bash_aliases"
-    starship init fish | source
 end
 
 # TODO: see a way to dont write in history and maintain the arrow up history

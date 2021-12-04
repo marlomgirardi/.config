@@ -189,6 +189,7 @@ if ! has_app "Spark"; then mas_install "1176895641"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
 # if ! has_app "Evernote"; then mas_install "406056744"; fi
 # if ! has_app "Bear"; then mas_install "1091189122"; fi
+if ! has_app "TradingView"; then brew_cask_install tradingview; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
