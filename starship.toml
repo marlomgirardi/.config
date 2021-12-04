@@ -1,0 +1,32 @@
+# https://starship.rs/config/#prompt
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$singularity\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$deno\
+$nodejs\
+$python\
+$memory_usage\
+$aws\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$time\
+$status\
+$shell\
+$character"""

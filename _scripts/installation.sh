@@ -37,6 +37,9 @@ if not_exists brew; then
   # CI = 1 to do a simulate a CI bot and do it silently
   echo "Install brew..."
   CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 echo "Tap homebrew/cask-versions...";
@@ -167,28 +170,30 @@ if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud
 # Utils
 if ! has_app "Raycast"; then brew_cask_install raycast; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
-if ! has_app "Magnet"; then mas_install "441258766"; fi
+# if ! has_app "Magnet"; then mas_install "441258766"; fi # replaced by Raycast
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
 if ! has_app "Authy Desktop"; then brew_cask_install authy; fi
+if ! has_app "AdGuard"; then brew_cask_install adguard; fi
 
 # Office
 if ! has_app "Notion"; then brew_cask_install notion; fi
-if ! has_app "Backup and Sync"; then brew_cask_install google-backup-and-sync; fi
+if ! has_app "Google Drive"; then brew_cask_install google-drive; fi
 # if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
 # if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
 # if ! has_app "Keynote"; then mas_install "409183694"; fi
 if ! has_app "Spark"; then mas_install "1176895641"; fi
-if ! has_app "Dashlane"; then mas_install "552383089"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
 # if ! has_app "Evernote"; then mas_install "406056744"; fi
 # if ! has_app "Bear"; then mas_install "1091189122"; fi
 
 # General
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
+if ! has_app "Brave Browser"; then brew_cask_install microsoft-edge; fi
+if ! has_app "Microsoft Edge"; then brew_cask_install brave-browser; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
 if ! has_app "Stremio"; then brew_cask_install stremio; fi
 
@@ -208,14 +213,12 @@ if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
 fi;
 
 echo "Install OMF...";
-curl -L https://get.oh-my.fish | fish
+curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 if ! test -d "$HOME/.nvm"; then
     echo "Install NVM...";
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 fi;
-
-rm -r /usr/local/Caskroom/adobe-creative-cloud 2>/dev/null;
 
 ######
 # Custom directories

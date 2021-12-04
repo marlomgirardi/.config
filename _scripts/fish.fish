@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-echo "Install spacefish theme..."
-omf install spacefish 1>/dev/null # https://github.com/matchai/spacefish
+echo "Install starship theme..."
+brew install starship
 
 echo "Install z - z tracks the directories you visit. With a combination of frequency and recency, it enables you to jump to the directory in mind."
 omf install z 1>/dev/null # https://github.com/jethrokuan/z

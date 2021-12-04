@@ -147,7 +147,6 @@ SYSTEM_NAME="mgmbp"
 
 
     # Add apps to dock
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Launchpad");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
 
@@ -169,7 +168,6 @@ SYSTEM_NAME="mgmbp"
 
     # defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Cyberduck");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Notes");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "FaceTime");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Messages");
 
     # Add folders to docker
@@ -314,15 +312,13 @@ SYSTEM_NAME="mgmbp"
         defaults import $PLIST "$HOME/.config/_backup/plists/$PLIST.plist";
     done;
 
-if [ $SHELL != "/usr/local/bin/fish" ]; then
+if [ $SHELL != "/opt/homebrew/bin/fish" ]; then
 	echo "Defined fish as default shell...";
-   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells;
-   chsh -s /usr/local/bin/fish;
+   echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells;
+   chsh -s /opt/homebrew/bin/fish;
 fi
 
-killall Spotlight; # Restart Spotlight
 killall ControlCenter; # Restart Control Center
-killall ControlStrip; # Restart Touchbar
 killall Dock; # Restart Dock
 killall Finder; # Restart Finder
 killall SystemUIServer; # Restart Top right menu (clock, battery, ...)

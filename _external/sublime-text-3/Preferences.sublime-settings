@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"draw_white_space": "all",
@@ -28,5 +27,5 @@
 	"match_brackets_angle": true,
 	"show_encoding": true,
 	"show_line_endings": true,
-	"theme": "Monokai Pro (Filter Spectrum).sublime-theme"
+	"theme": "Adaptive.sublime-theme",
 }

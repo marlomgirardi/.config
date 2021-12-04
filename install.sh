@@ -25,20 +25,10 @@ done
 # HOME
 ###########
 
-for FILE in vim bashrc; do
+for FILE in vim; do
   rm -r "$HOME/.$FILE" 2>/dev/null
   ln -sf "$DIR/_external/home/.$FILE" $HOME
 done
-
-###########
-# VSCODE
-###########
-
-  # Install sync extension
-  if [ $(code --list-extensions | grep -c "Shan.code-settings-sync") -eq 0 ]; then
-    echo "Installing VSCode Settings sync...";
-    code --install-extension "Shan.code-settings-sync";
-  fi;
 
 ###########
 # SUBLIME TEXT
