@@ -1,32 +1,45 @@
 # https://starship.rs/config/#prompt
 
+# Inserts a blank line between shell prompts
+add_newline = true
+
+
 format = """
 $username\
 $hostname\
-$shlvl\
-$singularity\
 $directory\
-$vcsh\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
-$docker_context\
 $package\
-$deno\
 $nodejs\
-$python\
-$memory_usage\
-$aws\
-$env_var\
-$crystal\
-$custom\
 $cmd_duration\
 $line_break\
 $jobs\
-$time\
 $status\
 $shell\
-$character"""
+$character\
+"""
+
+# https://starship.rs/config/#directory
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+
+[git_state]
+cherry_pick = "[🍒 PICKING](bold red)"
+merge =" MERGING"
+revert ="碑 REVERTING"
+rebase ="REBASING"
+bisect ="BISECTING"
+
+[nodejs]
+version_format = "$raw"
+
+[package]
+version_format = "$raw"
+display_private = true
