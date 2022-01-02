@@ -167,6 +167,8 @@ if ! has_app "Postman"; then brew_cask_install postman; fi
 if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
 # if ! has_app "Xcode"; then mas_install "497799835"; fi
 
+if ! has_app "Ganache"; then brew_cask_install ganache; fi
+
 # Utils
 if ! has_app "Raycast"; then brew_cask_install raycast; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
@@ -197,6 +199,7 @@ if ! has_app "Brave Browser"; then brew_cask_install microsoft-edge; fi
 if ! has_app "Microsoft Edge"; then brew_cask_install brave-browser; fi
 if ! has_app "Spotify"; then brew_cask_install spotify; fi
 if ! has_app "Stremio"; then brew_cask_install stremio; fi
+if ! has_app "IINA"; then brew_cask_install iina; fi
 
 # Chat
 if ! has_app "Discord"; then brew_cask_install discord; fi
