@@ -178,6 +178,7 @@ if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
 if ! has_app "Authy Desktop"; then brew_cask_install authy; fi
 if ! has_app "AdGuard"; then brew_cask_install adguard; fi
+if ! has_app "draw.io"; then brew_cask_install drawio; fi
 
 # Office
 if ! has_app "Notion"; then brew_cask_install notion; fi
