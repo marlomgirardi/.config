@@ -42,12 +42,13 @@ This is the structure used for this project.
 # Clone
 cd ~
 git clone --recursive git@github.com:marlomgirardi/MacOS.git .config
+```
 
+Change `SYSTEM_NAME` at `defaults.sh`.
+
+```sh
 # Install
 sh .config/install.sh
-
-# Save backup
-sh .config/backup.sh
 ```
 
 ## Apple

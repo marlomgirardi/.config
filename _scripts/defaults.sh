@@ -7,7 +7,7 @@ to_dock_app() { echo $(to_dock "/Applications/$1.app" 0); }
 to_dock_app_system() { echo $(to_dock "/System/Applications/$1.app" 0); }
 to_dock_folder() { echo $(to_dock "file://$1" 15); }
 
-SYSTEM_NAME="mgmbp"
+SYSTEM_NAME=""
 
 ###############################################################################
 # Sharing                                                                     #
