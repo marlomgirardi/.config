@@ -1,5 +1,3 @@
-.DS_Store
-
 /_external/home/.vim/swaps
 !/_external/home/.vim/swaps/.gitkeep
 
@@ -9,11 +7,19 @@ fish/conf.d/omf.fish
 fish/fish_variables
 fish/fishfile
 
-configstore/
 fisherman/
 fnm/
-gatsby/
-iterm2/AppSupport
 secrets.fish
 
+# Raycast
+Raycast/extensions
+Raycast/config.json
+
+# Dev
+gatsby/
 yarn/link
+
+# Utils
+.DS_Store
+iterm2/AppSupport
+configstore/
