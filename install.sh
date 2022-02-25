@@ -7,13 +7,6 @@ sudo -v;
 DIR=$( cd $( dirname $BASH_SOURCE[0] ) && pwd )
 
 ###########
-# GIVE SSH FILE PERMISSIONS
-###########
-chmod 600 ~/.ssh/config
-chmod 600 ~/.ssh/id_rsa
-chmod 644 ~/.ssh/id_rsa.pub
-
-###########
 # INSTALLATION SCRIPTS
 ###########
 

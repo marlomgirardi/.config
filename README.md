@@ -38,13 +38,23 @@ This is the structure used for this project.
 
 ## Install
 
+```ssh
+# Create SSH key or import the one you have
+ssh-keygen -t ed25519;
+
+# Give the proper permissions if imported
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+```
+
 ```sh
 # Clone
 cd ~
 git clone --recursive git@github.com:marlomgirardi/MacOS.git .config
 ```
 
-Change `SYSTEM_NAME` at `defaults.sh`.
+Change `SYSTEM_NAME` at `defaults.sh` as the computer name.
 
 ```sh
 # Install
