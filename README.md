@@ -38,6 +38,14 @@ This is the structure used for this project.
 
 ## Install
 
+Some software like Adobe Creative Cloud still not compatible with Silicon processors, install rosetta if you see
+"Bad CPU type in executable" or similar.
+
+```ssh
+softwareupdate --install-rosetta
+```
+
+
 ```ssh
 # Create SSH key or import the one you have
 ssh-keygen -t ed25519;

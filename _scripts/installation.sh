@@ -7,8 +7,6 @@ download() { echo "Downloading $2..."; curl $3 --output "$1/$2" &>/dev/null; }
 has_font() { ls "/Library/Fonts/$1" &>/dev/null || ls "$HOME/Library/Fonts/$1" &>/dev/null; }
 install_font() { if ! has_font "$1"; then download "$HOME/Library/Fonts" "$1" "$2"; fi; }
 
-
-
 exists_in_brew() { brew ls --versions $1 > /dev/null; }
 brew_install() { echo "brew install $1 ..."; brew install $1 1>/dev/null; }
 brew_cask_install() { echo "brew install --cask $1 ..."; brew install --cask $1 1>/dev/null; }
@@ -153,26 +151,22 @@ install_font "JetBrainsMono-Medium.ttf" "https://raw.githubusercontent.com/JetBr
 # Development
 if ! has_app "Visual Studio Code"; then brew_cask_install visual-studio-code; fi
 if ! has_app "Sublime Text"; then brew_cask_install sublime-text; fi
+if ! has_app "iTerm"; then brew_cask_install iterm2; fi
+if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
+if ! has_app "Postman"; then brew_cask_install postman; fi
+if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
 #if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
 #if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 #if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
-if ! has_app "iTerm"; then brew_cask_install iterm2; fi
-if ! has_app "Dash"; then brew_cask_install dash; fi
-if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
 #if ! has_app "Docker"; then brew_cask_install docker; fi
-if ! has_app "Postman"; then brew_cask_install postman; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
 # if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
-# if ! has_app "MAMP PRO"; then brew_cask_install mamp; fi
-if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
-# if ! has_app "Xcode"; then mas_install "497799835"; fi
 
 if ! has_app "Ganache"; then brew_cask_install ganache; fi
 
 # Utils
 if ! has_app "Raycast"; then brew_cask_install raycast; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
-# if ! has_app "Magnet"; then mas_install "441258766"; fi # replaced by Raycast
 if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
@@ -183,15 +177,10 @@ if ! has_app "draw.io"; then brew_cask_install drawio; fi
 # Office
 if ! has_app "Notion"; then brew_cask_install notion; fi
 if ! has_app "Google Drive"; then brew_cask_install google-drive; fi
-# if ! has_app "Alfred 4"; then brew_cask_install alfred; fi
-# if ! has_app "Grammarly"; then brew_cask_install grammarly; fi
 if ! has_app "Numbers"; then mas_install "409203825"; fi
 if ! has_app "Pages"; then mas_install "409201541"; fi
-# if ! has_app "Keynote"; then mas_install "409183694"; fi
 if ! has_app "Spark"; then mas_install "1176895641"; fi
 if ! has_app "Kindle"; then mas_install "405399194"; fi
-# if ! has_app "Evernote"; then mas_install "406056744"; fi
-# if ! has_app "Bear"; then mas_install "1091189122"; fi
 if ! has_app "TradingView"; then brew_cask_install tradingview; fi
 
 # General
@@ -204,7 +193,6 @@ if ! has_app "IINA"; then brew_cask_install iina; fi
 
 # Chat
 if ! has_app "Discord"; then brew_cask_install discord; fi
-if ! has_app "Skype"; then brew_cask_install skype; fi
 if ! has_app "Slack"; then mas_install "803453959"; fi
 if ! has_app "WhatsApp"; then mas_install "1147396723"; fi
 if ! has_app "Telegram"; then mas_install "747648890"; fi
