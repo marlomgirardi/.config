@@ -8,5 +8,3 @@ brew upgrade;
 
 echo "Clear old versions...";
 brew cleanup -s;
-
-rm -rf $(brew --cache)/*
