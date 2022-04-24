@@ -158,9 +158,8 @@ if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud
 #if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
 #if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 #if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
-#if ! has_app "Docker"; then brew_cask_install docker; fi
+if ! has_app "Docker"; then brew_cask_install docker; fi
 # if ! has_app "JetBrains Toolbox"; then brew_cask_install jetbrains-toolbox; fi
-# if ! has_app "MySQLWorkbench"; then brew_cask_install mysqlworkbench; fi
 
 if ! has_app "Ganache"; then brew_cask_install ganache; fi
 
