@@ -23,3 +23,6 @@ yarn/link
 .DS_Store
 iterm2/AppSupport
 configstore/
+
+# Github
+gh/hosts.yml
