@@ -1,5 +1,5 @@
-/_external/home/.vim/swaps
-!/_external/home/.vim/swaps/.gitkeep
+vim/swaps
+!vim/swaps/.gitkeep
 
 # FISH
 fish/functions/fish_prompt.fish

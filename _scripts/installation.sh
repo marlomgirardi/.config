@@ -50,8 +50,8 @@ brew tap homebrew/cask-versions
 
 if exists brew; then
 
-  # Check outdated libraries
-  if ! exists brew cu; then brew tap buo/cask-upgrade; fi
+  # Like cat, but better.
+  if ! exists_in_brew nvim; then brew_install nvim; fi
 
   # Distributed revision control system
   if ! exists_in_brew git; then brew_install git; fi
@@ -67,9 +67,6 @@ if exists brew; then
 
   # Better man command
   if ! exists_in_brew tldr; then brew_install tldr; fi
-
-  # Show ps output as a tree
-  if ! exists_in_brew pstree; then brew_install pstree; fi
 
   # It's an interactive Unix filter for command-line.
   if ! exists_in_brew fzf; then brew_install fzf; fi
@@ -95,12 +92,12 @@ if exists brew; then
   # if ! exists_in_brew lazydocker; then brew_install lazydocker; fi;
 
   # https://github.com/bcicen/ctop
-  if ! exists_in_brew ctop; then brew_install ctop; fi;
+  # if ! exists_in_brew ctop; then brew_install ctop; fi;
 
   # PGP
-  if ! exists_in_brew gpg2; then brew_install gpg2; fi
-  if ! exists_in_brew gnupg; then brew_install gnupg; fi
-  if ! exists_in_brew pinentry-mac; then brew_install pinentry-mac; fi
+  # if ! exists_in_brew gpg2; then brew_install gpg2; fi
+  # if ! exists_in_brew gnupg; then brew_install gnupg; fi
+  # if ! exists_in_brew pinentry-mac; then brew_install pinentry-mac; fi
 else
   echo "Looks like brew isn't installed"
 fi;

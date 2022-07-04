@@ -15,15 +15,6 @@ for SCRIPT in installation defaults brew; do
 done
 
 ###########
-# HOME
-###########
-
-for FILE in vim; do
-  rm -r "$HOME/.$FILE" 2>/dev/null
-  ln -sf "$DIR/_external/home/.$FILE" $HOME
-done
-
-###########
 # SUBLIME TEXT
 ###########
 

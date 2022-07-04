@@ -3,7 +3,7 @@
 	name = Marlom Girardi
 	signingkey = E7EEE242FC90B2C564554FDCFF4361BBB606CDAE
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = false
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.config/git/ignore
@@ -41,10 +41,11 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
 	guitool = subl -w
-[difftool]
+[difftool "nvimdiff"]
 	prompt = false
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [url "git@github.com:"]
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [alias]

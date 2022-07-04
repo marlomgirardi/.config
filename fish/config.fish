@@ -7,9 +7,9 @@ stty start undef
 # TERMINAL CONFIG
 set HISTIGNORE history pwd jobs fg bg l ll ls la lsd lsf clear c exit
 set -gx LC_ALL en_US.UTF-8
-set -gx EDITOR vim
-set -gx VISUAL vim
-set -gx GIT_EDITOR vim
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+set -gx GIT_EDITOR nvim
 set -gx GPG_TTY (tty)
 
 # PJ CONFIG
@@ -23,7 +23,7 @@ if status is-interactive
     starship init fish | source
 
     # Source aliases
-    source "$HOME/.config/_external/.bash_aliases"
+    source "$HOME/.config/.bash_aliases"
 end
 
 # TODO: see a way to dont write in history and maintain the arrow up history
