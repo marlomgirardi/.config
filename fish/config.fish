@@ -34,3 +34,8 @@ function ignorehistory --on-event fish_postexec -d "Simulate HISTIGNORE from bas
         history delete --case-sensitive --exact $COMMAND
     end
 end
+
+# pnpm
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end

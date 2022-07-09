@@ -96,21 +96,26 @@ alias path='echo -e {$PATH \\n}'; # fish
 
 # NPM
 alias ni='npm install'
-alias nid='npm install --save-dev'
-alias nig='npm install --global'
 alias nt='npm test'
-alias nit='npm install && npm test'
 alias nk='npm link'
 alias nr='npm run'
 alias ns='npm start'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nlg='npm list --global --depth=0'
 
+# PNPM
+alias pn='pnpm'
+alias pni='pnpm install'
+alias pnad='pnpm add'
+alias pnt='pnpm test'
+alias pnr='pnpm run'
+alias pns='pnpm start'
+alias pnlg='pnpm list --global --depth=0'
+
 # yarn
 alias yi='yarn install'
 alias ya='yarn add'
 alias yt='yarn test'
-alias yit='yarn install && yarn test'
 alias ns='npm start'
 alias yf='yarn cache clean && rm -rf node_modules && yarn install'
 alias ylg='yarn global list --depth=0'
