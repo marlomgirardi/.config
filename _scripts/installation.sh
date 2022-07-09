@@ -49,6 +49,8 @@ brew tap homebrew/cask-versions
 #####
 
 if exists brew; then
+  # Like NVM, but better
+  if ! exists_in_brew fnm; then brew_install fnm; fi;
 
   # Like cat, but better.
   if ! exists_in_brew nvim; then brew_install nvim; fi
@@ -203,11 +205,6 @@ fi;
 
 echo "Install OMF...";
 curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
-if ! test -d "$HOME/.nvm"; then
-    echo "Install NVM...";
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-fi;
 
 ######
 # Custom directories

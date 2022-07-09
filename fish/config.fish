@@ -16,7 +16,7 @@ set -gx GPG_TTY (tty)
 set -gx PROJECT_PATHS ~/Library/Projects
 
 # Use default node
-nvm use default --silent
+fnm use default 1>/dev/null
 
 if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)

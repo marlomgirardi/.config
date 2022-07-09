@@ -107,7 +107,6 @@ alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nlg='npm list --global --depth=0'
 
 # yarn
-alias y='yarn'
 alias yi='yarn install'
 alias ya='yarn add'
 alias yt='yarn test'
