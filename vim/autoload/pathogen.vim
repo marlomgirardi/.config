@@ -136,7 +136,7 @@ function! pathogen#interpose(name) abort
   let list = []
   for dir in pathogen#split(&rtp)
     if dir =~# '\<after$'
-      let list += reverse(filter(pathogen#expand(dir[0:-6].name, sep.'after'), '!pathogen#is_disabled(v:val[0:-7])')) + [dir]
+      let list += reverse(filter(pathogen#expand(dir[0 : -6].name, sep.'after'), '!pathogen#is_disabled(v:val[0 : -7])')) + [dir]
     else
       let list += [dir] + filter(pathogen#expand(dir.sep.name), '!pathogen#is_disabled(v:val)')
     endif
