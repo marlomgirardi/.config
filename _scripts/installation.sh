@@ -154,7 +154,6 @@ if ! has_app "iTerm"; then brew_cask_install iterm2; fi
 if ! has_app "Firefox Developer Edition"; then brew_cask_install firefox-developer-edition; fi
 if ! has_app "Postman"; then brew_cask_install postman; fi
 if ! has_app "Adobe Creative Cloud"; then brew_cask_install adobe-creative-cloud; fi
-#if ! has_app "Sequel Pro"; then brew_cask_install sequel-pro; fi # Replace by TablePlus?
 #if ! has_app "TablePlus"; then brew_cask_install tableplus; fi
 #if ! has_app "Cyberduck"; then brew_cask_install cyberduck; fi
 if ! has_app "Docker"; then brew_cask_install docker; fi

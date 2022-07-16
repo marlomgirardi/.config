@@ -41,7 +41,7 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 # Grep
-alias grep='ripgrep'
+alias grep='rg'
 
 # Storage
 alias df='df -H'

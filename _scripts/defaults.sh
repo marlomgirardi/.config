@@ -165,8 +165,7 @@ SYSTEM_NAME=""
 
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Notion");
 
-    #APP="Sequel Pro";
-    #defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
+    # defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "TablePlus");
 
     # defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Cyberduck");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Notes");
