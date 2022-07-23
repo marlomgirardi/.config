@@ -15,9 +15,6 @@ set -gx GPG_TTY (tty)
 # PJ CONFIG
 set -gx PROJECT_PATHS ~/Library/Projects
 
-# Use default node
-fnm use default 1>/dev/null
-
 if status is-interactive
     eval (/opt/homebrew/bin/brew shellenv)
     starship init fish | source
