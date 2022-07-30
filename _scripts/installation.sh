@@ -90,6 +90,10 @@ if exists brew; then
   # https://github.com/BurntSushi/ripgrep
   if ! exists_in_brew ripgrep; then brew_install ripgrep; fi;
 
+  # Json processor
+  # - needed by nx fish completion.
+  if ! exists_in_brew jq; then brew_install jq; fi;
+
   # https://github.com/jesseduffield/lazydocker
   # if ! exists_in_brew lazydocker; then brew_install lazydocker; fi;
 

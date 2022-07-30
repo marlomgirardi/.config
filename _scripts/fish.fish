@@ -3,9 +3,6 @@
 echo "Install z - z tracks the directories you visit. With a combination of frequency and recency, it enables you to jump to the directory in mind."
 omf install z 1>/dev/null # https://github.com/jethrokuan/z
 
-echo "Install brew-completions - 🐟Fish shell completions for 🍺Homebrew"
-omf install laughedelic/brew-completions # https://github.com/laughedelic/brew-completions
-
 echo "Install pj - pj allows you to easily jump between your favourite directories in a predictable manner."
 omf install pj 1>/dev/null # https://github.com/oh-my-fish/plugin-pj
 
