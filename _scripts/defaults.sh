@@ -303,6 +303,20 @@ SYSTEM_NAME=""
         "/System/Library/CoreServices/Menu Extras/Volume.menu";
 
 ###############################################################################
+# VS Code                                                                     #
+###############################################################################
+
+    # Only worked ater this reset
+    defaults delete -g ApplePressAndHoldEnabled
+
+    # Repeat delay and speed
+    defaults write "Apple Global Domain" InitialKeyRepeat -int 15
+    defaults write "Apple Global Domain" KeyRepeat -int 2
+
+    # Repeated keys for vim keybindings
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+###############################################################################
 # Plists to import                                                            #
 ###############################################################################
 
