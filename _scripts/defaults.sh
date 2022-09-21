@@ -144,6 +144,7 @@ SYSTEM_NAME=""
     defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true; # spring loading for all Dock items
     defaults write com.apple.dock show-process-indicators -bool true;  # indicator lights for open applications in the Dock
     defaults write com.apple.dock show-recents -bool false; # Show recent apps in dock
+    defaults write com.apple.Dock showhidden -bool true; # Show hidden apps in dock (Cmd + H)
 
 
     # Add apps to dock
