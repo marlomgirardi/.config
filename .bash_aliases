@@ -113,6 +113,7 @@ alias pns='pnpm start'
 alias pnlg='pnpm list --global --depth=0'
 
 # yarn
+alias y='yarn'
 alias yi='yarn install'
 alias ya='yarn add'
 alias yt='yarn test'
