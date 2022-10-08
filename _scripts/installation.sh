@@ -168,12 +168,16 @@ if ! has_app "Ganache"; then brew_cask_install ganache; fi
 # Utils
 if ! has_app "Raycast"; then brew_cask_install raycast; fi
 if ! has_app "AppCleaner"; then brew_cask_install AppCleaner; fi
-if ! has_app "Lightshot Screenshot"; then mas_install "526298438"; fi
 if ! has_app "iStat Menus"; then mas_install "1319778037"; fi
 if ! has_app "Kap"; then brew_cask_install kap; fi
 if ! has_app "Authy Desktop"; then brew_cask_install authy; fi
 if ! has_app "AdGuard"; then brew_cask_install adguard; fi
 if ! has_app "draw.io"; then brew_cask_install drawio; fi
+if ! has_app "Velja"; then mas_install "1607635845"; fi # testing
+if ! has_app "Hidden Bar"; then mas_install "1452453066"; fi
+if ! has_app "Shottr"; then brew_cask_install shottr; fi # testing
+if ! has_app "One Thing"; then mas_install "1604176982"; fi
+if ! has_app "Dropover"; then mas_install "1355679052"; fi # testing
 
 # Office
 if ! has_app "Notion"; then brew_cask_install notion; fi
@@ -185,6 +189,7 @@ if ! has_app "Kindle"; then mas_install "405399194"; fi
 if ! has_app "TradingView"; then brew_cask_install tradingview; fi
 
 # General
+if ! has_app "Orion"; then brew_cask_install orion; fi # testing
 if ! has_app "Google Chrome"; then brew_cask_install google-chrome; fi
 if ! has_app "Brave Browser"; then brew_cask_install microsoft-edge; fi
 if ! has_app "Microsoft Edge"; then brew_cask_install brave-browser; fi
