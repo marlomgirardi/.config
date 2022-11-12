@@ -50,7 +50,7 @@ brew tap homebrew/cask-versions
 
 if exists brew; then
 
-  # Like cat, but better.
+  # Like vim, but better.
   if ! exists_in_brew nvim; then brew_install nvim; fi
 
   # Distributed revision control system
@@ -173,7 +173,7 @@ if ! has_app "AdGuard"; then brew_cask_install adguard; fi
 if ! has_app "draw.io"; then brew_cask_install drawio; fi
 if ! has_app "Velja"; then mas_install "1607635845"; fi # testing
 if ! has_app "Hidden Bar"; then mas_install "1452453066"; fi
-if ! has_app "Shottr"; then brew_cask_install shottr; fi # testing
+if ! has_app "Shottr"; then brew_cask_install shottr; fi
 if ! has_app "One Thing"; then mas_install "1604176982"; fi
 if ! has_app "Dropover"; then mas_install "1355679052"; fi # testing
 
