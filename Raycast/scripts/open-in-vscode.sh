@@ -20,7 +20,7 @@ if ! command -v code &> /dev/null; then
   exit 1;
 fi
 
-PROJECT_DIR=$(fish -c "z -e $1")
+PROJECT_DIR=$(zsh -c "z -e $1")
 
 code "$PROJECT_DIR"
 

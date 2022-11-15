@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSStatusItem Preferred Position AirDrop</key>
+	<real>304</real>
+	<key>NSStatusItem Preferred Position Battery</key>
+	<real>212</real>
+	<key>NSStatusItem Preferred Position BentoBox</key>
+	<real>194</real>
+	<key>NSStatusItem Preferred Position Bluetooth</key>
+	<real>176</real>
+	<key>NSStatusItem Preferred Position Clock</key>
+	<real>113</real>
+	<key>NSStatusItem Preferred Position NowPlaying</key>
+	<real>338</real>
+	<key>NSStatusItem Preferred Position Shortcuts</key>
+	<real>371</real>
+	<key>NSStatusItem Preferred Position Sound</key>
+	<real>293</real>
+	<key>NSStatusItem Preferred Position StageManager</key>
+	<real>226</real>
+	<key>NSStatusItem Preferred Position WiFi</key>
+	<real>268</real>
+	<key>NSStatusItem Visible AirDrop</key>
+	<false/>
+	<key>NSStatusItem Visible Battery</key>
+	<false/>
+	<key>NSStatusItem Visible BentoBox</key>
+	<true/>
+	<key>NSStatusItem Visible Bluetooth</key>
+	<false/>
+	<key>NSStatusItem Visible Clock</key>
+	<true/>
+	<key>NSStatusItem Visible Item-0</key>
+	<false/>
+	<key>NSStatusItem Visible Item-1</key>
+	<false/>
+	<key>NSStatusItem Visible Item-10</key>
+	<false/>
+	<key>NSStatusItem Visible Item-11</key>
+	<false/>
+	<key>NSStatusItem Visible Item-12</key>
+	<false/>
+	<key>NSStatusItem Visible Item-13</key>
+	<false/>
+	<key>NSStatusItem Visible Item-14</key>
+	<false/>
+	<key>NSStatusItem Visible Item-15</key>
+	<false/>
+	<key>NSStatusItem Visible Item-16</key>
+	<false/>
+	<key>NSStatusItem Visible Item-17</key>
+	<false/>
+	<key>NSStatusItem Visible Item-18</key>
+	<false/>
+	<key>NSStatusItem Visible Item-2</key>
+	<false/>
+	<key>NSStatusItem Visible Item-3</key>
+	<false/>
+	<key>NSStatusItem Visible Item-4</key>
+	<false/>
+	<key>NSStatusItem Visible Item-5</key>
+	<false/>
+	<key>NSStatusItem Visible Item-6</key>
+	<false/>
+	<key>NSStatusItem Visible Item-7</key>
+	<false/>
+	<key>NSStatusItem Visible Item-8</key>
+	<false/>
+	<key>NSStatusItem Visible Item-9</key>
+	<false/>
+	<key>NSStatusItem Visible NowPlaying</key>
+	<false/>
+	<key>NSStatusItem Visible Shortcuts</key>
+	<true/>
+	<key>NSStatusItem Visible Sound</key>
+	<false/>
+	<key>NSStatusItem Visible Spotlight</key>
+	<false/>
+	<key>NSStatusItem Visible StageManager</key>
+	<false/>
+	<key>NSStatusItem Visible WiFi</key>
+	<true/>
+</dict>
+</plist>

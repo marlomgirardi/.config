@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SS_firstLaunchDate</key>
+	<date>2022-09-07T18:37:54Z</date>
+	<key>SS_launchCount</key>
+	<integer>16</integer>
+	<key>alternativeBrowser</key>
+	<string>com.sindresorhus.Velja.promptMarker</string>
+	<key>defaultBrowser</key>
+	<string>com.apple.Safari</string>
+	<key>promptShowURL</key>
+	<false/>
+	<key>removeMailtoOnClipboard</key>
+	<true/>
+	<key>removeTrackingParametersOnClipboard</key>
+	<true/>
+	<key>rules</key>
+	<array>
+		<string>{"sourceApps":[],"id":"2252E389-903A-4974-AE44-14D122A5DFFF","title":"GitHub","matchers":[{"pattern":"github.com","id":"1D7C77D7-322A-43D8-9AC7-1618F1C3D759","kind":"hostSuffix","fixture":"https:\/\/github.com"}],"isEnabled":true,"browser":"com.google.Chrome|Default"}</string>
+		<string>{"sourceApps":[],"id":"6FE25C78-1671-4835-A728-A62957A7ACB6","title":"Atlassian 8bit","matchers":[{"pattern":"8bst.atlassian.net","id":"B59E4C1F-6FCC-4949-BD11-B0D68885C35E","kind":"host","fixture":"https:\/\/8bst.atlassian.net"}],"isEnabled":true,"browser":"com.google.Chrome|Default"}</string>
+		<string>{"sourceApps":["com.googlecode.iterm2","com.microsoft.VSCode"],"id":"2E19AC52-665E-4B8C-B528-0C0B92E3A9E8","title":"Localhost","matchers":[{"pattern":"localhost","id":"C4D4BA11-9298-445C-B9C9-6614DCAFEDC8","kind":"hostSuffix","fixture":"http:\/\/localhost:3333\/api"}],"isEnabled":true,"browser":"com.google.Chrome|Default"}</string>
+		<string>{"sourceApps":[],"id":"A839D5C1-5660-4A5C-9D41-EB57538CB55C","title":"TocOnline","matchers":[{"pattern":"toconline.pt","id":"EDD8D7C7-0DF4-40C4-85F1-D334FAA4C609","kind":"hostSuffix","fixture":"https:\/\/app3.toconline.pt\/public-document\/123123asdasd"}],"isEnabled":true,"browser":"com.microsoft.edgemac"}</string>
+		<string>{"sourceApps":[],"id":"EBB73910-8933-43E5-86A6-53819125BED9","title":"Gala Games","matchers":[{"pattern":"gala.com","id":"E7EE6F33-9F19-4531-A3F8-9FB655C61141","kind":"hostSuffix","fixture":"https:\/\/games.gala.com\/games\/town-star\/play?utm_type=writer"},{"pattern":"gala.games","id":"E9993808-1135-41E2-8B25-F754B20693CF","kind":"hostSuffix","fixture":""}],"isEnabled":true,"browser":"com.brave.Browser|Default"}</string>
+	</array>
+</dict>
+</plist>

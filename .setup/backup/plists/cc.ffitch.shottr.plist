@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeyboardShortcuts_area</key>
+	<string>{"carbonModifiers":768,"carbonKeyCode":21}</string>
+	<key>KeyboardShortcuts_fullscreen</key>
+	<string>{"carbonModifiers":768,"carbonKeyCode":20}</string>
+	<key>KeyboardShortcuts_ocr</key>
+	<string>{"carbonModifiers":6400,"carbonKeyCode":31}</string>
+	<key>KeyboardShortcuts_scrolling</key>
+	<string>{"carbonModifiers":768,"carbonKeyCode":18}</string>
+	<key>KeyboardShortcuts_window</key>
+	<string>{"carbonModifiers":768,"carbonKeyCode":19}</string>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Desktop</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{800, 448}</string>
+	<key>NSStatusItem Preferred Position Item-0</key>
+	<real>5682</real>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>1520 1265 800 448 0 0 3840 2135 </string>
+	<key>Shottr.ObjCounter: counterAngle</key>
+	<string>-2.356194490192345</string>
+	<key>afterGrabCopy</key>
+	<false/>
+	<key>afterGrabSave</key>
+	<false/>
+	<key>afterGrabShow</key>
+	<true/>
+	<key>allowTelemetry</key>
+	<false/>
+	<key>altZoomDirection</key>
+	<false/>
+	<key>alwaysOnTop</key>
+	<true/>
+	<key>areaCaptureMode</key>
+	<string>editor</string>
+	<key>colorFormat</key>
+	<string>HEX</string>
+	<key>copyOnEsc</key>
+	<true/>
+	<key>defaultColor</key>
+	<string>#F44723</string>
+	<key>defaultFolder</key>
+	<string>/Users/marlom/Desktop</string>
+	<key>downscaleOnSave</key>
+	<false/>
+	<key>everHidMainWindow</key>
+	<true/>
+	<key>everScrollingCapture</key>
+	<true/>
+	<key>everVisitedHotkeys</key>
+	<true/>
+	<key>localEventCounter</key>
+	<integer>504</integer>
+	<key>notificationType</key>
+	<string>custom</string>
+	<key>preferLargeWindow</key>
+	<false/>
+	<key>primaryOCRLang</key>
+	<string>en-US</string>
+	<key>realPixels</key>
+	<false/>
+	<key>saveFormat</key>
+	<string>Auto</string>
+	<key>saveOnEsc</key>
+	<false/>
+	<key>scrollingMax</key>
+	<integer>20000</integer>
+	<key>scrollingSpeed</key>
+	<integer>2</integer>
+	<key>token</key>
+	<string></string>
+	<key>uid</key>
+	<string>13en3cpv-4m4u</string>
+	<key>windowShadow</key>
+	<string>trimmed</string>
+	<key>windowSolidColor</key>
+	<string>#1B70CC</string>
+</dict>
+</plist>

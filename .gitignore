@@ -1,28 +1,14 @@
-vim/swaps
-!vim/swaps/.gitkeep
-
-# FISH
-fish/functions/fish_prompt.fish
-fish/conf.d/omf.fish
-fish/fish_variables
-fish/fishfile
-
-fisherman/
-fnm/
-secrets.fish
+# Generated data while using the OS is here, when possible.
+.data/*
+!.data/.gitkeep
 
 # Raycast
 Raycast/extensions
 Raycast/config.json
 
-# Dev
-gatsby/
-yarn/link
-
 # Utils
 .DS_Store
 iterm2/AppSupport
-configstore/
 
 # Github
 gh/hosts.yml

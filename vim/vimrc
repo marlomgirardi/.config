@@ -1,7 +1,3 @@
-" https://github.com/marlomgirardi/MacOS
-
-execute pathogen#infect() 
-
 colorscheme monokai
 
 set shell=fish
@@ -41,10 +37,10 @@ if has("autocmd")
 endif
 
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set backupdir=~/.config/.data/vim/backups
+set directory=~/.config/.data/vim/swaps
 if exists("&undodir")
-  set undodir=~/.vim/undo
+  set undodir=~/.config/.data/vim/undo
 endif
 
 set backupskip=/tmp/*,/private/tmp/* "> Don’t create backups when editing files in certain directories

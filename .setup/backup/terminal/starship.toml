@@ -1,0 +1,31 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# A continuation prompt that displays two filled in arrows
+continuation_prompt = "▶▶"
+
+format = "$all"
+
+# https://starship.rs/config/#directory
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+
+[git_state]
+cherry_pick = "[🍒 PICKING](bold red)"
+merge =" MERGING"
+revert ="碑 REVERTING"
+rebase ="REBASING"
+bisect ="BISECTING"
+
+[nodejs]
+version_format = "$raw"
+
+[package]
+version_format = "$raw"
+display_private = true
