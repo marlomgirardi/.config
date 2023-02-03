@@ -25,7 +25,7 @@ alias gps='g ps'
 alias gpl='g pl'
 alias gf='g f'
 alias gs='g s'
-alias gl='g l'
+alias gl='g l --no-merges'
 alias glm='g lm'
 alias gfco='g fco'
 
