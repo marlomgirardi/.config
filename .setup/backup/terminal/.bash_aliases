@@ -49,6 +49,11 @@ alias dut='du -hsx * | sort -rh | head -10'
 # Processes
 alias psk='ps -ax | fzf --ansi | sed "s/^ *//" | cut -d " " -f1 | xargs -o kill'
 
+function killport() {
+  kill -9 $(lsof -t -i:$1)
+}
+alias pk='killport'
+
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
