@@ -7,7 +7,7 @@ SETUP_DIR=$(cd $(dirname $BASH_SOURCE) && pwd)
 brew bundle dump --force;
 
 # Run scripts
-PLISTS="com.apple.controlcenter com.dwarvesv.minimalbar cc.ffitch.shottr com.sindresorhus.Velja com.googlecode.iterm2";
+PLISTS="com.apple.controlcenter com.dwarvesv.minimalbar cc.ffitch.shottr com.sindresorhus.Velja";
 
 for PLIST in $PLISTS; do
     defaults export $PLIST "$SETUP_DIR/backup/plists/$PLIST.plist"

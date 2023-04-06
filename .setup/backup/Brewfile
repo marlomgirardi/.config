@@ -44,7 +44,6 @@ cask "font-jetbrains-mono-nerd-font" # Terminal
 cask "ganache" # Ethereum dev blockchain
 cask "google-chrome"
 cask "iina" # Player
-cask "iterm2"
 cask "kap" # Screen Recording
 cask "microsoft-edge"
 cask "notion"
@@ -58,7 +57,7 @@ cask "sublime-text"
 cask "tableplus"
 cask "tradingview"
 cask "visual-studio-code"
-cask "warp" # Testing
+cask "warp"
 mas "Dashlane", id: 517914548
 mas "Dropover", id: 1355679052 # Testing
 mas "Hidden Bar", id: 1452453066
