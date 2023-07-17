@@ -120,4 +120,10 @@ alias ns='npm start'
 alias yf='yarn cache clean && rm -rf node_modules && yarn install'
 alias ylg='yarn global list --depth=0'
 
+jwt-decode() {
+  # We can't use the simple @base64d due to jq not handling web-safe encoded base64: https://github.com/jqlang/jq/issues/2262
+  # jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
+  jq -R 'split(".") |.[0:2] | map(gsub("-"; "+") | gsub("_"; "/") | gsub("%3D"; "=") | @base64d) | map(fromjson)' <<< $1
+}
+
 # vim: set ft=sh ts=2 sw=2 tw=120 noet :
