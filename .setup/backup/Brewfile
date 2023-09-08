@@ -22,7 +22,6 @@ brew "pinentry-mac"
 brew "pnpm"
 brew "pstree"
 brew "ripgrep" # https://github.com/BurntSushi/ripgrep
-brew "ruby"
 brew "starship" # Terminal theme
 brew "tldr" # better than man command
 brew "vim"

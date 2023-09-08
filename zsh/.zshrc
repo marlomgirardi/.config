@@ -44,4 +44,4 @@ export PNPM_HOME="/Users/marlom/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-source /Users/marlomgirardi/.docker/init-zsh.sh || true # Added by Docker Desktop
+source /Users/marlom/.docker/init-zsh.sh || true # Added by Docker Desktop

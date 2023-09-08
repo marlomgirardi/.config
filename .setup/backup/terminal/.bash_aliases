@@ -2,16 +2,11 @@
 # https://github.com/marlomgirardi/MacOS
 
 # Listing directory contents
-alias ls='colorls'
-alias l='ls -A'
-alias la='ls -lA --sd'
+alias l='ls -FA'
+alias la='ls -lA'
 alias ll='ls -l'
-alias lsd='ll -dA'
-alias lsf='ll -fA'
-# alias l='ls -FA'
-# alias lsd='ll | grep "^d"'
-# alias lsf='ll | grep "^-"'
-# alias la='ls -lA'
+alias lsd='ll | grep "^d"'
+alias lsf='ll | grep "^-"'
 
 
 # Git aliases
