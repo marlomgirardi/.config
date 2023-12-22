@@ -43,5 +43,3 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="/Users/marlom/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-
-source /Users/marlom/.docker/init-zsh.sh || true # Added by Docker Desktop

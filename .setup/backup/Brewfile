@@ -57,7 +57,6 @@ cask "tradingview"
 cask "visual-studio-code"
 cask "warp"
 mas "Dashlane", id: 517914548
-mas "Dropover", id: 1355679052 # Testing
 mas "Hidden Bar", id: 1452453066
 mas "iStat Menus", id: 1319778037
 mas "Keynote", id: 409183694
@@ -67,7 +66,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "ScreenBrush", id: 1233965871 # Testing
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
+mas "Spark Desktop", id: 6445813049
 mas "Taskheat", id: 1431995750 # Testing
 mas "Telegram", id: 747648890
 mas "Velja", id: 1607635845 # Default browser per link
