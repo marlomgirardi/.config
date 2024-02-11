@@ -121,4 +121,21 @@ jwt-decode() {
   jq -R 'split(".") |.[0:2] | map(gsub("-"; "+") | gsub("_"; "/") | gsub("%3D"; "=") | @base64d) | map(fromjson)' <<< $1
 }
 
+# Not complete, but at least a quick way to update to the latest LTS version
+nlts() {
+  CURR_VERSION=$(node -v | tr -d 'v');
+  LATEST_VERSION=$(nvm ls-remote --lts | tail -1 | awk '{print $1}' | tr -d 'v');
+
+  echo "Do you want to migrate from Node.js $CURR_VERSION to $LATEST_VERSION ? (y/n)"
+  read -k 1 REPLY
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    nvm i $LATEST_VERSION --reinstall-packages-from=$CURR_VERSION --latest-npm
+
+    if [ -f .nvmrc ]; then
+      sed -i '' "s/$CURR_VERSION/$LATEST_VERSION/g" .nvmrc
+    fi
+  fi
+}
+
 # vim: set ft=sh ts=2 sw=2 tw=120 noet :
