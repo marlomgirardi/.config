@@ -85,8 +85,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Print each PATH entry on a separate line
-alias path='echo -e {$PATH \\n}'; # fish
-# alias path='echo -e ${PATH//:/\\n}'; #bash
+alias path='echo -e ${PATH//:/\\n}';
 
 # NPM
 alias ni='npm install'

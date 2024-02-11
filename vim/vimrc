@@ -1,6 +1,6 @@
 colorscheme monokai
 
-set shell=fish
+set shell=/bin/zsh
 set t_Co=256              " iTerm2 supports 256 color mode. 
 set ai                    " auto indenting
 set history=1000          " keep 100 lines of history

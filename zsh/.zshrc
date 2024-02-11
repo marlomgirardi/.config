@@ -43,3 +43,5 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="/Users/marlom/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
