@@ -56,6 +56,7 @@ cask "tableplus"
 cask "tradingview"
 cask "visual-studio-code"
 cask "warp"
+cask "aldente"
 mas "Dashlane", id: 517914548
 mas "Hidden Bar", id: 1452453066
 mas "iStat Menus", id: 1319778037
