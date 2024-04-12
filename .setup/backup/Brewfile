@@ -14,7 +14,6 @@ brew "fzf" # It's an interactive Unix filter for command-line.
 brew "gh"
 brew "git"
 brew "gnupg"
-brew "grc" # Colorize logfiles and command output.
 brew "jq" # JSON processor, required by `nx``
 brew "mas" # Install apps from app store
 brew "nvm"

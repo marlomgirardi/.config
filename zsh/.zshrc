@@ -25,7 +25,6 @@ antibody bundle < ~/.config/.setup/backup/terminal/zsh_plugins
 
 # Aliases
 source "$HOME/.config/.setup/backup/terminal/.bash_aliases"
-source "$HOME/.config/zsh/functions/grc.zsh"
 
 # Theme
 STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
