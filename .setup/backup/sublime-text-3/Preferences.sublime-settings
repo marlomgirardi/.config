@@ -21,6 +21,7 @@
 	"font_size": 16,
 	"ignored_packages":
 	[
+		"Package Control",
 		"Vintage",
 	],
 	"match_brackets": true,
@@ -29,4 +30,5 @@
 	"show_line_endings": true,
 	"theme": "Monokai Pro (Filter Spectrum).sublime-theme",
 	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
+	"index_files": true,
 }
