@@ -1,12 +1,7 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
 brew "antibody" # Plugin manager for zsh
 brew "awscli"
-brew "bat" # Like bat, but better
-brew "ctop"
+brew "bat" # Like cat, but better
 # cask "cyberduck"
 brew "fd" # Intuitive find CLI
 brew "fx" # Json Viewer https://github.com/antonmedv/fx
@@ -26,25 +21,23 @@ brew "tldr" # better than man command
 brew "vim"
 brew "zsh"
 cask "adguard"
-cask "appcleaner"
+cask "aldente" # set max battery charge
 cask "audacity"
 cask "brave-browser"
-cask "dash"
 cask "discord"
-cask "docker"
 cask "drawio"
 cask "figma"
-cask "firefox-developer-edition"
-cask "font-jetbrains-mono" # Code editor
-cask "font-jetbrains-mono-nerd-font" # Terminal
-cask "ganache" # Ethereum dev blockchain
+cask "firefox@developer-edition"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "ganache"
 cask "google-chrome"
-cask "iina" # Player
-cask "kap" # Screen Recording
-cask "microsoft-edge"
+cask "iina"
+cask "jetbrains-toolbox"
+cask "kap"
 cask "notion"
-cask "orion" # Testing
 cask "postman"
+cask "proxyman"
 cask "raycast"
 cask "shottr"
 cask "spotify"
@@ -54,20 +47,19 @@ cask "tableplus"
 cask "tradingview"
 cask "visual-studio-code"
 cask "warp"
-cask "aldente"
-mas "Dashlane", id: 517914548
 mas "Hidden Bar", id: 1452453066
 mas "iStat Menus", id: 1319778037
 mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "Notion Web Clipper", id: 1559269364 # For Safari
+mas "Kindle", id: 302584613
+mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "ScreenBrush", id: 1233965871 # Testing
 mas "Slack", id: 803453959
 mas "Spark Desktop", id: 6445813049
-mas "Taskheat", id: 1431995750 # Testing
 mas "Telegram", id: 747648890
 mas "Velja", id: 1607635845 # Default browser per link
 mas "Vidimote", id: 1585702412 # For Safari
-mas "WhatsApp", id: 1147396723
+mas "WhatsApp", id: 310633997
+
+mas "Image2Icon", id: 992115977 # Testing
