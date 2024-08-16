@@ -28,18 +28,12 @@ alias gfco='g fco'
 alias c='clear'
 
 # A quick way to get out of current directory
-# alias ..='cd ..'
+alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias .....='cd ../../../../'
 
 # Grep
 alias grep='rg'
-
-# Storage
-alias df='df -H'
-alias du='du -ch'
-alias dut='du -hsx * | sort -rh | head -10'
 
 # Processes
 alias psk='ps -ax | fzf --ansi | sed "s/^ *//" | cut -d " " -f1 | xargs -o kill'
