@@ -142,42 +142,33 @@ fi
 
     # Add apps to dock
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Arc");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
 
     APP="Brave Browser";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
-    APP="Google Chrome";
-    defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
-
-    APP="Microsoft Edge";
-    defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
-
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Orion"); # Testing
 
     APP="Firefox Developer Edition";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spotify");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Slack");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Discord");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "TradingView");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Warp");
 
     APP="Visual Studio Code";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "TablePlus");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Postman");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Notion");
 
 
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Freeform");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Notes");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "FaceTime");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Messages");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "WhatsApp");
 
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Figma");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Figma");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "iPhone Mirroring");
 
     # Add folders to docker
     defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "${HOME}/Library/Projects/");
