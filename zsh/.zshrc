@@ -31,6 +31,11 @@ STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
 STARSHIP_CACHE=~/.config/.data/starship/cache
 eval "$(starship init zsh)"
 
+# For any app the landing will be the Projects folder instead of the home folder.
+if [[ $(pwd) == "/Users/marlom" ]]; then
+  cd /Users/marlom/Library/Projects
+fi
+
 # Add local node_modules binaries to path.
 export PATH="$PATH:./node_modules/.bin"
 
