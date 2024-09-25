@@ -32,9 +32,6 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 
-# Grep
-alias grep='rg'
-
 # Processes
 alias psk='ps -ax | fzf --ansi | sed "s/^ *//" | cut -d " " -f1 | xargs -o kill'
 

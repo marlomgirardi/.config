@@ -1,64 +1,64 @@
 tap "homebrew/bundle"
 brew "antibody" # Plugin manager for zsh
-brew "awscli"
-brew "bat" # Like cat, but better
-# cask "cyberduck"
-brew "fd" # Intuitive find CLI
-brew "fx" # Json Viewer https://github.com/antonmedv/fx
-brew "fzf" # It's an interactive Unix filter for command-line.
-brew "gh"
+brew "mas" # Install apps from app store
+brew "starship" # Terminal theme
+brew "zsh"
 brew "git"
 brew "gnupg"
-brew "jq" # JSON processor, required by `nx``
-brew "mas" # Install apps from app store
+
+# Essentials
+brew "fzf" # It's an interactive Unix filter for command-line.
 brew "nvm"
-brew "pinentry-mac"
 brew "pnpm"
-brew "pstree"
-brew "ripgrep" # https://github.com/BurntSushi/ripgrep
-brew "starship" # Terminal theme
-brew "tldr" # better than man command
-brew "vim"
-brew "zsh"
-cask "adguard"
 cask "arc"
 cask "aldente" # set max battery charge
-cask "audacity"
-cask "brave-browser"
-cask "discord"
-cask "drawio"
+cask "adguard"
 cask "figma"
-cask "firefox@developer-edition"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
-cask "iina"
-cask "jetbrains-toolbox"
-cask "kap"
 cask "notion"
-cask "postman"
-cask "proxyman"
 cask "raycast"
 cask "shottr"
 cask "spotify"
-cask "stremio"
-cask "sublime-text"
-cask "tableplus"
-cask "tradingview"
 cask "visual-studio-code"
 cask "warp"
 mas "Hidden Bar", id: 1452453066
-mas "iStat Menus", id: 1319778037
-mas "Keynote", id: 409183694
-mas "Kindle", id: 302584613
-mas "Notion Web Clipper", id: 1559269364
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "ScreenBrush", id: 1233965871 # Testing
 mas "Slack", id: 803453959
 mas "Spark Desktop", id: 6445813049
-mas "Telegram", id: 747648890
 mas "Velja", id: 1607635845 # Default browser per link
+
+# Useful when needed
+brew "awscli"
+brew "bat" # Like cat, but better
+brew "vim"
+cask "firefox@developer-edition"
+cask "iina"
+brew "jq" # JSON processor
+cask "kap"
+cask "postman"
+cask "proxyman"
+cask "sublime-text"
+cask "tableplus"
+mas "iStat Menus", id: 1319778037
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Vidimote", id: 1585702412 # For Safari
+
+# Not using often
+brew "fd" # Intuitive find CLI
+brew "fx" # Json Viewer https://github.com/antonmedv/fx
+brew "gh"
+brew "pstree"
+brew "tldr" # better than man command
+cask "brave-browser"
+cask "discord"
+cask "drawio"
+cask "stremio"
+cask "tradingview"
+mas "Kindle", id: 302584613
+mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 
-mas "Image2Icon", id: 992115977 # Testing
+# Testing
+mas "ScreenBrush", id: 1233965871
+mas "Image2Icon", id: 992115977
