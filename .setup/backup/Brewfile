@@ -1,5 +1,5 @@
 tap "homebrew/bundle"
-brew "antibody" # Plugin manager for zsh
+brew "antidote" # Plugin manager for zsh
 brew "mas" # Install apps from app store
 brew "starship" # Terminal theme
 brew "zsh"

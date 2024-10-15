@@ -18,6 +18,8 @@ auth0/config.json
 # Snyk
 configstore/snyk.json
 
-
 # Copilot
 github-copilot
+
+# ZSH
+.setup/backup/terminal/zsh_plugins.zsh

@@ -13,15 +13,16 @@ VISUAL='code --wait'
 GIT_EDITOR=vim
 GPG_TTY=$(tty)
 HISTORY_IGNORE='(ls|history|pwd|clear|c)'
+BREW_DIR=$(brew --prefix)
 
 zstyle ':omz:editor' keymap 'vi'
 zstyle ':completion:*' menu select
 
 source "$HOME/.config/zsh/functions/compinit.zsh"
 
-# Antibody
-source <(antibody init)
-antibody bundle < ~/.config/.setup/backup/terminal/zsh_plugins
+# antidote
+source $BREW_DIR/opt/antidote/share/antidote/antidote.zsh
+antidote load ~/.config/.setup/backup/terminal/zsh_plugins
 
 # Aliases
 source "$HOME/.config/.setup/backup/terminal/.bash_aliases"
@@ -32,19 +33,19 @@ STARSHIP_CACHE=~/.config/.data/starship/cache
 eval "$(starship init zsh)"
 
 # For any app the landing will be the Projects folder instead of the home folder.
-if [[ $(pwd) == "/Users/marlom" ]]; then
-  cd /Users/marlom/Library/Projects
+if [[ $(pwd) == $HOME ]]; then
+  cd $HOME/Library/Projects
 fi
 
 # Add local node_modules binaries to path.
 export PATH="$PATH:./node_modules/.bin"
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "$BREW_DIR/opt/nvm/nvm.sh" ] && \. "$BREW_DIR/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # pnpm
-export PNPM_HOME="/Users/marlom/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 

@@ -1,7 +1,9 @@
 agkozak/zsh-z
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
-zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+zdharma-continuum/fast-syntax-highlighting kind:defer
 
 # annotations are also allowed:
 # ohmyzsh/ohmyzsh path:plugins/aws

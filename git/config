@@ -137,8 +137,9 @@
 	ss = stash save
 [gpg]
 	program = /opt/homebrew/bin/gpg
+	format = ssh
 [commit]
-	gpgsign = false
+	gpgsign = true
 [pull]
 	ff = only
 [push]
