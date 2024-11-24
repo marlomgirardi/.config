@@ -13,7 +13,7 @@ sudo -v;
 # # INSTALLATION SCRIPTS
 # ###########
 
-for SCRIPT in base homebrew ruby sublime-text terminal defaults; do
+for SCRIPT in base homebrew sublime-text terminal defaults; do
   . $SETUP_DIR/scripts/$SCRIPT.sh
 done
 

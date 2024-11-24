@@ -12,7 +12,6 @@ brew "nvm"
 brew "pnpm"
 cask "arc"
 cask "aldente" # set max battery charge
-cask "adguard"
 cask "figma"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
@@ -39,7 +38,7 @@ cask "postman"
 cask "proxyman"
 cask "sublime-text"
 cask "tableplus"
-mas "iStat Menus", id: 1319778037
+cask "istat-menus"
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Vidimote", id: 1585702412 # For Safari
@@ -49,10 +48,8 @@ brew "fd" # Intuitive find CLI
 brew "fx" # Json Viewer https://github.com/antonmedv/fx
 brew "gh"
 brew "pstree"
-brew "tldr" # better than man command
 cask "brave-browser"
 cask "discord"
-cask "drawio"
 cask "stremio"
 cask "tradingview"
 mas "Kindle", id: 302584613

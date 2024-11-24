@@ -12,14 +12,6 @@ if not_exists gcc; then
   softwareupdate -i "$PROD" -a
 fi;
 
-# Screen Saver
-# https://github.com/dessibelle/Blue-Screen-Saver
-if ! test -d "$HOME/Library/Screen Savers/Blue Screen Saver.saver"; then
-    echo "Copy screen saver...";
-    curl "https://www.dropbox.com/s/30upmkpsdkyvjug/Blue-Screen-Saver.saver.zip?dl=1" -sLo "/tmp/saver.zip" 1>/dev/null;
-    unzip /tmp/saver.zip -d "$HOME/Library/Screen Savers/"
-fi;
-
 ######
 # Custom directories
 ######

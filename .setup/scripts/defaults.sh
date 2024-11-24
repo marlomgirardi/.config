@@ -4,7 +4,7 @@
 # Sharing                                                                     #
 ###############################################################################
 
-if [[ -v SYSTEM_NAME ]]; then
+if [ -n "$SYSTEM_NAME" ]; then
     # Set computer name
     sudo scutil --set ComputerName $SYSTEM_NAME
     sudo scutil --set HostName $SYSTEM_NAME
@@ -41,11 +41,6 @@ fi
     # Require password after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1;
     defaults write com.apple.screensaver askForPasswordDelay -int 0;
-
-    defaults -currentHost write com.apple.screensaver moduleDict -dict \
-        moduleName "Blue Screen Saver" \
-        path "$HOME/Library/Screen Savers/Blue Screen Saver.saver" \
-        type 0;
 
 ###############################################################################
 # Screenshots                                                                 #
@@ -139,15 +134,12 @@ fi
     defaults write com.apple.dock show-recents -bool false; # Show recent apps in dock
     defaults write com.apple.Dock showhidden -bool true; # Show hidden apps in dock (Cmd + H)
 
-
     # Add apps to dock
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Spark");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Arc");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
-
-    APP="Brave Browser";
+    APP="Spark Desktop";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Arc");
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Safari");
 
     APP="Firefox Developer Edition";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
@@ -159,6 +151,8 @@ fi
     APP="Visual Studio Code";
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$APP.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>";
 
+    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Figma");
+
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "TablePlus");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Notion");
 
@@ -166,9 +160,6 @@ fi
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Freeform");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Notes");
     defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "Messages");
-
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app "Figma");
-    defaults write com.apple.dock persistent-apps -array-add $(to_dock_app_system "iPhone Mirroring");
 
     # Add folders to docker
     defaults write com.apple.dock persistent-others -array-add $(to_dock_folder "${HOME}/Library/Projects/");
