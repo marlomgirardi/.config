@@ -2,6 +2,9 @@
 .data/*
 !.data/.gitkeep
 
+!.data/vim/backups/.gitkeep
+!.data/vim/swaps/.gitkeep
+
 # Raycast
 Raycast/extensions
 Raycast/config.json
