@@ -26,3 +26,6 @@ github-copilot
 
 # ZSH
 .setup/backup/terminal/zsh_plugins.zsh
+
+containers/
+nxcloud.ini

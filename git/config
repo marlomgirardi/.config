@@ -1,7 +1,7 @@
 [init]
 	defaultBranch = main
 [user]
-	email = marlom.girardi@gmail.com
+	email = hi@marlomgirardi.com
 	name = Marlom Girardi
 [core]
 	editor = vim
@@ -143,6 +143,7 @@
 	ff = only
 [push]
 	autoSetupRemote = true
+	default = current
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]

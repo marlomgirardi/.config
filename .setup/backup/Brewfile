@@ -34,11 +34,10 @@ cask "firefox@developer-edition"
 cask "iina"
 brew "jq" # JSON processor
 cask "kap"
+cask "eza" # Better ls
 cask "postman"
 cask "proxyman"
-cask "sublime-text"
 cask "tableplus"
-cask "istat-menus"
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Vidimote", id: 1585702412 # For Safari

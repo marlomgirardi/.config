@@ -2,12 +2,11 @@
 # https://github.com/marlomgirardi/MacOS
 
 # Listing directory contents
-alias l='ls -FA'
-alias la='ls -lA'
-alias ll='ls -l'
-alias lsd='ll | grep "^d"'
-alias lsf='ll | grep "^-"'
-
+alias l='eza --icons -F -A'
+alias la='eza --icons -lA'
+alias ll='eza --icons -l'
+alias lsd='ll -D'
+alias lsf='ll -f'
 
 # Git aliases
 alias g='git'

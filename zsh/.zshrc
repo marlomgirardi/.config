@@ -49,4 +49,7 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+
+export FPATH="$BREW_DIR/opt/eza/completions/zsh:$FPATH"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
