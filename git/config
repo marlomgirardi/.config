@@ -4,22 +4,25 @@
 	email = hi@marlomgirardi.com
 	name = Marlom Girardi
 [core]
-	editor = vim
 	autocrlf = false
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.config/git/ignore
 	attributesfile = ~/.config/git/attributes
-	pager = delta
+	# pager = delta
 [rerere]
-	enabled = 1g
-	autoupdate = 1
+	enabled = true
+	autoupdate = true
 [fetch]
 	prune = true
-	pruneTags = true
+	# pruneTags = true
 	recurseSubmodules = true
 [help]
 	# Automatically correct and execute mistyped commands
-	autocorrect = 1
+	autocorrect = prompt
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 [pretty]
 	singleline = %C(yellow)%h %C(bold green)%d%C(reset) %s %C(245)(%an · %cr)%C(reset)
 	multiline = %n%C(240)────────────%+n%C(auto)%H%C(auto)%D%C(reset)%n%C(cyan)%an%C(reset) · %C(green)%cr%C(reset)%n%+B
@@ -46,12 +49,19 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vscode
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true # i/w headers by default
+	renames = true
 [difftool "vscode"]
 	prompt = false
 	cmd = code --wait --diff $LOCAL $REMOTE
 [url "git@github.com:"]
 	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
+[branch]
+	sort = -commiterdate
+[tag]
+	sort = version:refname
 [alias]
 	a = add --all
 	#############
@@ -141,10 +151,10 @@
 	gpgsign = true
 [pull]
 	ff = only
+	rebase = true
 [push]
 	autoSetupRemote = true
 	default = current
+	followTags = true
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-[commit]
-  gpgsign = true
