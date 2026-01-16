@@ -4,7 +4,7 @@
 # @raycast.schemaVersion 1
 # @raycast.title External IPv4
 # @raycast.mode inline
-# @raycast.refreshTime 1h
+# @raycast.refreshTime 24h
 # @raycast.packageName Internet
 
 # Optional parameters:
