@@ -29,3 +29,5 @@ github-copilot
 
 containers/
 nxcloud.ini
+
+configstore/update-notifier-*

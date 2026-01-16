@@ -39,6 +39,40 @@ function killport() {
 }
 alias pk='killport'
 
+function quick_proxy() {
+  local target_url="${1:-localhost:8080}"
+  local metrics_port="${2:-7777}"
+  local max_wait="${3:-60}"
+  
+  killport "$metrics_port"
+  
+  echo "Starting tunnel to $target_url..."
+  nohup cloudflared tunnel --url "$target_url" --metrics "localhost:$metrics_port" --no-autoupdate &
+  rm -rf nohup.out
+  
+  echo "Waiting for tunnel to be ready..."
+  local elapsed=0
+  local tunnel_hostname=""
+  
+  while [ $elapsed -lt $max_wait ]; do
+    tunnel_hostname=$(curl -s "http://localhost:$metrics_port/quicktunnel" 2>/dev/null | jq -r '.hostname // empty')
+    
+    if [ -n "$tunnel_hostname" ] && [ "$tunnel_hostname" != "null" ]; then
+      echo "✓ Tunnel successfully created: $tunnel_hostname"
+      open "https://$tunnel_hostname/health"
+      return 0
+    fi
+    
+    sleep 1
+    elapsed=$((elapsed + 1))
+    echo -n "."
+  done
+  
+  echo ""
+  echo "✗ Tunnel failed to start within $max_wait seconds"
+  return 1
+}
+
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 

@@ -3,34 +3,36 @@ export HOMEBREW_BUNDLE_FILE="$HOME/.config/.setup/backup/Brewfile";
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+  # Ignore from history if command start with "<space>"
+  setopt HIST_IGNORE_SPACE
 
-# Ignore from history if command start with "<space>"
-setopt HIST_IGNORE_SPACE
+  LC_ALL=en_US.UTF-8
+  EDITOR=vim
+  VISUAL='code --wait'
+  GIT_EDITOR=vim
+  GPG_TTY=$(tty)
+  HISTORY_IGNORE='(ls|history|pwd|clear|c)'
+  BREW_DIR=$(brew --prefix)
 
-LC_ALL=en_US.UTF-8
-EDITOR=vim
-VISUAL='code --wait'
-GIT_EDITOR=vim
-GPG_TTY=$(tty)
-HISTORY_IGNORE='(ls|history|pwd|clear|c)'
-BREW_DIR=$(brew --prefix)
+  zstyle ':omz:editor' keymap 'vi'
+  zstyle ':completion:*' menu select
 
-zstyle ':omz:editor' keymap 'vi'
-zstyle ':completion:*' menu select
+  source "$HOME/.config/zsh/functions/compinit.zsh"
 
-source "$HOME/.config/zsh/functions/compinit.zsh"
+  # antidote
+  source $BREW_DIR/opt/antidote/share/antidote/antidote.zsh
+  antidote load ~/.config/.setup/backup/terminal/zsh_plugins
 
-# antidote
-source $BREW_DIR/opt/antidote/share/antidote/antidote.zsh
-antidote load ~/.config/.setup/backup/terminal/zsh_plugins
+  # Theme
+  STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
+  STARSHIP_CACHE=~/.config/.data/starship/cache
+  eval "$(starship init zsh)"
+fi
 
 # Aliases
 source "$HOME/.config/.setup/backup/terminal/.bash_aliases"
 
-# Theme
-STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
-STARSHIP_CACHE=~/.config/.data/starship/cache
-eval "$(starship init zsh)"
 
 # For any app the landing will be the Projects folder instead of the home folder.
 if [[ $(pwd) == $HOME ]]; then
@@ -48,7 +50,6 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-
 
 export FPATH="$BREW_DIR/opt/eza/completions/zsh:$FPATH"
 
