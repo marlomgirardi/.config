@@ -36,11 +36,4 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.config/.data/vim/backups
-set directory=~/.config/.data/vim/swaps
-if exists("&undodir")
-  set undodir=~/.config/.data/vim/undo
-endif
-
 set backupskip=/tmp/*,/private/tmp/* "> Don’t create backups when editing files in certain directories

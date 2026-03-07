@@ -1,10 +1,3 @@
-# Generated data while using the OS is here, when possible.
-.data/*
-!.data/.gitkeep
-
-!.data/vim/backups/.gitkeep
-!.data/vim/swaps/.gitkeep
-
 # Raycast
 Raycast/extensions
 Raycast/config.json
@@ -31,3 +24,25 @@ containers/
 nxcloud.ini
 
 configstore/update-notifier-*
+
+# Claude
+.claude/cache
+.claude/debug
+.claude/downloads
+.claude/projects
+.claude/shell-snapshots
+.claude/statsig
+.claude/todos
+
+# Codex
+.codex/*sqlite*
+.codex/tmp
+.codex/version.json
+.codex/models_cache.json
+.codex/history.jsonl
+.codex/auth.json
+.codex/.personality_migration
+.codex/.codex-global-state.json
+.codex/shell_snapshots
+.codex/sessions
+.codex/skills/.system

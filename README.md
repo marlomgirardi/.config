@@ -13,7 +13,6 @@ This is the structure used for this project.
 ```
 .config/
 │
-├─ .data/ - All data generated during usage (as much as we can centralize)
 ├─ .setup/ - All files relative to the automated setup of the OS.
 │  ├─  backup/ - All possible backups and used by the script to restore stuff.
 │  ├─  scripts/ - A bunch of scripts used to restore the settings.

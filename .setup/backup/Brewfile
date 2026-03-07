@@ -35,7 +35,7 @@ cask "iina"
 brew "jq" # JSON processor
 cask "kap"
 cask "eza" # Better ls
-cask "postman"
+cask "bruno"
 cask "proxyman"
 cask "tableplus"
 mas "Numbers", id: 409203825
@@ -51,10 +51,9 @@ cask "brave-browser"
 cask "discord"
 cask "stremio"
 cask "tradingview"
-mas "Kindle", id: 302584613
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 
 # Testing
 mas "ScreenBrush", id: 1233965871
-mas "Image2Icon", id: 992115977
+cask "screen-studio"
