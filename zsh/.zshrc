@@ -1,6 +1,8 @@
 export GEM_HOME="$HOME/.config/.data/gem";
 export HOMEBREW_BUNDLE_FILE="$HOME/.config/.setup/backup/Brewfile";
 
+[ -f $HOME/.config/zsh/.zshrc_local ] && source "$HOME/.config/zsh/.zshrc_local"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then

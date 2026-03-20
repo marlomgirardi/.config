@@ -22,6 +22,7 @@ alias gs='g s'
 alias gl='g l --no-merges'
 alias glm='g lm'
 alias gfco='g fco'
+alias grehh='g rehh'
 
 # Shortcuts
 alias c='clear'
@@ -134,6 +135,8 @@ alias yt='yarn test'
 alias ns='npm start'
 alias yf='yarn cache clean && rm -rf node_modules && yarn install'
 alias ylg='yarn global list --depth=0'
+
+[ -f $HOME/.config/.setup/backup/terminal/.bash_aliases_local ] && source "$HOME/.config/.setup/backup/terminal/.bash_aliases_local"
 
 jwt-decode() {
   # We can't use the simple @base64d due to jq not handling web-safe encoded base64: https://github.com/jqlang/jq/issues/2262

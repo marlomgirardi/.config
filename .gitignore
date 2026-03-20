@@ -46,3 +46,5 @@ configstore/update-notifier-*
 .codex/shell_snapshots
 .codex/sessions
 .codex/skills/.system
+
+*_local
