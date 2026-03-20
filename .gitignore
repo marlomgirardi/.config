@@ -26,25 +26,29 @@ nxcloud.ini
 configstore/update-notifier-*
 
 # Claude
-.claude/cache
-.claude/debug
-.claude/downloads
-.claude/projects
-.claude/shell-snapshots
-.claude/statsig
-.claude/todos
+.claude/*
+!.claude/skills
+!.claude/agents
+!.claude/settings.json
+!.claude/statusline-command.sh
 
 # Codex
-.codex/*sqlite*
-.codex/tmp
-.codex/version.json
-.codex/models_cache.json
-.codex/history.jsonl
-.codex/auth.json
-.codex/.personality_migration
-.codex/.codex-global-state.json
-.codex/shell_snapshots
-.codex/sessions
+.codex/*
 .codex/skills/.system
+!.codex/agents
+!.codex/skills
+!.codex/rules
+!.codex/config.toml
+
+
 
 *_local
+
+# Copilot
+.copilot/*
+!.copilot/prompts
+!.copilot/hooks
+!.copilot/agents
+!.copilot/skills
+!.copilot/config.json
+!.copilot/mcp-config.json

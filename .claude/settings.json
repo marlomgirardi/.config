@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.config/.claude/statusline-command.sh"
+  }
+}

@@ -1,4 +1,3 @@
-export GEM_HOME="$HOME/.config/.data/gem";
 export HOMEBREW_BUNDLE_FILE="$HOME/.config/.setup/backup/Brewfile";
 
 [ -f $HOME/.config/zsh/.zshrc_local ] && source "$HOME/.config/zsh/.zshrc_local"
@@ -28,7 +27,6 @@ if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
 
   # Theme
   STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
-  STARSHIP_CACHE=~/.config/.data/starship/cache
   eval "$(starship init zsh)"
 fi
 
