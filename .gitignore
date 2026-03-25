@@ -40,10 +40,6 @@ configstore/update-notifier-*
 !.codex/rules
 !.codex/config.toml
 
-
-
-*_local
-
 # Copilot
 .copilot/*
 !.copilot/prompts
@@ -52,3 +48,5 @@ configstore/update-notifier-*
 !.copilot/skills
 !.copilot/config.json
 !.copilot/mcp-config.json
+
+*_local

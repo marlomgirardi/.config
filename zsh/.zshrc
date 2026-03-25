@@ -1,7 +1,5 @@
 export HOMEBREW_BUNDLE_FILE="$HOME/.config/.setup/backup/Brewfile";
 
-[ -f $HOME/.config/zsh/.zshrc_local ] && source "$HOME/.config/zsh/.zshrc_local"
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
@@ -48,7 +46,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
 export FPATH="$BREW_DIR/opt/eza/completions/zsh:$FPATH"
