@@ -3,7 +3,7 @@ name: write-a-prd
 description: Create a PRD through user interview, codebase exploration, and module design. Use when user wants to write a PRD, create a product requirements document, or plan a new feature.
 ---
 
-This skill will be invoked when the user wants to create a PRD. You may skip steps if you don't consider them necessary.
+This skill will be invoked when the user wants to create a PRD. You should go through the steps below. You may skip steps if you don't consider them necessary.
 
 1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.
 
@@ -15,7 +15,7 @@ This skill will be invoked when the user wants to create a PRD. You may skip ste
 
 A deep module (as opposed to a shallow module) is one which encapsulates a lot of functionality in a simple, testable interface which rarely changes.
 
-Check with the user that these modules match their expectations. Check with the user which modules they want tests written for.
+Check with the user that these modules match their expectations. Check with the user which modules they want tests written for, and at what boundary.
 
 5. Once you have a complete understanding of the problem and solution, use the template below to write the PRD. use the AskUserQuestion tool to ask the user if they would like to create a Jira Epic from the PRD. If they confirm, use `acli jira` to create the Epic.
 
