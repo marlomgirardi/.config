@@ -1,3 +1,9 @@
+---
+name: prd-to-issues
+description: "Break a PRD into independently-grabbable issue files using vertical slices (tracer bullets). Use when user wants to create issues from a PRD."
+disable-model-invocation: true
+---
+
 # PRD to Issues
 
 Break a PRD into independently-grabbable GitHub issues using vertical slices (tracer bullets).
