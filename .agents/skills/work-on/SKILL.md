@@ -42,4 +42,9 @@ pnpm run test
 
 ### 5. Commit
 
-Once typecheck and tests pass, commit the work.
+Once typecheck and tests pass, commit the work and open a PR if applicable.
+
+
+### 6. Code Review
+
+Ask the agent deep-code-reviewer to review the PR, and loop on any feedback from the agent until there are no more blockers. On suggestions ask the user if any changes should be made, and if so, make them and update the PR. If not, explain to the user why the suggestion was not implemented.
