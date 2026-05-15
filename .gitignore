@@ -49,4 +49,8 @@ configstore/update-notifier-*
 !.copilot/config.json
 !.copilot/mcp-config.json
 
+# Cursor
+.cursor/*
+!.cursor/skills
+
 *_local

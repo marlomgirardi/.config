@@ -28,14 +28,13 @@ mas "Velja", id: 1607635845 # Default browser per link
 
 # Useful when needed
 brew "awscli"
-brew "bat" # Like cat, but better
 brew "vim"
 cask "firefox@developer-edition"
 cask "iina"
 brew "jq" # JSON processor
 cask "kap"
 cask "eza" # Better ls
-cask "bruno"
+cask "yaak"
 cask "proxyman"
 cask "tableplus"
 mas "Numbers", id: 409203825
@@ -50,7 +49,6 @@ brew "pstree"
 cask "brave-browser"
 cask "discord"
 cask "stremio"
-cask "tradingview"
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 

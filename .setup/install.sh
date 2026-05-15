@@ -13,7 +13,7 @@ sudo -v;
 # # INSTALLATION SCRIPTS
 # ###########
 
-for SCRIPT in base homebrew sublime-text terminal defaults; do
+for SCRIPT in base homebrew sublime-text terminal defaults llm; do
   . $SETUP_DIR/scripts/$SCRIPT.sh
 done
 

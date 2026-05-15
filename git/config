@@ -56,8 +56,6 @@
 [difftool "vscode"]
 	prompt = false
 	cmd = code --wait --diff $LOCAL $REMOTE
-[url "git@github.com:"]
-	insteadOf = https://github.com/ # https://ricostacruz.com/til/github-always-ssh
 [branch]
 	sort = -committerdate
 [tag]

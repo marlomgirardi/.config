@@ -55,3 +55,5 @@ esac
 export FPATH="$BREW_DIR/opt/eza/completions/zsh:$FPATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f ~/.config/zsh/.zshrc_local ] && source ~/.config/zsh/.zshrc_local
