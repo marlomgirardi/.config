@@ -16,6 +16,11 @@
 	prune = true
 	# pruneTags = true
 	recurseSubmodules = true
+# SSH to github.com is blocked in some networks; rewrite remotes to HTTPS.
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com/
 [help]
 	# Automatically correct and execute mistyped commands
 	autocorrect = prompt
