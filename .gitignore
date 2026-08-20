@@ -1,6 +1,11 @@
 # Raycast
 Raycast/extensions
 Raycast/config.json
+raycast-x/
+
+# herdr
+herdr/session.json
+herdr/session-history.json
 
 # Utils
 .DS_Store
