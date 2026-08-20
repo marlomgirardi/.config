@@ -6,7 +6,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-TARGETS=(".claude/skills" ".codex/skills" ".copilot/skills" ".cursor/skills")
+TARGETS=(".claude/skills" ".codex/skills" ".cursor/skills")
 
 removed=0
 

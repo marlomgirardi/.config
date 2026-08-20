@@ -10,8 +10,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-SRC="$ROOT/.agents/skills"
-TARGETS=(".claude/skills" ".codex/skills" ".copilot/skills", ".cursor/skills")
+SRC="$ROOT/.agents/skills" # cursor/codex reads from .agents
+TARGETS=(".claude/skills")
 
 if [[ ! -d "$SRC" ]]; then
   echo "source missing: $SRC" >&2
