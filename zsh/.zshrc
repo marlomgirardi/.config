@@ -1,59 +1,42 @@
-export HOMEBREW_BUNDLE_FILE="$HOME/.config/.setup/backup/Brewfile";
+# Interactive shells only. Options, completion, plugins, prompt, aliases.
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
-  # Ignore from history if command start with "<space>"
-  setopt HIST_IGNORE_SPACE
-
-  LC_ALL=en_US.UTF-8
-  EDITOR=vim
-  VISUAL='code --wait'
-  GIT_EDITOR=vim
-  GPG_TTY=$(tty)
-  HISTORY_IGNORE='(ls|history|pwd|clear|c)'
-  BREW_DIR=$(brew --prefix)
-
-  zstyle ':omz:editor' keymap 'vi'
-  zstyle ':completion:*' menu select
-
-  source "$HOME/.config/zsh/functions/compinit.zsh"
-
-  # antidote
-  source $BREW_DIR/opt/antidote/share/antidote/antidote.zsh
-  antidote load ~/.config/.setup/backup/terminal/zsh_plugins
-
-  # Theme
-  STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
-  eval "$(starship init zsh)"
+# Non-login terminals (Cursor, VS Code, etc.) skip .zprofile — load PATH/brew.
+if [[ ! -o login ]]; then
+  source "$HOME/.config/zsh/.zprofile_local"
 fi
+BREW_DIR="$(brew --prefix)"
+setopt HIST_IGNORE_SPACE
+export HISTORY_IGNORE='(ls|history|pwd|clear|c)'
+export GPG_TTY="$(tty)"
+
+zstyle ':omz:editor' keymap 'vi'
+zstyle ':completion:*' menu select
+
+source "$HOME/.config/zsh/functions/compinit.zsh"
+
+# antidote
+source "$BREW_DIR/opt/antidote/share/antidote/antidote.zsh"
+antidote load ~/.config/.setup/backup/terminal/zsh_plugins
+
+# Theme
+export STARSHIP_CONFIG=~/.config/.setup/backup/terminal/starship.toml
+eval "$(starship init zsh)"
 
 # Aliases
 source "$HOME/.config/.setup/backup/terminal/.bash_aliases"
 
-
-# For any app the landing will be the Projects folder instead of the home folder.
-if [[ $(pwd) == $HOME ]]; then
-  cd $HOME/Library/Projects
+# Landing directory for new shells started in $HOME.
+if [[ "$(pwd)" == "$HOME" ]]; then
+  cd "$HOME/Library/Projects"
 fi
 
-# Add local node_modules binaries to path.
+# Local node_modules binaries (cwd-relative; interactive only).
 export PATH="$PATH:./node_modules/.bin"
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "$BREW_DIR/opt/nvm/nvm.sh" ] && \. "$BREW_DIR/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+[ -s "$BREW_DIR/opt/nvm/nvm.sh" ] && . "$BREW_DIR/opt/nvm/nvm.sh"
+[ -s "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && . "$BREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
 
 export FPATH="$BREW_DIR/opt/eza/completions/zsh:$FPATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-[ -f ~/.config/zsh/.zshrc_local ] && source ~/.config/zsh/.zshrc_local
