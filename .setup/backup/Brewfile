@@ -10,7 +10,8 @@ brew "gnupg"
 brew "fzf" # It's an interactive Unix filter for command-line.
 brew "nvm"
 brew "pnpm"
-cask "arc"
+brew "herdr"
+cask "zen"
 cask "aldente" # set max battery charge
 cask "figma"
 cask "font-jetbrains-mono"
@@ -29,7 +30,6 @@ mas "Velja", id: 1607635845 # Default browser per link
 # Useful when needed
 brew "awscli"
 brew "vim"
-cask "firefox@developer-edition"
 cask "iina"
 brew "jq" # JSON processor
 cask "kap"
@@ -55,4 +55,3 @@ mas "WhatsApp", id: 310633997
 # Testing
 mas "ScreenBrush", id: 1233965871
 cask "screen-studio"
-brew "herdr"

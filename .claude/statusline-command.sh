@@ -5,22 +5,21 @@ input=$(cat)
 
 cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd')
 model=$(echo "$input" | jq -r '.model.display_name // empty')
-remaining=$(echo "$input" | jq -r '.context_window.remaining_percentage // empty')
+used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
+ctx_size=$(echo "$input" | jq -r '.context_window.context_window_size // 0')
 
 # 256-color ANSI codes
 c_path=$'\033[38;5;75m'
 c_git=$'\033[38;5;114m'
 c_dirty=$'\033[38;5;203m'
-c_node=$'\033[38;5;71m'
 c_dim=$'\033[2m'
 c_reset=$'\033[0m'
-c_ctx_warn=$'\033[1m\033[38;5;221m'
+c_ctx_warn=$'\033[22m\033[1m\033[38;5;221m'
 c_ctx_danger=$'\033[1m\033[38;5;203m'
 
 # Nerd font icons — hex bytes used because macOS bash 3.2 lacks \u support
 icon_branch=$(printf '\xee\x82\xa0')  # U+E0A0 nf-pl-branch
 icon_dirty=$(printf '\xef\x81\xaa')   # U+F06A nf-fa-exclamation_circle
-icon_node=$(printf '\xee\x9c\x98')    # U+E718 nf-dev-nodejs
 
 # Shorten home directory to ~
 home="$HOME"
@@ -40,34 +39,26 @@ if git_dir=$(git -C "$cwd" rev-parse --git-dir 2>/dev/null); then
   fi
 fi
 
-# Node.js version
-node_part=""
-node_bin=""
-if command -v node >/dev/null 2>&1; then
-  node_bin="node"
-else
-  nvm_latest=$(ls "$HOME/.nvm/versions/node/" 2>/dev/null | sort -V | tail -1)
-  if [ -n "$nvm_latest" ]; then
-    node_bin="$HOME/.nvm/versions/node/$nvm_latest/bin/node"
-  fi
-fi
-if [ -n "$node_bin" ]; then
-  node_version=$("$node_bin" --version 2>/dev/null)
-  if [ -n "$node_version" ]; then
-    node_part=" | ${c_node}${icon_node} ${node_version}${c_reset}"
-  fi
-fi
-
-# Context remaining
+# Context: tokens used + used percentage
 ctx_part=""
-if [ -n "$remaining" ]; then
-  if [ "$remaining" -le 10 ]; then
-    ctx_part=" | ${c_ctx_danger}ctx: ${remaining}%${c_reset}"
-  elif [ "$remaining" -le 20 ]; then
-    ctx_part=" | ${c_ctx_warn}ctx: ${remaining}%${c_reset}"
+if [ -n "$used_pct" ] && [ "$ctx_size" -gt 0 ] 2>/dev/null; then
+  used_tokens=$(printf '%.0f' "$(echo "$ctx_size * $used_pct / 100" | bc -l)")
+  if [ "$used_tokens" -ge 1000000 ]; then
+    fmt=$(printf '%.1fM' "$(echo "$used_tokens / 1000000" | bc -l)")
+  elif [ "$used_tokens" -ge 1000 ]; then
+    fmt=$(printf '%.1fk' "$(echo "$used_tokens / 1000" | bc -l)")
   else
-    ctx_part=" | ctx: ${remaining}%"
+    fmt="${used_tokens}"
   fi
+  used_int=$(printf '%.0f' "$used_pct")
+  if [ "$used_tokens" -ge 80000 ]; then
+    c_tok="${c_ctx_danger}"
+  elif [ "$used_tokens" -ge 40000 ]; then
+    c_tok="${c_ctx_warn}"
+  else
+    c_tok=""
+  fi
+  ctx_part=" | ctx: ${c_tok}${fmt}${c_reset} (${used_int}%)"
 fi
 
 # Model
@@ -76,8 +67,7 @@ if [ -n "$model" ]; then
   model_part=" | $model"
 fi
 
-printf '%s%s%s%s%s%s%s' \
+printf '%s%s%s%s' \
   "${c_path}${short_cwd}${c_reset}" \
   "$git_branch" \
-  "$node_part" \
-  "${c_dim}${model_part}${ctx_part}${c_reset}"
+  "${c_dim}${model_part}${c_reset}${ctx_part}"

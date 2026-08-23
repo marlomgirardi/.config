@@ -1,9 +1,20 @@
 {
-  "permissions": {
-    "defaultMode": "acceptEdits"
+  "agentPushNotifEnabled": true,
+  "effortLevel": "medium",
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
   },
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "true"
+  },
+  "permissions": {
+    "allow": ["Read(**)", "Bash(gh pr:*)", "Bash(gh issue *)"],
+    "defaultMode": "auto"
+  },
+  "skipAutoPermissionPrompt": true,
   "statusLine": {
-    "type": "command",
-    "command": "bash ~/.config/.claude/statusline-command.sh"
+    "command": "bash ~/.config/.claude/statusline-command.sh",
+    "type": "command"
   }
 }
